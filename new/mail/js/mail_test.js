@@ -20,10 +20,12 @@
 		let formDescription = $(this).find('.contact-form__description');
 
 		let fd = new FormData(form);
+		
 		$.ajax({
 			url: "/mail/php/mail.php",
 			type: "POST",
 			data: fd,
+			async : false,
 			processData: false,
 			contentType: false,
 			success: function success(res) {
@@ -60,8 +62,58 @@
 				} else {
 					formDescription.text('');
 				}
+//			updateTable();
+				//here you can call another ajax request - здесь вы можете вызвать другой запрос ajax
+				//Am I doing right here? - Я делаю прямо здесь?
+				$.ajax({
+					url: 'mysql_form_insert.php',
+					type: 'POST',
+					data: fd,
+					async : false,
+					processData: false,
+					contentType: false,
+					data : {
+						todo:"Save"
+					},
 
-/**/
+					success: function(data) {
+					  // do smth.			
+					},
+				});
+			}
+		});			
+
+// Переброс на страницу благодарности		
+//		window.location.replace("/thank-you-page.php?status=success");
+		
+	});
+}(jQuery));	
+
+/*
+$.ajax({  
+    url : url,
+    type : "POST",
+    async : false,
+    data : data,
+    success:function(result){
+        bootbox.alert('Ordered',function(){
+        });
+        updateTable();
+        //here you can call another ajax request
+        //Am I doing right here?
+        $.ajax({  
+            url : url,
+            type : "POST",
+            async : false,
+            data : {
+                todo:"Save"
+            }
+        }); 
+    }
+});
+*/
+
+/*
 // Сообщение об успехе
 				if (respond.success) {
 				formDescription.text(respond.success).fadeIn();
@@ -73,7 +125,9 @@
 					}, 5000);
 					
 				}
+*/
 
+/*
 // Переброс на страницу благодарности
 				if (respond.success) {
 					$.ajax({
@@ -92,13 +146,48 @@
 				
 				window.location.replace("/thank-you-page.php?status=success");
 				}
-			},
-		});
+*/
 
 		
 		
-	});
-}(jQuery));
+
+
+// Функция печати ошибок при вводе полей формы
+function success(res) {
+	console.log(res);
+	let respond = $.parseJSON(res);
+				
+	if (respond.name) {
+		inpNameError.text(respond.name);
+	} else {
+		inpNameError.text('');
+	}
+
+	if (respond.tel) {
+		inpTelError.text(respond.tel);
+	} else {
+		inpTelError.text('');
+	}
+
+	if (respond.email) {
+		inpEmailError.text(respond.email);
+	} else {
+		inpEmailError.text('');
+	}
+
+	if (respond.mess) {
+		inpTextError.text(respond.mess);
+	} else {
+		inpTextError.text('');
+	}
+				
+	if (respond.attantion) {
+		formDescription.text(respond.attantion).css('color', '#e84a66').fadeIn(); //
+	} else {
+		formDescription.text('');
+	}
+}
+
 
 // ЭТО ФУНКЦИИ ВВОДА ДАТЫ    
     /* функция добавления ведущих нулей */

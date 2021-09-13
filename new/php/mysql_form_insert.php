@@ -19,7 +19,7 @@
 
 <?php
 // Соединяемся с базой данных
-require_once 'blocks/date_base.php';
+require_once '../blocks/date_base.php';
 
 // Вычислитель
 //$name = $tel = $email = $text = $start_time = $send_time = $unix_time = "";
