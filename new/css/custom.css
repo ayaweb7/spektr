@@ -1,0 +1,50 @@
+.test-custom {
+    border-bottom-color: lawngreen !important;
+}
+
+.test-custom-top {
+    border-top-color: lawngreen !important;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+/* MY STYLES */
+/* li - checkbox */
+ul .li-pointer:before {
+    position: absolute; /**/
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+	margin-left: -30px;
+    background: url("../img/str1.png") no-repeat 0px 0px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* top */
+#top {
+    position :fixed;
+    bottom :100px;
+    right :5px;
+}
+
+.border-block {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.badge-str {
+    text-align: center;
+    height: inherit ;
+    vertical-align: middle;
+}
+
+.row-cols-md-30 > * {
+    flex: 0 0 auto;
+    width: 30%;
+}
+/*# sourceMappingURL=bootstrap.min.css.map */
