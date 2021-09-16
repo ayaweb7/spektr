@@ -1,22 +1,17 @@
-
 (function ($) {
-//	прикрепляем обработчик отправки к форме
 	$(".contact-form").submit(function (event) {
-// остановить нормальную отправку формы
 		event.preventDefault();
-				
-// Сохраняем в переменную form id текущей формы, на которой сработало событие submit
 		let form = $('#' + $(this).attr('id'))[0];
-		
-// Сохраняем в переменные дивы, в которые будем выводить текст ошибки
+
+		// Сохраняем в переменные дивы, в которые будем выводить текст ошибки
 		let inpNameError = $(this).find('.contact-form__error_name');
 		let inpEmailError = $(this).find('.contact-form__error_email');
 		let inpTelError = $(this).find('.contact-form__error_tel');
 		let inpTextError = $(this).find('.contact-form__error_text');
-//let inpAgreementError = $(this).find('.contact-form__error_agreement');
-//let inpFileError = $(this).find('.contact-form__error_file');
+		let inpAgreementError = $(this).find('.contact-form__error_agreement');
+		let inpFileError = $(this).find('.contact-form__error_file');
 
-// Сохраняем в переменную див, в который будем выводить сообщение формы
+		// Сохраняем в переменную див, в который будем выводить сообщение формы
 		let formDescription = $(this).find('.contact-form__description');
 
 		let fd = new FormData(form);
@@ -53,50 +48,40 @@
 				} else {
 					inpTextError.text('');
 				}
-				
+/*				
+				if (respond.file) {
+					inpFileError.text(respond.file);
+				} else {
+					inpFileError.text('');
+				}
 
+				if (respond.agreement) {
+					inpAgreementError.text(respond.agreement);
+				} else {
+					inpAgreementError.text('');
+				}
+*/
 				if (respond.attantion) {
-					formDescription.text(respond.attantion).css('color', '#e84a66').fadeIn(); //
+					formDescription.text(respond.attantion).css('color', '#e84a66').fadeIn();
 				} else {
 					formDescription.text('');
 				}
-
-/**/
-// Сообщение об успехе
+/*
 				if (respond.success) {
-				formDescription.text(respond.success).fadeIn();
+					formDescription.text(respond.success).fadeIn();
 					setTimeout(() => {
 						formDescription.fadeOut("slow");
-					}, 10000);
+					}, 4000);
 					setTimeout(() => {
 						formDescription.text('');
 					}, 5000);
-					
 				}
-
-// Переброс на страницу благодарности
+*/				
 				if (respond.success) {
-					$.ajax({
-					url: 'mysql_form_insert.php',
-					type: 'POST',
-					data: fd,
-					cache: false,
-					dataType: 'json',
-					processData: false,
-					contentType: false,
-
-					success: function(data) {
-					  // do smth.			
-					},
-				});
-				
-				window.location.replace("/thank-you-page.php?status=success");
+					window.location.replace("/thank-you-page.php?status=success"); 
 				}
 			},
 		});
-
-		
-		
 	});
 }(jQuery));
 
@@ -168,5 +153,24 @@ $.get("https://ipinfo.io", function (response) {
 		document.getElementById('region').value = response.region;
 	}, "jsonp");
 
-
-// 
+/*
+// PRIMER
+$.ajax({
+    url: 'news.php',
+    method: 'POST',
+    dataType: 'JSON',
+    data:{textnews:'naserver'},
+    success: function(answer){
+        $("#novosti").html(answer.textnews);
+        $.ajax({
+            url: 'success.php',
+            method: 'POST',
+            dataType: 'JSON',
+            data:{asd:'qwe'},
+            success: function(ans){
+                $("#novosti2").html(ans.asd);
+            }
+        });
+    }
+});
+*/

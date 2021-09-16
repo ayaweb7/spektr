@@ -175,12 +175,14 @@ body {
     text-align: center;
     font-size: 32px;
     margin-bottom: 30px;
+	color: #e84a66;
 }
 
 .thank-you-page__descriptor {
     font-size: 20px;
     text-align: center;
     margin-bottom: 30px;
+	color: #4a90e8;
 }
 
 .thank-you-page__button {

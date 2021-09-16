@@ -51,6 +51,26 @@
 		header ("Location: /");
 	}
 	
+//Более сложный вариант:
+
+/*
+
+if($_POST['submit']) {       //проверка нажата ли кнопка “отправить”
+
+       $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000);
+
+       $mess =  substr(htmlspecialchars(trim($_POST['mess'])), 0, 10000);
+
+       $to = 'test@test.ru';      //получатель
+
+       $from='test@test.ru';   //отправитель
+
+       mail($to, $title, $mess, 'From:'.$from);
+
+       echo 'Письмо отправлено.';
+
+}
+*/
 
 	
 

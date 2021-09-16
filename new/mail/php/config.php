@@ -31,19 +31,19 @@
 
 	// ***YANDEX - 'ssl://smtp.yandex.ru' SMTP *** GOOGLE - 'smtp.gmail.com' //
 
-		require_once($_SERVER['DOCUMENT_ROOT'] . '/mail/phpmailer/smtp.php');
-		const HOST = 'smtp.gmail.com';
-		const LOGIN = 'ayaweb7@gmail.com';
-		const PASS = 'arteeva12';
-		const PORT = '465';
+//		require_once($_SERVER['DOCUMENT_ROOT'] . '/mail/phpmailer/smtp.php');
+//		const HOST = 'smtp.gmail.com';
+//		const LOGIN = 'ayaweb7@gmail.com';
+//		const PASS = 'arteeva12';
+//		const PORT = '465';
 
 	// *** /SMTP *** //
 
   // Почта с которой будет приходить письмо
-	const SENDER = 'ayaweb7@gmail.com';
+	const SENDER = 'ayaweb7@yandex.ru';
 	
 	// Почта на которую будет приходить письмо
-	const CATCHER = 'ayaweb7@yandex.ru';
+	const CATCHER = 'ayaweb7@gmail.com';
 	
 	// Тема письма
 	const SUBJECT = 'Заявка с сайта';
