@@ -148,7 +148,7 @@
 
 <!-- features -->
 <div class="container px-4 py-5" id="advantage">
-    <h2 class="pb-2 border-bottom test-custom">Почему работа со мной выгодна вам <!--<i class="fas fa-camera"></i>--></h2>
+    <h2 class="pb-2 border-bottom text-center test-custom">Почему работа со мной выгодна вам <!--<i class="fas fa-camera"></i>--></h2>
     <div class="row row-cols-md-4 g-4 py-5"> <!-- row-cols-1 row-cols-sm-2 row-cols-lg-4  -->
         <div class="col d-flex align-items-start">
             <div class="p-3">
@@ -191,73 +191,55 @@
 
 <!-- doing -->
 <div class="container" id="doing">
-    <h2 class="pb-2 border-bottom test-custom">Что я делаю</h2>
-    <div class="row row-cols-1 row-cols-md-30"><!--  row-cols-sm-2 row-cols-lg-5 -->
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Анализ конкурентов</h3>
-                <p class="card-text mb-auto text-center">Анализирую рекламу конкурентов, чтобы учесть их слабые места.</p>
-            </div>
-        </div><!--  -->
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-2 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Сбор семантики</h3>
-                <p class="card-text mb-auto text-center">Собираю максимально полную семантику по вашей тематике.</p>
-            </div>
-        </div><!--  -->
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative"><!--  -->
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Работа с семантикой</h3>
-                <p class="card-text mb-auto text-center">Чищу семантику от мусора, составляю список "минус" слов.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-30"><!--  row-cols-sm-2 row-cols-lg-5 -->
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Распределяю запросы</h3>
-                <p class="card-text mb-auto text-center">Делаю запросы по направлениям, категориям, определяюсь со структурой кампаний.</p>
-            </div>
-        </div>
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-2 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Составление объявлений</h3>
-                <p class="card-text mb-auto text-center">Составляю продающие объявления, продумываю быстрые ссылки, уточнения.</p>
-            </div>
-        </div>
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Настройка аналитики</h3>
-                <p class="card-text mb-auto text-center">Настраиваю цели в Яндекс Метрике, Google Analitics, чтобы анализировать обращения.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-30"><!--  row-cols-sm-2 row-cols-lg-5 -->
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Запуск проекта</h3>
-                <p class="card-text mb-auto text-center">Запуск рекламных кампаний, оптимизация настроек, получение первых клиентов.</p>
-            </div>
-        </div>
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-2 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Ведение проекта</h3>
-                <p class="card-text mb-auto text-center">Ведение рекламных кампаний - оптимизация, аналитика, составление отчётов.</p>
-            </div>
-        </div>
-        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow mb-4 mx-4 h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0 text-center">Аналитика проекта</h3>
-                <p class="card-text mb-auto text-center">Формирование отчётов, подключение сквозной аналитики.</p>
-            </div>
-        </div>
-    </div>
+	<h2 class="pb-2 border-bottom text-center test-custom">Что я делаю</h2>
+	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 ---- row row-cols-1 row-cols-md-30-->
+		<div class="card mb-4 rounded-3 shadow-sm"><!--class="col p-4 d-flex flex-column position-static"-->
+			<h3 class="mb-0 text-center">Анализ конкурентов</h3>
+			<p class="card-text mb-auto text-center">Анализирую рекламу конкурентов, чтобы учесть их слабые места.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Сбор семантики</h3>
+			<p class="card-text mb-auto text-center">Собираю максимально полную семантику по вашей тематике.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Работа с семантикой</h3>
+			<p class="card-text mb-auto text-center">Чищу семантику от мусора, составляю список "минус" слов.</p>
+		</div>
+	</div>
+	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 -->
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Распределяю запросы</h3>
+			<p class="card-text mb-auto text-center">Делаю запросы по направлениям, категориям, определяюсь со структурой кампаний.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Составление объявлений</h3>
+			<p class="card-text mb-auto text-center">Составляю продающие объявления, продумываю быстрые ссылки, уточнения.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Настройка аналитики</h3>
+			<p class="card-text mb-auto text-center">Настраиваю цели в Яндекс Метрике, Google Analitics, чтобы анализировать обращения.</p>
+		</div>
+	</div>
+	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 -->
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Запуск проекта</h3>
+			<p class="card-text mb-auto text-center">Запуск рекламных кампаний, оптимизация настроек, получение первых клиентов.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Ведение проекта</h3>
+			<p class="card-text mb-auto text-center">Ведение рекламных кампаний - оптимизация, аналитика, составление отчётов.</p>
+		</div>
+		<div class="card mb-4 rounded-3 shadow-sm">
+			<h3 class="mb-0 text-center">Аналитика проекта</h3>
+			<p class="card-text mb-auto text-center">Формирование отчётов, подключение сквозной аналитики.</p>
+		</div>
+	</div>
 </div>
 
 <!-- about me -->
 <div class="container col-xxl-8 px-4 py-5" id="about-me">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <h2 class="pb-2 border-bottom test-custom">Обо мне</h2>
+        <h2 class="pb-2 border-bottom text-center test-custom">Обо мне</h2>
         <div class="col-lg-6">
             <div class="bd-example">
                 <p>Меня зовут Николай Артеев</p>
@@ -290,13 +272,9 @@
     </symbol>
 </svg>
 <div class="container py-3" id="pricing">
-    <header>
-        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h2 class="pb-2 border-bottom test-custom">Тарифы</h2>
-            <!--<p class="fs-5 text-muted">Надо придумать какой-то текст.</p>-->
-        </div>
-    </header>
-
+    <h2 class="pb-2 border-bottom text-center test-custom">Тарифы</h2>
+<!--<p class="fs-5 text-muted">Надо придумать какой-то текст.</p>-->
+    
     <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div class="col">
@@ -447,7 +425,7 @@
 <!-- conducting -->
 <div class="container py-3" id="conducting">
     <main>
-        <h2 class="pb-2 border-bottom test-custom">Ведение рекламных проектов от 5000 руб./мес.</h2>
+        <h2 class="pb-2 border-bottom text-center test-custom">Ведение рекламных проектов от 5000 руб./мес.</h2>
         <ol class="list-group list-group-flush">
             <li class="list-group-num">Отчетность раз в 2 недели и отчет за месяц
                         (бюджет, ctr, количество кликов, стоимость клика,
@@ -557,7 +535,7 @@
 	</symbol>
 </svg>
 <div class="container px-4 py-5" id="stages">
-    <h2 class="pb-2 border-bottom test-custom">Этапы совместной работы</h2>
+    <h2 class="pb-2 border-bottom text-center test-custom">Этапы совместной работы</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
