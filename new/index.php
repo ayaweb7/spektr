@@ -14,8 +14,15 @@
     <link href="css/features.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
 	<link href="fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/remodal.css">
+	<link rel="stylesheet" href="css/remodal-default-theme.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+<!-- Маска ввода номера телефона -->
+<!-- jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     
     <!--script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script-->
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
@@ -60,11 +67,67 @@
 
         <div class="col-md-3 text-end">
             <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
-            <button type="button" class="btn btn-primary" onclick="document.location='form.php'">Связаться со мной</button>
+            <!-- <button type="button" class="btn btn-primary" onclick="document.location='form2.php'">Связаться со мной</button> -->
+			<a class="btn btn-primary" href="#modal">Оставить заявку</a> <!-- class="mainButton"-->
 		</div>
 
         <div id='top'><a href='#header' title="Наверх страницы"><img src='img/buttonUpActive.png'/></a></div>
     </header>
+</div>
+
+<!-- modal_form -->
+<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+	<div class="remodalBorder">
+		<p><img src="img/NikArt_60.png"></p>
+		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+		<form class="contact-form" id="contact-form_1" method="POST">
+			<p class="contact-form__title">Сделать заявку</p>
+			<p class="contact-form__description"></p>
+<!-- ИМЯ -->
+		<div class="contact-form__input-wrapper">
+			<input type="text" id="name" name="name" class="contact-form__input contact-form__input_name"
+				placeholder="Введите ваше имя">
+			<div class="contact-form__error contact-form__error_name"></div>
+		</div>
+<!-- ТЕЛЕФОН -->
+		<div class="contact-form__input-wrapper">
+			<input type="text" id="tel" name="tel" class="contact-form__input contact-form__input_tel"
+				placeholder="Введите ваш телефон">
+			<div class="contact-form__error contact-form__error_tel"></div>
+		</div>
+<!-- ПОЧТА -->
+		<div class="contact-form__input-wrapper"> 
+			<input type="email" id="email" name="email" class="contact-form__input contact-form__input_email"
+				placeholder="Введите ваш email">
+			<div class="contact-form__error contact-form__error_email"></div>
+		</div>
+<!-- СООБЩЕНИЕ -->
+		<div class="contact-form__input-wrapper">		
+			<textarea id="mess" name="mess" class="contact-form__input contact-form__text"
+				placeholder="Введите ваше сообщение"></textarea>
+			<div class="contact-form__error contact-form__error_text"></div>
+		</div>
+<!-- БРАУЗЕР И ДРУГИЕ СВОЙСТВА ПОЛЬЗОВАТЕЛЯ -->
+        <div class="contact-form__input-wrapper">		
+			<input type="hidden" id="ip" name="ip" />
+			<input type="hidden" id="location" name="location" />
+			<input type="hidden" id="city" name="city" />
+			<input type="hidden" id="region" name="region" />
+			<input type="hidden" id="hostname" name="hostname" />
+			<input type="hidden" id="brauser" name="brauser" />
+			<input type="hidden" id="version" name="version" />
+			<input type="hidden" id="os" name="os" />
+		</div>	
+<!-- ДАТА, ВРЕМЯ -->
+		<div class="contact-form__input-wrapper">		
+			<input type="hidden" id="start_time" name="start_time" action="javascript:date_time()" />
+			<input type="hidden" id="send_time" name="send_time" action="javascript:date_time()" />
+			<input type="hidden" id="unix_time" name="unix_time" />
+		</div>
+			<input type="submit" name="submit" class="btn_modal" value="ОТПРАВИТЬ">
+			<input type="hidden" name="formData" value="Отправка заявки с хэдера сайта">
+		</form>
+	</div>
 </div>
 
 <!-- annotation -->
@@ -572,6 +635,16 @@
         </ul>
     </footer>
 </div>
+
+<?php
+// Соединяемся с базой данных
+require_once 'blocks/date_base.php';
+?>
+
+<script src="js/remodal.min.js"></script>
+<script src="/mail/js/mail.js"></script>
+<!--<script src="js/script.js"></script>-->
+<script src="/mail/js/browser.js"></script>
 
 </body>
 </html>

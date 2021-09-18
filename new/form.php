@@ -17,7 +17,7 @@
 <!----> 
 <div class="form-wrapper"> 
 	<form class="contact-form" id="contact-form_1" method="POST"> <!-- action="php/mysql_form_insert.php" class="ajaxform"-->
-		<p class="contact-form__title">Заказать услугу</p>
+		<p class="contact-form__title">Заказать рекламу</p>
 		<p class="contact-form__description"></p>
 <!-- ИМЯ -->
 		<div class="contact-form__input-wrapper">

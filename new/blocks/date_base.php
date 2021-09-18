@@ -10,5 +10,5 @@ mysqli_set_charset($db, "utf8") or die("Не могу подключить arte0
 
 //$db = new mysqli($hostname, $username, $password, $database);
 if ($db->connect_error) die($db->connect_error);
-//echo "OK";
+echo "OK";
 ?>

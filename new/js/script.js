@@ -1,6 +1,10 @@
-(function ($) {
-	$(".contact-form").submit(function (event) {
-		event.preventDefault();
+$(document).ready(function () {
+    $("form").submit(function () {
+        // Получение ID формы
+        var formID = $(this).attr('id');
+        // Добавление решётки к имени ID
+        var formNm = $('#' + formID);
+		
 		let form = $('#' + $(this).attr('id'))[0];
 
 		// Сохраняем в переменные дивы, в которые будем выводить текст ошибки
@@ -15,87 +19,34 @@
 		let formDescription = $(this).find('.contact-form__description');
 
 		let fd = new FormData(form);
-		$.ajax({
-			url: "/mail/php/mail.php",
-			type: "POST",
-			data: fd,
-			processData: false,
-			contentType: false,
-			success: function success(res) {
-				console.log(res);
-				let respond = $.parseJSON(res);
-				
-				if (respond.name) {
-					inpNameError.text(respond.name);
-				} else {
-					inpNameError.text('');
-				}
-
-				if (respond.tel) {
-					inpTelError.text(respond.tel);
-				} else {
-					inpTelError.text('');
-				}
-
-				if (respond.email) {
-					inpEmailError.text(respond.email);
-				} else {
-					inpEmailError.text('');
-				}
-
-				if (respond.mess) {
-					inpTextError.text(respond.mess);
-				} else {
-					inpTextError.text('');
-				}
-/*				
-				if (respond.file) {
-					inpFileError.text(respond.file);
-				} else {
-					inpFileError.text('');
-				}
-
-				if (respond.agreement) {
-					inpAgreementError.text(respond.agreement);
-				} else {
-					inpAgreementError.text('');
-				}
-*/
-				if (respond.attantion) {
-					formDescription.text(respond.attantion).css('color', '#e84a66').fadeIn();
-				} else {
-					formDescription.text('');
-				}
-/*
-				if (respond.success) {
-					formDescription.text(respond.success).fadeIn();
-					setTimeout(() => {
-						formDescription.fadeOut("slow");
-					}, 4000);
-					setTimeout(() => {
-						formDescription.text('');
-					}, 5000);
-				}
-*/
-				if (respond.success) {
-					$.ajax({
+		
+        $.ajax({
+            type: "POST",
+            url: 'mail.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                // Вывод текста результата отправки
+                
+				$.ajax({
 						url: "php/mysql_form_insert.php",
 						type: "POST",
 						data: fd,
 						processData: false,
 						contentType: false,
-						success: function success(res) {
+						success: function (data) {
+							$(formNm).html(data);
 						},
 					});
-				}
-
-				if (respond.success) {
-					window.location.replace("/thank-you-page.php?status=success"); 
-				}
-			},
-		});
-	});
-}(jQuery));
+//				$(formNm).html(data);	
+				},
+            error: function (jqXHR, text, error) {
+                // Вывод текста ошибки отправки
+                $(formNm).html(error);         
+            }
+        });
+        return false;
+    });
+});
 
 // ЭТО ФУНКЦИИ ВВОДА ДАТЫ    
     /* функция добавления ведущих нулей */
@@ -164,25 +115,3 @@ $.get("https://ipinfo.io", function (response) {
 		document.getElementById('city').value = response.city;
 		document.getElementById('region').value = response.region;
 	}, "jsonp");
-
-/*
-// PRIMER
-$.ajax({
-    url: 'news.php',
-    method: 'POST',
-    dataType: 'JSON',
-    data:{textnews:'naserver'},
-    success: function(answer){
-        $("#novosti").html(answer.textnews);
-        $.ajax({
-            url: 'success.php',
-            method: 'POST',
-            dataType: 'JSON',
-            data:{asd:'qwe'},
-            success: function(ans){
-                $("#novosti2").html(ans.asd);
-            }
-        });
-    }
-});
-*/
