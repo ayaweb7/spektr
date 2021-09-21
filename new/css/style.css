@@ -16,6 +16,7 @@
     background: rgba(251, 251, 251, 0.2);
     padding: 30px;
     border-radius: 5px;
+	
 }
 
 .contact-form {
@@ -26,6 +27,7 @@
     padding: 0 30px 30px;
     box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
     border-radius: 2px;
+	
 }
 
 .contact-form__title {

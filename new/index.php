@@ -62,7 +62,7 @@
 			<li><a href="#doing" class="nav-link px-2 link-secondary">Что я делаю</a></li>
             <li><a href="#pricing" class="nav-link px-2 link-dark">Тарифы</a></li>
 			<li><a href="#stages" class="nav-link px-2 link-dark">Этапы работы</a></li>
-			<li><a href="bid.php" style="color: white;">.</a></li>
+			<li><a href="admin/bid.php" style="color: white;">.</a></li>
         </ul>
 
         <div class="col-md-3 text-end">
@@ -616,7 +616,7 @@
 
 <?php
 // Соединяемся с базой данных
-require_once 'blocks/date_base.php';
+//require_once 'blocks/date_base.php';
 ?>
 
 <script src="js/remodal.min.js"></script>

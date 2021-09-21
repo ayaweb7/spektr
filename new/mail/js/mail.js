@@ -154,10 +154,10 @@ $(function() {
 
 // Location
 $.get("https://ipinfo.io", function (response) { 
-		$("#ip").html("IP: " + response.ip); 
-		$("#address").html("Location: " + response.region + ", City: " + response.city); 
-		$("#details").html(JSON.stringify(response, null, 4)); 
-		console.log(response);
+//		$("#ip").html("IP: " + response.ip); 
+//		$("#address").html("Location: " + response.region + ", City: " + response.city); 
+//		$("#details").html(JSON.stringify(response, null, 4)); 
+//		console.log(response);
 		document.getElementById('ip').value = response.ip;
 		document.getElementById('location').value = response.loc;
 		document.getElementById('hostname').value = response.hostname;
