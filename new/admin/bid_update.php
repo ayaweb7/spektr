@@ -65,14 +65,16 @@ $myrow = mysqli_fetch_array($result);
 							<td class='id'><a href='form_bid_update.php?id=%s'>%s</a></td>
 							<td class='name_bid'>%s</td>
 							<td class='tel_bid'>%s / %s</td>
-							<td class='mess_bid'>%s</td>
+							<td class='mess_bid'>%s.<br>%s<br>%s<br>(%s; %s руб.)</td>
 							<td class='time_bid'>%s, %s, %s</td>
 							<td class='host_bid'>%s</td>
 							<td class='city_bid'>%s, %s</td>
 							<td class='loc_bid'>%s</td>
 							<td class='browser_bid'>%s, %s, %s</td>
-						</tr>  ",$myrow['id'], $myrow['id'], $myrow['name'], $myrow['tel'], $myrow['email'], $myrow['mess'], $myrow['start_time'],
-						$myrow['send_time'], $myrow['unix_time'], $myrow['ip'], $myrow['city'], $myrow['region'], $myrow['location'], $myrow['brauser'], $myrow['version'], $myrow['os']);
+						</tr>  ",$myrow['id'], $myrow['id'], $myrow['name'], $myrow['tel'], $myrow['email'],
+						$myrow['mess'], $myrow['working'], $myrow['effect'], $myrow['work_time'], $myrow['amount'],
+						$myrow['start_time'], $myrow['send_time'], $myrow['unix_time'], $myrow['ip'], $myrow['city'],
+						$myrow['region'], $myrow['location'], $myrow['brauser'], $myrow['version'], $myrow['os']);
 				
 				$even=!$even;
 			}

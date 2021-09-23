@@ -120,7 +120,7 @@
         var minutes = zero_first_format(current_datetime.getMinutes());
         var seconds = zero_first_format(current_datetime.getSeconds());
 
-        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+        return year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
     }
 
     /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */

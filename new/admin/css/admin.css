@@ -126,14 +126,14 @@ caption {
     }
 	
 #inventory .mess_bid {
-    width: 27%;
+    width: 30%;
 	text-align: left;
 	font-style: italic;
 	color: #19910f;/* green */
     }
 	
 #inventory .time_bid {
-	width: 15%;
+	width: 12%;
 	text-align: right;
 	font-size: 0.8em;
     }

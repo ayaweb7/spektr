@@ -1,14 +1,13 @@
 <?php
-//header("Content-Type: text/html; charset=utf-8");
-include ("lock.php");  /*Пароль в админскую часть */
-include ("blocks/header_adm.php");
+//Пароль в админскую часть
+include ("lock.php");  /* */
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="UTF-8">
-	<title>Tables</title>
+	<title>Хостинг</title>
 	<link rel="stylesheet" href="css/admin.css">
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 </head>
@@ -19,35 +18,17 @@ include ("blocks/header_adm.php");
 
 <!-- Подключаем HEADER -->
 <?php
-
-
+include ("blocks/header_adm.php");
 ?>
-
-<!-- header -->
-<div class="container" id="header">
-	<div id='top'><a href='#header' title="Наверх страницы"><img src='img/buttonUpActive.png'/></a></div>
-</div>
 
 <!-- TABLE inventory -->
 <table id="inventory" width="99%" class="realty">
-                  
-	<colgroup> <!-- Задание ширины и стилей для колонок таблицы -->
-		<col id="id_bid" /> <!-- Задание ширины и стилей для одной из колонок таблицы -->
-		<col id="name_bid" />
-		<col id="tel_bid" />
-		<col id="mess_bid" />
-		<col id="time_bid" />
-		<col id="host_bid" />
-		<col id="city_bid" />
-		<col id="loc_bid" />
-		<col id="browser_bid" />
-	</colgroup>
                   
 	<tr class="alt"> <!-- Строка таблицы -->
 		<th scope="col">ID</th> <!-- Заголовочная ячейка таблицы -->
 		<th scope="col">Имя клиента</th>
 		<th scope="col">Телефон / Email</th>
-		<th scope="col">Текст заявки</th>
+		<th scope="col">Текст заявки / Действия / Результат<br>(дата, сумма)</th>
 		<th scope="col">Дата входа, дата отправки, UNIX-time</th>
 		<th scope="col">IP</th>
 		<th scope="col">Город, регион </th>
@@ -87,14 +68,16 @@ $myrow = mysqli_fetch_array($result);
 							<td class='id_bid'>%s</a></td>
 							<td class='name_bid'>%s</td>
 							<td class='tel_bid'>%s / %s</td>
-							<td class='mess_bid'>%s</td>
+							<td class='mess_bid'>%s.<br>%s<br>%s<br>(%s; %s руб.)</td>
 							<td class='time_bid'>%s, %s, %s</td>
 							<td class='host_bid'>%s</td>
 							<td class='city_bid'>%s, %s</td>
 							<td class='loc_bid'>%s</td>
 							<td class='browser_bid'>%s, %s, %s</td>
-						</tr>  ",$myrow['id'], $myrow['name'], $myrow['tel'], $myrow['email'], $myrow['mess'], $myrow['start_time'], $myrow['send_time'],
-								$myrow['unix_time'], $myrow['ip'], $myrow['city'], $myrow['region'], $myrow['location'], $myrow['brauser'], $myrow['version'], $myrow['os']); 
+						</tr>  ",$myrow['id'], $myrow['name'], $myrow['tel'], $myrow['email'],
+								$myrow['mess'], $myrow['working'], $myrow['effect'], $myrow['work_time'], $myrow['amount'],
+								$myrow['start_time'], $myrow['send_time'], $myrow['unix_time'], $myrow['ip'], $myrow['city'],
+								$myrow['region'], $myrow['location'], $myrow['brauser'], $myrow['version'], $myrow['os']); 
 				
 				$even=!$even;
 			}
