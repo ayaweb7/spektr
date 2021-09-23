@@ -21,7 +21,7 @@
   color: #6c757d;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #565e64;
+  color: #212529; /*#565e64*/
 }
 
 .link-success {
@@ -60,10 +60,10 @@
 }
 
 .link-dark {
-  color: #212529;
+  color: #212529; /**/
 }
 .link-dark:hover, .link-dark:focus {
-  color: #1a1e21;
+  color: #1a1e21; /**/
 }
 
 .ratio {

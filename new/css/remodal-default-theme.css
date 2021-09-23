@@ -36,16 +36,16 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   color: #2b2e38;
-  background: #2f3847;
+  /*background: #2f3847;*/
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
 
 }
 .remodalBorder{
-    width: 89.2%;
-    border: 1px solid #e1e1e1;
-    padding: 4% 5% 0.8%;
+    /*width: 89.2%;
+    border: 1px solid #e1e1e1;*/
+    padding: 4% 5% 0.8%; 
 }
 
 .remodal.remodal-is-opening,

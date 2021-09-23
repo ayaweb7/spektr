@@ -58,10 +58,10 @@
         </div>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#advantage" class="nav-link px-2 link-dark">Преимущества</a></li>
+            <li><a href="#advantage" class="nav-link px-2 link-secondary">Преимущества</a></li>
 			<li><a href="#doing" class="nav-link px-2 link-secondary">Что я делаю</a></li>
-            <li><a href="#pricing" class="nav-link px-2 link-dark">Тарифы</a></li>
-			<li><a href="#stages" class="nav-link px-2 link-dark">Этапы работы</a></li>
+            <li><a href="#pricing" class="nav-link px-2 link-secondary">Тарифы</a></li>
+			<li><a href="#stages" class="nav-link px-2 link-secondary">Этапы работы</a></li>
 			<li><a href="admin/bid.php" style="color: white;">.</a></li>
         </ul>
 
@@ -139,7 +139,7 @@
         <div class="col-lg-6">
             <h2 class="display-6 fw-normal lh-sm mb-6">Настройка, ведение, аналитика Яндекс Директ и Google Ads от 5000 руб.</h2>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-				<button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="document.location='form.php'">Заказать рекламу</button>
+				<a class="btn btn-primary btn-lg px-4 me-md-2" target="_blank" href="form.php">Заказать рекламу</a>
             </div>
             <p class="lead">При заказе рекламы в Яндекс Директ - настройка в Google Ads со скидкой.</p>
 </div>
@@ -319,7 +319,9 @@
                 </div>
             </div>
             
-			<button type="button" class="w-100 btn btn-primary btn-lg" onclick="document.location='form.php'">Подать заявку</button>
+			<!--<button type="button" class="w-100 btn btn-primary btn-lg" onclick="document.location='form.php'">Подать заявку</button>-->
+			<!--<button type="button" class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</button>-->
+			<a class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</a><!--class="btn btn-primary"-->
             
         </div>
 
@@ -599,17 +601,15 @@
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3">
-				<a class="text-muted" href="https://vk.com/id465255382">
+				<a class="text-muted" href="https://vk.com/id465255382"  target="_blank">
 					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
 				</a>
 			</li>
             <li class="ms-3">
 				<a class="text-muted" href="https://t.me/NikArtMessageBot" target="_blank">
-
 					<img src="img/tlg.png" class="d-block mx-lg-auto img-fluid" alt="Написать в Телеграм" width="50" height="50">
 				</a>
 			</li>
-            <!--<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>-->
         </ul>
     </footer>
 </div>
