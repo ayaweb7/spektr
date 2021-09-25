@@ -204,3 +204,6 @@ The key's randomart image is:
 |o.oo o.o         |
 |..o.o==..        |
 +----[SHA256]-----+
+
+
+https://docs.google.com/spreadsheets/d/1fMiH1Lcp1-FAuhGOGoPX9dHaZ2qjxffDeJeeRPs0QJM/edit?usp=sharing
