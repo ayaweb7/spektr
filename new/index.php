@@ -62,14 +62,16 @@
     <symbol id="twitter" viewBox="0 0 16 16">
         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
     </symbol>
+	<symbol id="arrow-up-circle-fill" viewBox="0 0 16 16">
+		<path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+	</symbol>
 </svg>
-
 <!-- header -->
 <div class="container" id="header">
     <header class="test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="">
             <a href='#about-me' title="Обо мне">
-				<img src="img/NikArt_60.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
+				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
 			</a>
         </div>
 
@@ -87,7 +89,7 @@
 			<a class="btn btn-primary" href="#modal">Оставить заявку</a> <!-- class="mainButton"-->
 		</div>
 
-        <div id='top'><a href='#header' title="Наверх страницы"><img src='img/buttonUpActive.png'/></a></div>
+        <div id='top'><a href='#header' title="Наверх страницы"><svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg></a></div>
     </header>
 </div>
 
@@ -147,7 +149,7 @@
 </div>
 
 <!-- annotation -->
-<div class="container col-xxl-8 px-4 py-5">
+<div class="container col-xxl-8 px-4 py-4">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
             <img src="img/reklama.png" class="d-block mx-lg-auto img-fluid" alt="reklama" width="700" height="500" loading="lazy">
@@ -163,7 +165,7 @@
 </div>
 
 <!-- features -->
-<div class="container px-4 py-5" id="advantage">
+<div class="container px-4 py-4" id="advantage">
     <h2 class="pb-2 border-bottom text-center test-custom">Почему работа со мной выгодна вам <!--<i class="fas fa-camera"></i>--></h2>
     <div class="row row-cols-md-4 g-4 py-5"> <!-- row-cols-1 row-cols-sm-2 row-cols-lg-4  -->
         <div class="col d-flex align-items-start">
@@ -171,7 +173,7 @@
                 <img src="img/user.png">
             </div>
             <div>
-                <h4 class="fw-bold mb-0">Я работаю один</h4>
+                <h4 class="mb-0 fs-4">Я работаю один</h4>
                 <p>Не нужно платить тарифы и "кормить" агентство.</p>
             </div>
         </div>
@@ -180,7 +182,7 @@
                 <img src="img/email.png">
             </div>
             <div>
-                <h4 class="fw-bold mb-0">Обратная связь</h4>
+                <h4 class="mb-0 fs-4">Обратная связь</h4>
                 <p>Обратная связь по проекту ведётся только со мной.</p>
             </div>
         </div>
@@ -189,7 +191,7 @@
                 <img src="img/calendar.png">
             </div>
             <div>
-                <h4 class="fw-bold mb-0">Быстрые сроки</h4>
+                <h4 class="mb-0 fs-4">Быстрые сроки</h4>
                 <p>Сроки исполнения согласовываются с заказчиком и чётко соблюдаются.</p>
             </div>
         </div>
@@ -198,7 +200,7 @@
                 <img src="img/grid.png">
             </div>
             <div>
-                <h4 class="fw-bold mb-0">Аналитика бесплатно</h4>
+                <h4 class="mb-0 fs-4">Аналитика бесплатно</h4>
                 <p>Яндекс метрика и Гугл Аналитикс включены в тариф.</p>
             </div>
         </div>
@@ -206,46 +208,46 @@
 </div>
 
 <!-- doing -->
-<div class="container" id="doing">
+<div class="container px-4 py-4" id="doing">
 	<h2 class="pb-2 border-bottom text-center test-custom">Что я делаю</h2>
 	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 ---- row row-cols-1 row-cols-md-30-->
-		<div class="card mb-4 rounded-3 shadow-sm"><!--class="col p-4 d-flex flex-column position-static"-->
-			<h3 class="mb-0 text-center">Анализ конкурентов</h3>
+		<div class="cardd my-3 rounded-3 shadow-sm"><!--class="col p-4 d-flex flex-column position-static"-->
+			<h3 class="mb-0 text-center fs-4">Анализ конкурентов</h3>
 			<p class="card-text mb-auto text-center">Анализирую рекламу конкурентов, чтобы учесть их слабые места.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Сбор семантики</h3>
 			<p class="card-text mb-auto text-center">Собираю максимально полную семантику по вашей тематике.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Работа с семантикой</h3>
 			<p class="card-text mb-auto text-center">Чищу семантику от мусора, составляю список "минус" слов.</p>
 		</div>
 	</div>
 	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 -->
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Распределяю запросы</h3>
 			<p class="card-text mb-auto text-center">Делаю запросы по направлениям, категориям, определяюсь со структурой кампаний.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Составление объявлений</h3>
 			<p class="card-text mb-auto text-center">Составляю продающие объявления, продумываю быстрые ссылки, уточнения.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Настройка аналитики</h3>
 			<p class="card-text mb-auto text-center">Настраиваю цели в Яндекс Метрике, Google Analitics, чтобы анализировать обращения.</p>
 		</div>
 	</div>
 	<div class="row row-cols-1 row-cols-md-3 my-2 text-center"><!--  row-cols-sm-2 row-cols-lg-5 -->
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Запуск проекта</h3>
 			<p class="card-text mb-auto text-center">Запуск рекламных кампаний, оптимизация настроек, получение первых клиентов.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Ведение проекта</h3>
 			<p class="card-text mb-auto text-center">Ведение рекламных кампаний - оптимизация, аналитика, составление отчётов.</p>
 		</div>
-		<div class="card mb-4 rounded-3 shadow-sm">
+		<div class="cardd my-3 rounded-3 shadow-sm">
 			<h3 class="mb-0 text-center">Аналитика проекта</h3>
 			<p class="card-text mb-auto text-center">Формирование отчётов, подключение сквозной аналитики.</p>
 		</div>
@@ -253,9 +255,14 @@
 </div>
 
 <!-- about me -->
-<div class="container col-xxl-8 px-4 py-5" id="about-me">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+	</symbol>
+</svg>
+<div class="container col-xxl-8 px-4 py-4" id="about-me">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <h2 class="pb-2 border-bottom text-center test-custom">Обо мне</h2>
+		<h2 class="pb-2 border-bottom text-center test-custom">Обо мне</h2>
         <div class="col-lg-6">
             <div class="bd-example">
                 <p>Меня зовут Николай Артеев</p>
@@ -279,7 +286,6 @@
     </div>
 </div>
 
-
 <!-- pricing -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check" viewBox="0 0 16 16">
@@ -287,8 +293,8 @@
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
     </symbol>
 </svg>
-<div class="container py-3" id="pricing">
-    <h2 class="pb-2 border-bottom text-center test-custom">Тарифы</h2>
+<div class="container px-4 py-4" id="pricing">
+	<h2 class="pb-2 border-bottom text-center test-custom">Тарифы</h2>
 <!--<p class="fs-5 text-muted">Надо придумать какой-то текст.</p>-->
     
     <main>
@@ -322,7 +328,7 @@
             </div>
 
             <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3 text-white bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Премиум</h4>
                     </div>
@@ -335,11 +341,13 @@
                 </div>
             </div>
             
-			<!--<button type="button" class="w-100 btn btn-primary btn-lg" onclick="document.location='form.php'">Подать заявку</button>-->
-			<!--<button type="button" class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</button>-->
-			<a class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</a><!--class="btn btn-primary"-->
-            
-        </div>
+		</div>
+
+		<div class="row row-cols-1 row-cols-md-3 mb-3 text-center"><!--row-cols-3 row -->
+			<div class="col"></div>
+			<div class="col"><a class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</a></div>
+			<div class="col"></div>
+		</div>
 
         <h2 class="pb-2 border-bottom text-center test-custom">Сравнение планов</h2>
 
@@ -441,7 +449,7 @@
 </div>
 
 <!-- conducting -->
-<div class="container py-3" id="conducting">
+<div class="container px-4 py-4" id="conducting">
     <main>
         <h2 class="pb-2 border-bottom text-center test-custom">Ведение рекламных проектов от 5000 руб./мес.</h2>
         <ol class="list-group list-group-flush">
@@ -552,12 +560,12 @@
 		<path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
 	</symbol>
 </svg>
-<div class="container px-4 py-5" id="stages">
+<div class="container px-4 py-4" id="stages">
     <h2 class="pb-2 border-bottom text-center test-custom">Этапы совместной работы</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#text-indent-left"/></svg>
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#text-indent-left"/></svg><!---->
             </div>
             <h2>1. Заявка</h2>
             <p>Оставьте заявку на сайте или оставьте сообщение ВКонтакте или Telegram.<br>
@@ -566,7 +574,7 @@
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
                 <svg class="bi" width="1em" height="1em"><use xlink:href="#briefcase"/></svg>
-            </div>
+			</div>
             <h2>2. Проект</h2>
             <p>Обсудим проект, условия, объем работ. Заполните бриф.<br>
                 Оплата 50% перед началом работы.</p>
@@ -610,7 +618,7 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top test-custom-top">
         <div class="col-md-4 d-flex align-items-center">
             <a href='#about-me' title="Обо мне">
-				<img src="img/NikArt_60.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
+				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
 			</a>
             <span class="text-muted">   &copy; 2021 Nikolaj Arteev</span>
         </div>
@@ -630,10 +638,6 @@
     </footer>
 </div>
 
-<?php
-// Соединяемся с базой данных
-//require_once 'blocks/date_base.php';
-?>
 
 <script src="js/remodal.min.js"></script>
 <script src="/mail/js/mail.js"></script>
