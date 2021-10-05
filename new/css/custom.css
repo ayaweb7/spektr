@@ -25,6 +25,20 @@ ul .li-pointer:before {
     transform: translateY(-50%);
 }
 
+/* Мои стили для блока 'annotation' */
+.lead_p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.0;
+  color: #6c757d;
+}
+
+.display-7 {
+  font-size: calc(1.325rem + 1.0vw);
+  font-weight: 300;
+  line-height: 1.0;
+}
+
 /* Мои стили для блоков 'doing' */
 .cardd {
   position: relative;

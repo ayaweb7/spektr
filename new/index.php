@@ -71,7 +71,7 @@
     <header class="test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="">
             <a href='#about-me' title="Обо мне">
-				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
+				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="46" loading="lazy">
 			</a>
         </div>
 
@@ -96,10 +96,10 @@
 <!-- modal_form -->
 <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
 	<div class="remodalBorder">
-		<p><img src="img/NikArt_60.png"></p>
+		<!--<p><img src="img/logo.png" width="46" height="50"></p>-->
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 		<form class="contact-form" id="contact-form_1" method="POST">
-			<p class="contact-form__title">Сделать заявку</p>
+			<p class="contact-form__title"><img src="img/logo.png" width="30" height="30" class="me-3">Заявка на рекламу</p>
 			<p class="contact-form__description"></p>
 <!-- ИМЯ -->
 		<div class="contact-form__input-wrapper">
@@ -142,7 +142,7 @@
 			<input type="hidden" id="send_time" name="send_time" action="javascript:date_time()" />
 			<input type="hidden" id="unix_time" name="unix_time" />
 		</div>
-			<input type="submit" name="submit" class="btn_modal" value="ОТПРАВИТЬ">
+			<input type="submit" name="submit" class="btn_modal" value="ОТПРАВИТЬ ЗАЯВКУ">
 			<input type="hidden" name="formData" value="Отправка заявки с хэдера сайта">
 		</form>
 	</div>
@@ -155,11 +155,11 @@
             <img src="img/reklama.png" class="d-block mx-lg-auto img-fluid" alt="reklama" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h2 class="display-6 fw-normal lh-sm mb-6">Настройка, ведение, аналитика Яндекс Директ и Google Ads от 5000 руб.</h2>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-				<a class="btn btn-primary btn-lg px-4 me-md-2" target="_blank" href="form.php">Заказать рекламу</a>
+            <h2 class="display-7 fw-normal mb-6">Настройка, ведение, аналитика Яндекс Директ и Google Ads от 5000 руб.</h2><!-- lh-sm-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start py-3">
+				<a class="btn btn-primary btn-lg px-4 me-md-2" href="#modal">Заказать рекламу</a>
             </div>
-            <p class="lead">При заказе рекламы в Яндекс Директ - настройка в Google Ads со скидкой.</p>
+            <p class="lead_p fst-italic">При заказе рекламы в Яндекс Директ - настройка в Google Ads со скидкой.</p>
 </div>
     </div>
 </div>
@@ -562,53 +562,53 @@
 </svg>
 <div class="container px-4 py-4" id="stages">
     <h2 class="pb-2 border-bottom text-center test-custom">Этапы совместной работы</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#text-indent-left"/></svg><!---->
-            </div>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#text-indent-left"/></svg><!---->
+			</div>
             <h2>1. Заявка</h2>
-            <p>Оставьте заявку на сайте или оставьте сообщение ВКонтакте или Telegram.<br>
+            <p>Оставьте заявку на сайте или отправьте сообщение ВКонтакте или Telegram.<br>
                 Я свяжусь с вами в течение 30 минут.</p>
         </div>
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#briefcase"/></svg>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#briefcase"/></svg>
 			</div>
             <h2>2. Проект</h2>
-            <p>Обсудим проект, условия, объем работ. Заполните бриф.<br>
+            <p>Обсуждаем проект, условия, объем работ. Вместе заполняем бриф (анкету).<br>
                 Оплата 50% перед началом работы.</p>
         </div>
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#sliders"/></svg>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#sliders"/></svg>
             </div>
             <h2>3. Семантика</h2>
-            <p>Создание и согласование семантического ядра, текстов с клиентом.<br>
+            <p>Создаём и согласовываем семантическое ядро и тексты объявлений с клиентом.<br>
                 Настройка рекламных кампаний.</p>
         </div>
     </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#play-circle"/></svg>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#play-circle"/></svg>
             </div>
             <h2>4. Запуск</h2>
-            <p>Передача рекламы клиенту, оплата второй половины 50%<br>, запуск проекта.</p>
+            <p>Передача рекламы клиенту, оплата второй половины 50%.<br>Запуск проекта.</p>
         </div>
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#bar-chart-line"/></svg>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#bar-chart-line"/></svg>
             </div>
             <h2>5. Оптимизация</h2>
-            <p>Ведение рекламы в рамках тарифного плана 7-14 дней,<br> анализ первых клиентов.</p>
+            <p>Ведение рекламы в рамках тарифного плана 7-14 дней.<br>Анализ первых результатов.</p>
         </div>
         <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
-                <svg class="bi" width="1em" height="1em"><use xlink:href="#arrow-repeat"/></svg>
+                <svg class="bi" width="1.25em" height="1.25em"><use xlink:href="#arrow-repeat"/></svg>
             </div>
             <h2>6. Сопровождение</h2>
-            <p>Ведение проекта на платной основе<br> (по желанию клиента).</p>
+            <p>Ведение проекта на платной основе<br>(по желанию клиента).</p>
         </div>
     </div>
 </div>
@@ -617,7 +617,7 @@
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top test-custom-top">
         <div class="col-md-4 d-flex align-items-center">
-            <a href='#about-me' title="Обо мне">
+            <a href='#about-me' title="Обо мне" class="me-3">
 				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
 			</a>
             <span class="text-muted">   &copy; 2021 Nikolaj Arteev</span>
