@@ -4,7 +4,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
     <title>Николай Артеев</title>
 <!-- Bootstrap core CSS -->
     <link href="css/bootstrap-reboot.css" rel="stylesheet">
@@ -13,17 +12,23 @@
     <link href="css/bootstrap-utilities.css" rel="stylesheet">
     <link href="css/features.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/buttons.css" rel="stylesheet">
 	<link href="fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" href="css/remodal.css">
 	<link rel="stylesheet" href="css/remodal-default-theme.css">
+<!-- button callback -->
+	<link rel="stylesheet" href="css/callback/main.css" />
+	<!-- <link rel="stylesheet" href="css/callback/bootstrap.min.css" /> -->
+	<link rel="stylesheet" href="css/callback/magnific-popup.css" />
+	<!-- <link href="https://fonts.googleapis.com/css?family=Alice&amp;subset=cyrillic" rel="stylesheet"> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 	<script src="js/jquery-3.6.0.min.js"></script>
 <!-- Маска ввода номера телефона -->
 <!-- jQuery Mask Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    
+	
     <!--script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script-->
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 
@@ -66,6 +71,7 @@
 		<path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
 	</symbol>
 </svg>
+
 <!-- header -->
 <div class="container" id="header">
     <header class="test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -76,19 +82,71 @@
         </div>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#advantage" class="nav-link px-2 link-secondary">Преимущества</a></li>
+            <!--<li><a href="#advantage" class="nav-link px-2 link-secondary">Преимущества</a></li>-->
+			<li><a href="#about-me" class="nav-link px-2 link-secondary">Обо мне</a></li>
 			<li><a href="#doing" class="nav-link px-2 link-secondary">Что я делаю</a></li>
-            <li><a href="#pricing" class="nav-link px-2 link-secondary">Тарифы</a></li>
+            <!--<li><a href="#pricing" class="nav-link px-2 link-secondary">Тарифы</a></li>-->
 			<li><a href="#stages" class="nav-link px-2 link-secondary">Этапы работы</a></li>
-			<li><a href="admin/bid.php" style="color: white;">.</a></li>
+			<li><a href="admin/list.php" style="color: white;">.</a></li>
         </ul>
 
-        <div class="col-md-3 text-end">
-            <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
-            <!-- <button type="button" class="btn btn-primary" onclick="document.location='form2.php'">Связаться со мной</button> -->
-			<a class="btn btn-primary" href="#modal">Оставить заявку</a> <!-- class="mainButton"-->
-		</div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-2">
+				<a class="text-muted" href="https://vk.com/id465255382"  target="_blank">
+					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
+				</a>
+			</li>
+            <li class="ms-2">
+				<a class="text-muted" href="https://t.me/NikArtMessageBot" target="_blank">
+					<img src="img/tlg.png" class="d-block mx-lg-auto img-fluid" alt="Написать в Телеграм" width="50" height="50">
+				</a>
+			</li>
+			<li class="ms-3">
+				<a class="btn btn-primary" href="#modal">Оставить заявку</a>
+			</li>
+			<li class="ms-2">
+				<a class="btn btn-primary" href="tel:+79997914839">ТЕЛЕФОН</a>
+			</li><!---->
+        </ul>
+			
+<!-- Кнопка заказа звонка -->
+<div type="button" class="callback-bt">
+    <div class="text-call">
+        <i class="fa fa-phone"></i>
+        <span>Заказать<br>звонок</span>
+    </div>
+</div>
+            
+<!-- Кнопка обратной связи -->
+<div type="button" class="email-bt">
+    <div class="text-call">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>Обратная<br>связь</span>
+    </div>
+</div>
 
+<!-- Кнопка обратного звонка -->
+			
+<div class="text-center">
+	<a class="popup-modal button" href="#form">Обратный звонок</a>
+</div>
+
+<!-- Форма для кнопки обратного звонка -->
+<div id="magnific-modal" class="white-popup-block mfp-hide">
+	<div class="mfpcontentBorder">
+		<a class="popup-modal-dismiss" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+		<form id="form">
+            <p class="title">Оставьте ваш номер<br> и я перезвоню вам</p>
+            <input type="text" class="putName" name="name" placeholder="Ваше имя" required>
+            <input type="tel" class="putPhone" name="phone" placeholder="Ваш телефон" required>
+			<input type="datetime-local" class="putNumber" name="date" value="2017-12-09">
+            <input type="submit" name="submit" class="btn" value="ЗАКАЗАТЬ ЗВОНОК">
+            <input type="hidden" name="formData" value="Заявка с сайта">
+        </form>
+	</div>
+</div>
+		
+<!-- Кнопка Наверх страницы -->
         <div id='top'><a href='#header' title="Наверх страницы"><svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg></a></div>
     </header>
 </div>
@@ -96,7 +154,6 @@
 <!-- modal_form -->
 <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
 	<div class="remodalBorder">
-		<!--<p><img src="img/logo.png" width="46" height="50"></p>-->
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
 		<form class="contact-form" id="contact-form_1" method="POST">
 			<p class="contact-form__title"><img src="img/logo.png" width="30" height="30" class="me-3">Заявка на рекламу</p>
@@ -165,9 +222,9 @@
 </div>
 
 <!-- features -->
-<div class="container px-4 py-4" id="advantage">
-    <h2 class="pb-2 border-bottom text-center test-custom">Почему работа со мной выгодна вам <!--<i class="fas fa-camera"></i>--></h2>
-    <div class="row row-cols-md-4 g-4 py-5"> <!-- row-cols-1 row-cols-sm-2 row-cols-lg-4  -->
+<!--<div class="container px-4 py-4" id="advantage">
+    <h2 class="pb-2 border-bottom text-center test-custom">Почему работа со мной выгодна вам</h2>
+    <div class="row row-cols-md-4 g-4 py-5">
         <div class="col d-flex align-items-start">
             <div class="p-3">
                 <img src="img/user.png">
@@ -205,7 +262,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- doing -->
 <div class="container px-4 py-4" id="doing">
@@ -266,20 +323,23 @@
         <div class="col-lg-6">
             <div class="bd-example">
                 <p>Меня зовут Николай Артеев</p>
-                <p>Я начинающий интернет-маркетолог. Специализируюсь на платном трафике
-                    (контекстная реклама, таргетированная реклама, создание лендингов)
+                <p>Специализируюсь на платном трафике
+                    (контекстно-графическая и таргетированная реклама, создание лендингов)
                     и аналитике рекламы (работаю над ключевыми показателями рекламы,
                     вывожу рекламу в "плюс"</p>
                 <p>Основные услуги, которые я могу предоставить:</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item li-pointer">Настройка и ведение рекламы в Яндекс Директ и Google Ads</li>
+                    <li class="list-group-item li-pointer">Изучение спроса на услуги в регионе.</li>
+					<li class="list-group-item li-pointer">Анализ деятельности конкурентов по бизнесу.</li>
+					<li class="list-group-item li-pointer">Настройка и ведение рекламы в Яндекс Директ и Google Ads</li>
                     <li class="list-group-item li-pointer">Подключение аналитики в Яндекс метрике и Гугл Аналитикс</li>
-                    <li class="list-group-item li-pointer">Настройка целей в рекламных компаниях</li>
+                    <li class="list-group-item li-pointer">Настройка целей в рекламных кампаниях</li>
                     <li class="list-group-item li-pointer">Формирование отчётности</li>
                     <li class="list-group-item li-pointer">Ведение и аналитика рекламы</li>
                 </ul>
+				<a class="btn btn-primary my-4" href="#modal">Связаться со мной</a>
             </div>
-        </div>
+		</div>
         <div class="col-10 col-sm-8 col-lg-6">
             <img src="img/avatar.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
@@ -287,15 +347,15 @@
 </div>
 
 <!-- pricing -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<!--<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check" viewBox="0 0 16 16">
         <title>Check</title>
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
     </symbol>
-</svg>
-<div class="container px-4 py-4" id="pricing">
+</svg> -->
+<!--<div class="container px-4 py-4" id="pricing">
 	<h2 class="pb-2 border-bottom text-center test-custom">Тарифы</h2>
-<!--<p class="fs-5 text-muted">Надо придумать какой-то текст.</p>-->
+<p class="fs-5 text-muted">Надо придумать какой-то текст.</p>
     
     <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -343,7 +403,7 @@
             
 		</div>
 
-		<div class="row row-cols-1 row-cols-md-3 mb-3 text-center"><!--row-cols-3 row -->
+		<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 			<div class="col"></div>
 			<div class="col"><a class="w-100 btn btn-primary btn-lg" href="#modal">Подать заявку</a></div>
 			<div class="col"></div>
@@ -446,10 +506,10 @@
             </table>
         </div>
     </main>
-</div>
+</div> -->
 
 <!-- conducting -->
-<div class="container px-4 py-4" id="conducting">
+<!--<div class="container px-4 py-4" id="conducting">
     <main>
         <h2 class="pb-2 border-bottom text-center test-custom">Ведение рекламных проектов от 5000 руб./мес.</h2>
         <ol class="list-group list-group-flush">
@@ -472,7 +532,7 @@
         </ol>
 
     </main>
-</div>
+</div> -->
 
 <!-- stages -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -624,12 +684,12 @@
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
+            <li class="ms-2">
 				<a class="text-muted" href="https://vk.com/id465255382"  target="_blank">
 					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
 				</a>
 			</li>
-            <li class="ms-3">
+            <li class="ms-2">
 				<a class="text-muted" href="https://t.me/NikArtMessageBot" target="_blank">
 					<img src="img/tlg.png" class="d-block mx-lg-auto img-fluid" alt="Написать в Телеграм" width="50" height="50">
 				</a>
@@ -638,11 +698,15 @@
     </footer>
 </div>
 
-
-<script src="js/remodal.min.js"></script>
-<script src="/mail/js/mail.js"></script>
-<!--<script src="js/script.js"></script>-->
-<script src="/mail/js/browser.js"></script>
+<!-- Scripts -->
+<!-- button callback -->
+<script type="text/javascript" src="js/maskedinput.min.js"></script>			
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- modal_form -->
+<script type="text/javascript" src="js/remodal.min.js"></script>
+<script type="text/javascript" src="/mail/js/mail.js"></script>
+<script type="text/javascript" src="/mail/js/browser.js"></script>
 
 </body>
 </html>
