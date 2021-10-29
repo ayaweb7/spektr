@@ -4,19 +4,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Спектр</title>
-<!-- Bootstrap core CSS -->
-    <link href="css/bootstrap-reboot.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap-utilities.css" rel="stylesheet" type="text/css"/>
-	<link href="css/carousel.css" rel="stylesheet" type="text/css"/>
-    <link href="css/features.css" rel="stylesheet" type="text/css"/>
-	<link href="css/custom.css" rel="stylesheet" type="text/css"/>
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="css/remodal.css" rel="stylesheet" type="text/css"/>
-	<link href="css/remodal-default-theme.css" rel="stylesheet" type="text/css"/>
-	<link href="fontawesome/css/all.css" rel="stylesheet" type="text/css"/> <!--load all styles -->
+    <title><?php echo $title ?></title>
+	<link href="css/screen.css" type="text/css" rel="stylesheet" />
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 	
@@ -46,7 +35,7 @@
             <li><a href="#services" class="nav-link px-2 link-secondary">Наши услуги</a></li>
 			<li><a href="#sale" class="nav-link px-2 link-secondary">Горячие предложения</a></li>
 			<li><a href="#contact" class="nav-link px-2 link-secondary">Контакты</a></li>
-			<li><a href="#" style="color: white;">.</a></li>
+			<li><a href="admin/index.php" style="color: white;">.</a></li>
         </ul>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

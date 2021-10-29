@@ -44,12 +44,12 @@ function validate_quantity($field) {return ($field == "") ? "Не введено
 function validate_price($field) {return ($field == "") ? "Не введена цена товара.<br>" : "";}
 function validate_amount($field) {return ($field == "") ? "Не введена стоимость товара.<br>" : "";}
 
-if ($fail == "")
-{
-echo "Проверка формы прошла успешно:<br>
+if ($fail == "") {
+	echo "Проверка формы прошла успешно:<br>
 Дата: $date;<br> Магазин: $shop;<br> Категория: $gruppa;<br> Наименование: $name;<br> Характеристики: $characteristic;<br>
 Количество: $quantity $item;<br> Цена: $price руб.;<br> Стоимость: $amount руб.<br><br>";
-}
+} else {
+	echo "BAD";
 
 $query = "INSERT INTO shops (id, date, shop, gruppa, name, characteristic, quantity, item, price, amount)
 VALUES ('$id', '$date', '$shop', '$gruppa', '$name','$characteristic', '$quantity', '$item', '$price', '$amount')";
