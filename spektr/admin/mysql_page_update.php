@@ -43,14 +43,14 @@ function validate_title($field) {return ($field == "") ? "<p><em>! ! !</em> Не
 
 if ($fail == "") {
 	echo "<p>Проверка формы прошла успешно:</p><br>
-	<p>Новый заголовок страницы - TITLE: $title;<p><br><br>";
+	<p>Новый заголовок страницы - TITLE: <em>$title.</em><p><br><br>";
 	
-	$query = "UPDATE pages SET date='$date', marker='$marker', menu='$menu', title='$title', offer='$offer', extra='$extra', h1='$h1', h2='$h2',
+	$query = "UPDATE pages SET date='$date', title='$title', offer='$offer', extra='$extra', h1='$h1', h2='$h2',
 	keywords='$keywords', description='$description', word='$word', photo_alt='$photo_alt', photo_name='$photo_name' WHERE id='$id'";
 	
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {
-		echo "<p>Страница $page успешно отредактирована</p>";
+		echo "<p>Страница <em>$page</em> успешно отредактирована</p>";
 	} else {
 		  echo "<p>У нас проблемы ! ! ! --- НЕудачный ввод - Error: " . $query . "<br>" . mysqli_error($db) . "</p>";
 	}

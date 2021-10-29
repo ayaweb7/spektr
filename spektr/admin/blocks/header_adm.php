@@ -7,6 +7,7 @@ include ("lock.php");  /* */
 
 // Определение надписи для титула страницы
 if (isset($_GET['page'])) {$page = $_GET['page'];}
+//if (isset($_GET['good'])) {$good = $_GET['good'];}
 
 // Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
 $result = mysqli_query($db, "SELECT * FROM pages WHERE page='$page'");
@@ -44,23 +45,44 @@ if (isset($myrow['title'])) {$title = $myrow['title'];}
 						<li><a href="#" title="Свежие вверху">По внесённым <em>изменениям</em></a></li>
                     </ul>
 -->
+
+<!-- GOODS -->
 			<li>
-				<a class="pageLink" href="index.php" title="База заявок"><em>Продукция</em></a>
+				<a class="pageLink" href="index.php" title="Товары"><em>Товары и услуги</em></a>
 				<ul>
-					<li><a class="realty1Link" href="bid_update.php" title="Новый"><em>Новый</em> товар</a></li>
-					<li><a class="realty1Link" href="bid_update.php" title="Изменение"><em>Изменить</em> характеристики</a></li>
-					<li><a class="realty1Link" href="bid_drop.php" title="Удаление"><em>Удаление</em> товара</a></li>
+<?php
+/**/
+// Выборка в цикле всех существующих ссылок на страницы
+$result3 = mysqli_query($db, "SELECT * FROM pages WHERE marker='good' ORDER BY page");
+$myrow3 = mysqli_fetch_array($result3);
+$good_header='';
+
+	do
+	{
+		if ($myrow3['page'] != $good_header)
+		{
+			printf ("<li><a class='realty1Link' href='page.php?page=%s' title='%s'>%s</a></li>", $myrow3['page'], $myrow3['title'], $myrow3['menu']);
+
+// Окончание цикла групп
+		
+			$good_header = $myrow3['page'];
+		}
+	}
+	while ($myrow3 = mysqli_fetch_array($result3));
+	
+//Закрытие объектов с результатами и подключение к базе данных
+$result3->close(); // Категории, отсортированные по алфавиту
+?>
 				</ul>
 			</li>
-    			
+
+
+<!-- PAGES -->
 			<li>
 				<a class="pageLink" href="index.php" title="Страницы">Страницы <em>сайта</em></a>
 				<ul>
-					<!--<li><a class="realty1Link" href="page_insert.php" title="Добавление"><em>Новая </em>страница</a></li>-->
-					<!--<li><a class="realty1Link" href="page_update.php" title="Редактирование"><em>Редактирование </em>страниц</a></li>-->
-					<!--<li><a class="realty1Link" href="#" title="Удаление">Удаление <em>данных</em></a></li>-->
-					
-				<?php
+
+<?php
 /**/
 // Выборка в цикле всех существующих ссылок на страницы
 $result2 = mysqli_query($db, "SELECT * FROM pages WHERE marker='page' ORDER BY page");
@@ -81,9 +103,8 @@ $page_header='';
 	while ($myrow2 = mysqli_fetch_array($result2));
 	
 //Закрытие объектов с результатами и подключение к базе данных
-//$result2->close(); Категории, отсортированные по алфавиту
+$result2->close(); // Категории, отсортированные по алфавиту
 ?>
-				
 				</ul>
 			</li>
 <!--

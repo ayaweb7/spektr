@@ -43,7 +43,7 @@ $myrow = mysqli_fetch_array($result);
 </h1>
 <form name='form' action='mysql_page_update.php' method='post'>
 
-<!-- MARKER & MENU -->
+<!-- MARKER & MENU
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Маркер категории страницы - marker <em>*</em><br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
@@ -59,7 +59,7 @@ $myrow = mysqli_fetch_array($result);
 			</label>
 		</div>
 	</div>
-
+ -->
 
 <!-- TITLE & OFFER -->
 	<div class='flexSmall'>
