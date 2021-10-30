@@ -1,123 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?php 
+// Подключаем HEADER
+include ("blocks/header.php");
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo $title ?></title>
-	<link href="css/screen.css" type="text/css" rel="stylesheet" />
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
-	
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
+// Подключаем modal_form
+include ("blocks/modal.php");
+?>
 
-<!-- Yandex.Metrika counter -->
-<!-- /Yandex.Metrika counter -->
-
-</head>
-
-<body>
-
-<!--  -->
-<!-- header -->
-<div class="container" id="header">
-    <header class="test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="">
-            <a href='#about_us' title="О нас">
-				<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" alt="about_us" width="70" height="70" loading="lazy">
-			</a>
-        </div>
-
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#about_us" class="nav-link px-2 link-secondary">О нас</a></li>
-			<li><a href="#objects" class="nav-link px-2 link-secondary">Объекты</a></li>
-            <li><a href="#services" class="nav-link px-2 link-secondary">Наши услуги</a></li>
-			<li><a href="#sale" class="nav-link px-2 link-secondary">Горячие предложения</a></li>
-			<li><a href="#contact" class="nav-link px-2 link-secondary">Контакты</a></li>
-			<li><a href="admin/index.php" style="color: white;">.</a></li>
-        </ul>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-2">
-				<a class="text-muted" href="#"  target="_blank">
-					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
-				</a>
-			</li>
-            <li class="ms-2">
-				<a class="text-muted" href="#" target="_blank">
-					<img src="img/tlg.png" class="d-block mx-lg-auto img-fluid" alt="Написать в Телеграм" width="50" height="50">
-				</a>
-			</li>
-			<li class="ms-3">
-				<!--<a class="btn btn-primary" href="#modal">ТЕЛЕФОН</a>-->
-				<a class="btn btn-primary" href="tel:+79997914839">ТЕЛЕФОН</a><!---->
-				<!--<a href="tel:+78142332211">+7(814)-233-22-11</a>-->
-				<!--<a href="tel:+7 (8142) 33 22 11">Позвоните нам</a>-->
-			</li>
-        </ul>
-			
-            
-		
-
-        <div id='top'><a href='#header' title="Наверх страницы"><svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg></a></div>
-    </header>
-</div>
-
-<!-- modal_form -->
-<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
-	<div class="remodalBorder">
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="contact-form" id="contact-form_1" method="POST">
-			<p class="contact-form__title"><img src="img/logo.jpg" width="30" height="30" class="me-3">Заявка на -></p>
-			<p class="contact-form__description"></p>
-<!-- ИМЯ -->
-			<div class="contact-form__input-wrapper">
-				<input type="text" id="name" name="name" class="contact-form__input contact-form__input_name"
-					placeholder="Введите ваше имя">
-				<div class="contact-form__error contact-form__error_name"></div>
-			</div>
-<!-- ТЕЛЕФОН -->
-			<div class="contact-form__input-wrapper">
-				<input type="text" id="tel" name="tel" class="contact-form__input contact-form__input_tel"
-					placeholder="Введите ваш телефон">
-				<div class="contact-form__error contact-form__error_tel"></div>
-			</div>
-<!-- ПОЧТА -->
-			<div class="contact-form__input-wrapper"> 
-				<input type="email" id="email" name="email" class="contact-form__input contact-form__input_email"
-					placeholder="Введите ваш email">
-				<div class="contact-form__error contact-form__error_email"></div>
-			</div>
-<!-- СООБЩЕНИЕ -->
-			<div class="contact-form__input-wrapper">		
-				<textarea id="mess" name="mess" class="contact-form__input contact-form__text"
-					placeholder="Введите ваше сообщение"></textarea>
-				<div class="contact-form__error contact-form__error_text"></div>
-			</div>
-
-			<input type="submit" name="submit" class="btn_modal" value="ОТПРАВИТЬ ЗАЯВКУ">
-			<input type="hidden" name="formData" value="Отправка заявки с хэдера сайта">
-		</form>
-	</div>
-</div>
 
 <!-- annotation -->
-<div class="container col-xxl-8 px-4 py-4">
+<div class="container px-4 py-4" style='background-color: #a1a1a1;'><!-- col-xxl-8 info-->
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        
+		<div class="col-10 col-sm-8 col-lg-6">
             <img src="img/objects/house.jpg" class="d-block mx-lg-auto img-fluid" alt="Сруб дома" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <p class="lead_p fst-italic">Очень хорошо подумать над предложением, например:</p>
-			<h2 class="display-7 fw-normal mb-6">Дома из цилиндрованного бревна (или бруса) для счастливой жизни</h2>
-			<p>И САМУЮ КРАСИВУЮ ФОТОГРАФИЮ</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start py-3">
-				<a class="btn btn-primary btn-lg px-4 me-md-2" href="#modal">Заявка</a>
+            <h1 class="display-7 fw-normal mb-6"><?php echo $myrow1['offer'] ?></h1>
+			<div class="d-grid gap-2 d-md-flex justify-content-md-start py-3">
+				<a class="btn btn-primary btn-lg px-4 me-md-2" href="#modal">Каталог</a>
             </div>
-            <p>Подумать какие плюшки ещё положить, например:</p>
-			<p class="lead_p fst-italic">Большие и не очень, для жизни круглый год или для летнего отдыха</p>
-</div>
+            <h2 class="lead_p fst-italic"><?php echo $myrow1['extra'] ?></h2>
+		</div>
     </div>
 </div>
 
@@ -177,7 +80,7 @@
 </div>
 
 <!-- about us -->
-<div class="container col-xxl-8 px-4 py-4" id="about_us">
+<div class="container px-4 py-4" id="about_us">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 		<h2 class="pb-2 border-bottom text-center test-custom">О нас - (слева или справа) фото а с другой стороны краткая информация о компании (история, услуги, команда, производственные помещения и т.д.)</h2>
         <div class="col-lg-6">
@@ -268,7 +171,7 @@
 </div>
 
 <!-- contact -->
-<div class="container col-xxl-8 px-4 py-4" id="contact">
+<div class="container px-4 py-4" id="contact">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 		<h2 class="pb-2 border-bottom text-center test-custom">Наши контакты (слева или справа) фото или карта где вас найти, а с другой стороны контактная информация (телефоны, адреса, email, Telegram, Watsup ...)</h2>
         <div class="col-lg-6">
@@ -289,35 +192,7 @@
     </div>
 </div>
 
-<!-- footer -->
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top test-custom-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href='#about_us' title="О нас" class="me-3">
-				<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
-			</a>
-            <span class="text-muted">   &copy; 2021 строительная компания "Спектр" </span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-2">
-				<a class="text-muted" href="#"  target="_blank">
-					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
-				</a>
-			</li>
-            <li class="ms-2">
-				<a class="text-muted" href="#" target="_blank">
-					<img src="img/tlg.png" class="d-block mx-lg-auto img-fluid" alt="Написать в Телеграм" width="50" height="50">
-				</a>
-			</li>
-        </ul>
-    </footer>
-</div>
-
-
-<script src="js/remodal.min.js"></script>
-<script src="/mail/js/mail.js"></script>
-<script src="/mail/js/browser.js"></script>
-
-</body>
-</html>
+<?php 
+// Подключаем FOOTER
+include ("blocks/footer.php");
+?>

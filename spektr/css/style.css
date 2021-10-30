@@ -1,10 +1,49 @@
-/*body {
-    font: 16px 'PT Sans',
-        sans-serif;
-    background: url("../img/bg-main.jpg") center top no-repeat;
-
+/* ************ */
+/*    TITLES    */
+/* ************ */
+h1 {
+	color: #402A1B;/* dark-brown */
+    font-weight: bold;
+	font-size: 2em;
+	/*margin: 1% 0;*/
 }
-*/
+
+h2 {
+	color: #986D4B;/* light-brown */
+    font-size: 1.3em;
+	font-style: italic;
+	/*margin: 1% 0 3% 0;*/
+}
+
+/* ********** */
+/*    INFO    */
+/* ********** */
+/**/
+.info {
+	margin: 1% 5%;
+	/*text-align: center;*/
+}
+
+.info h1 {
+	color: #402A1B;/* dark-brown */
+    font-weight: bold;
+	font-size: 2em;
+	/*margin: 1% 0;*/
+}
+
+/**/
+.info h2 {
+	color: #986D4B;/* light-brown */
+    font-size: 1.3em;
+	font-style: italic;
+	/*margin: 1% 0 3% 0;*/
+}
+
+/* ********** */
+/*    FORM    */
+/* ********** */
+
+
 .form-wrapper {
     box-sizing: border-box;
     width: 100%;
