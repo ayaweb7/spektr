@@ -45,55 +45,85 @@ $myrow1 = mysqli_fetch_array($result1);
 
 <!--  -->
 <!-- header -->
-<div id="header" class="container"><!---->
-    <header class="flexBig" style='background-color: yellow;'><!--test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom-->
-        <div class="flexTitle" style='background-color: green;'>
-			<div class="flexMiddle logo" style='background-color: #ccc;'><!---->
+<div id="header" class="container my-2"><!-- style='background-color: #a1a1a1;'-->
+    <header class="flexBig"><!-- style='background-color: yellow;' test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom-->
+        <div class="flexTitle"><!-- style='background-color: green;'-->
+			<div class="flexMiddle logo"><!-- style='background-color: #ccc;'-->
 				<a href='#about_us' title="О нас">
-					<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" alt="about_us" width="70" height="70" loading="lazy">
+					<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
 				</a>
 			</div>
 
-			<div class="flexMiddle menu" style='background-color: #eee;'><!---->
+			<div class="flexMiddle menu"><!-- style='background-color: #eee;'-->
 				<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="#about_us" class="nav-link px-2 link-secondary">О нас</a></li>
-					<li><a href="#objects" class="nav-link px-2 link-secondary">Объекты</a></li>
-					<li><a href="#services" class="nav-link px-2 link-secondary">Наши услуги</a></li>
-					<li><a href="#sale" class="nav-link px-2 link-secondary">Горячие предложения</a></li>
-					<li><a href="#contact" class="nav-link px-2 link-secondary">Контакты</a></li>
+					<li><a href="#about_us" class="nav-spektr px-2 link-secondary">О нас</a></li>
+					<li><a href="#objects" class="nav-spektr px-2 link-secondary">Услуги</a></li>
+					<li><a href="#services" class="nav-spektr px-2 link-secondary">Каталог</a></li>
+					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
+					<li><a href="#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
 					<li><a href="admin/index.php" style="color: white;">.</a></li>
 				</ul>
 			</div>
 
-			<div class="flexMiddle contact" style='background-color: #bbb;'><!---->
-				<div class="blockInput"><!---->
-					<div class="ms-2 align-middle blockButton" style='background-color: #a1a1a1;'>
+			<div class="flexTitle mobil"><!-- style='background-color: #bbb;'-->
+				<div class="ms-2 align-middle flexPhone"><!-- style='background-color: #a1a1a1;'-->
+					<div class="text-start">
 						<a class="" href="tel:+79115518191"><!--text-muted-->
-							<img src="img/tel.png" class="" alt="Телефон" width="30" height="30"><!--d-block mx-lg-auto img-fluid-->
+							<img src="img/tel.png" class="" title="Телефон" width="30" height="30"><!--d-block mx-lg-auto img-fluid-->
 						</a>
 					</div>
-					<div class="ms-2 align-middle blockButton" style='background-color: #b1d3e5;'>
-						<a class="" href="https://wa.me/79115518191" target="_blank"><!--text-muted  https://api.whatsapp.com/send/?phone=79115518191 -->
-							<img src="img/ws.png" class="" alt="WhatsApp" width="30" height="30"><!--d-block mx-lg-auto img-fluid-->
+					<!--
+					<div class="text-start">
+						<a class="" href="https://wa.me/79115518191" target="_blank">
+							<img src="img/ws.png" class="" title="WhatsApp" width="30" height="30">
 						</a>
 					</div>
+					-->
+							
+				</div>
+				<div class="ms-2 align-middle flexPhone fw-bold"><!---->
+					<div class="text-start">+7 (911) 551-81-91</h3></div>
+					<!--<div class="text-start">WhatsApp</div>-->
 				</div>
 			</div>
-			<div class="ms-2 flexMiddle tel" style='background-color: #c1c3a4;'><!-- align-middle-->
-						<!--<a class="btn btn-primary" href="#modal">ТЕЛЕФОН</a>-->
-				<p>+7 (911) 551-81-91</p>
-						<!--<a href="tel:+78142332211">+7(814)-233-22-11</a>-->
-						<!--<a href="tel:+7 (8142) 33 22 11">Позвоните нам</a>-->
-			</div>
+			<!--<div class="ms-2 flexMiddle tel" style='background-color: #c1c3a4;' align-middle>-->
+						<!--<a class="btn btn-primary" href="#modal">ТЕЛЕФОН</a>
+				<h3>+7 (911) 551-81-91<br>WhatsApp</h3>
+			</div>-->
 			
 
-		</div> <!--flexSmall -->
+		</div> <!--flexTitle -->
     </header>
 </div>
 
+<!-- Кнопка заказа звонка
+<div type="button" class="callback-bt">
+    <div class="text-call">
+		<a class="" href="tel:+79115518191">
+			<i class="fa fa-phone"></i>
+			<span>Сделать<br>звонок</span>
+		</a>
+    </div>
+</div>
+ -->            
+<!-- Кнопка обратной связи
+<div type="button" class="email-bt">
+    <div class="text-call">
+		<a class="" href="https://wa.me/79115518191" target="_blank">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<span>Письмо в<br>WhatsApp</span>
+		</a>
+    </div>
+</div>
+ -->
+<!-- Кнопка Наверх страницы -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-	<symbol id="home" viewBox="0 0 16 16">
-        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-    </symbol>
+	<symbol id="arrow-up-circle-fill" viewBox="0 0 16 16">
+		<path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+	</symbol>
 </svg>			
-			<!--<div id='top'><a href='#header' title="Наверх страницы"><svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#home"/></svg></a></div><!--#arrow-up-circle-fill-->
+<div type="button" id='top' class="top-bt">
+	<div class="text-call">
+		<a href='#header' title="Наверх страницы"><i class="fas fa-arrow-circle-up"></i></i></a>
+	</div>
+</div><!--<svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg>#arrow-up-circle-fill<!---->

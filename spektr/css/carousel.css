@@ -3,9 +3,9 @@
 /* Padding below the footer and lighter body text */
 
 #objects {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;  /*;*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /*color: #5a5a5a;  ;*/
 }
 
 
@@ -14,8 +14,9 @@
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
@@ -70,19 +71,29 @@
 }
 
 /* IMAGE CSS   */
-.house {
-background: url('../img/objects/house.jpg') no-repeat bottom, #777;
+.frame {
+background: url('../img/objects/frame.jpg') no-repeat bottom, #777;
 }
 
-.veranda {
-background: url('../img/objects/veranda.jpg') no-repeat bottom, #777;
+.fence {
+background: url('../img/objects/fence.jpg') no-repeat center, #777;
 }
 
-.bath {
-background: url('../img/objects/bath.jpg') no-repeat bottom, #777;
+.ladder {
+background: url('../img/objects/ladder.jpg') no-repeat bottom, #777;
 }
 
+.metal {
+background: url('../img/objects/metal.jpg') no-repeat center, #777;
+}
 
+.wood {
+background: url('../img/objects/wood.jpg') no-repeat bottom, #777;
+}
+
+.roof {
+background: url('../img/objects/roof.jpg') no-repeat center, #dee2e6;;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

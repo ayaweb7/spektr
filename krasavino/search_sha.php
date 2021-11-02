@@ -6,7 +6,7 @@ include ("blocks/header_admin.php");
 ?>
 
 <!--divBig-->
-<div id='divBig' class='flexBig' style='background-color: #ccc;'>flexBig<!--divBig - #ccc-->
+<div id='divBig' class='flexBig' style='background-color: #dee2e6;'>flexBig<!--divBig - #ccc-->
 	<div id='divTop' class='flexTitle' style='background-color: lightgreen;'>flexTitle<!--divTop - -->
 		<?php echo $myrow1['h1'] . " " . $myrow1['h2'] ?>
 	</div><!--divTop-->

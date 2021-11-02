@@ -19,9 +19,8 @@
 	<link rel="stylesheet" href="css/remodal-default-theme.css">
 <!-- button callback -->
 	<link rel="stylesheet" href="css/callback/main.css" />
-	<!-- <link rel="stylesheet" href="css/callback/bootstrap.min.css" /> -->
-	<link rel="stylesheet" href="css/callback/magnific-popup.css" />
-	<!-- <link href="https://fonts.googleapis.com/css?family=Alice&amp;subset=cyrillic" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/callback/magnific-popup.css" /><!--  -->
+	<link href="https://fonts.googleapis.com/css?family=Alice&amp;subset=cyrillic" rel="stylesheet"><!--  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 	<script src="js/jquery-3.6.0.min.js"></script>
@@ -29,7 +28,7 @@
 <!-- jQuery Mask Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 	
-    <!--script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script-->
+    <script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script--><!--
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 
 <!-- Yandex.Metrika counter -->
@@ -126,12 +125,12 @@
 </div>
 
 <!-- Кнопка обратного звонка -->
-			
+<!--		
 <div class="text-center">
 	<a class="popup-modal button" href="#form">Обратный звонок</a>
 </div>
-
-<!-- Форма для кнопки обратного звонка -->
+-->	
+<!-- Форма для кнопки обратного звонка
 <div id="magnific-modal" class="white-popup-block mfp-hide">
 	<div class="mfpcontentBorder">
 		<a class="popup-modal-dismiss" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -145,7 +144,7 @@
         </form>
 	</div>
 </div>
-		
+ -->		
 <!-- Кнопка Наверх страницы -->
         <div id='top'><a href='#header' title="Наверх страницы"><svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg></a></div>
     </header>

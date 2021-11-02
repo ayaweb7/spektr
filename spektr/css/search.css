@@ -31,8 +31,8 @@ label {float: left;}
 	flex-direction: column;
 /*    background-color: #ccc;#5e1da7;*/
 	align-items: center;/**/	
-	padding: 1% 1%;
-	margin: 0 1%;
+/*	padding: 1% 1%;*/
+/*	margin: 0 0%;*/
 	width: 100%;
 }
 
@@ -41,8 +41,8 @@ label {float: left;}
 	display: flex;
 	flex-direction: row;
 	justify-content: center;/**/
-	padding: 1% 1%;
-	margin: 0 1%;
+/*	padding: 1% 1%;*/
+/*	margin: 0 1%;*/
 	width: 100%;
 }
 
@@ -76,6 +76,7 @@ label {float: left;}
 	flex-direction: row;
 	/*justify-content: space-around;*/
 }
+
 /**/
 .blockInput span,
 .flexSmall span, 
@@ -92,6 +93,10 @@ label {float: left;}
 	justify-content: space-around;/**/
 	padding: 1% 1%;
 	margin: 0 1%;
+}
+
+.border-spektr {
+  border-bottom: 1px solid #986D4B; /* light-brown */
 }
 
 /*, #townHidden, #divShop, #town_hidden,*/
@@ -116,16 +121,25 @@ label {float: left;}
 	color: gray;/* gray */
 }
 
+.img-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 /* ************* */
 /*    BUTTONS    */
 /* ************* */
 
 /**/
 .logo {
+	display: flex;
 	width: 10%;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	margin: 0;
+	padding: 0;
 }
 
 .menu {
@@ -135,8 +149,8 @@ label {float: left;}
 	justify-content: center;
 }
 
-.contact {
-	width: 5%;
+.mobil {
+	width: 25%;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
@@ -149,3 +163,11 @@ label {float: left;}
 	font-weight: bold;
 }
 
+.flexPhone {/**/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;/**/
+	/*padding: 1% 1%;
+	margin: 0 1%;
+	border-bottom: 1px solid #19910f;*/
+}

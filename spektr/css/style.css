@@ -2,17 +2,70 @@
 /*    TITLES    */
 /* ************ */
 h1 {
-	color: #402A1B;/* dark-brown */
+	color: #6c757d; /*dark-gray*/ /* #402A1B - dark-brown */
+	/* background-color: #dee2e6; light-light-blue */
+	/* text-shadow: 1px 1px 2px black, 0 0 1em yellow; Параметры тени */
     font-weight: bold;
 	font-size: 2em;
+	
 	/*margin: 1% 0;*/
 }
 
 h2 {
-	color: #986D4B;/* light-brown */
+	color: #6c757d; /*dark-gray*/
+	text-shadow: 1px 1px black; /*text-shadow: 1px 1px 2px black; Параметры тени */
     font-size: 1.3em;
-	font-style: italic;
 	/*margin: 1% 0 3% 0;*/
+}
+
+h3 {
+	color: #6c757d; /*dark-gray*/
+	font-size: 1.2em;
+    font-weight: bold;
+}
+
+.services span {
+	color: #dee2e6; /* light-light-blue */
+	background-color: #6c757d; /*dark-gray*/
+	padding: 0 10px;
+	font-weight: normal;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
+
+.rubric span {
+	color: #dee2e6; /* light-light-blue */
+	font-weight: normal;
+}
+
+.color-dark {
+	color: #6c757d; /*dark-gray*/
+}
+
+.color-light {
+	color: #dee2e6; /* light-light-blue */
+}
+
+/* ********** */
+/*    MENU    */
+/* ********** */
+
+.nav-spektr {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #6c757d; /*dark-gray*/
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-spektr {
+    transition: none;
+  }
+}
+.nav-spektr:hover,
+.nav-spektr:focus,
+.nav-spektr:active {
+  color: #dee2e6; /* light-light-blue */
 }
 
 /* ********** */
