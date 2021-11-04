@@ -1,10 +1,10 @@
 ﻿<!-- footer -->
 <div class="container">
-    <footer class="flexBig color-dark">
+    <footer class="flexBig color-dark border-top">
         <div class="flexTitle"><!-- style='background-color: green;'-->
 			<div class="flexMiddle logo"><!-- style='background-color: #ccc;'-->
-				<a href='#about_us' title="О нас">
-					<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
+				<a href='#about' title="О нас">
+					<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
 				</a>
 			</div>
             <div class="flexMiddle">&copy; 2021 строительная компания "Спектр"</div>

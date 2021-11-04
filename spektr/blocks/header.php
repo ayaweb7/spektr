@@ -49,18 +49,18 @@ $myrow1 = mysqli_fetch_array($result1);
     <header class="flexBig"><!-- style='background-color: yellow;' test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom-->
         <div class="flexTitle"><!-- style='background-color: green;'-->
 			<div class="flexMiddle logo"><!-- style='background-color: #ccc;'-->
-				<a href='#about_us' title="О нас">
-					<img src="img/logo.jpg" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
+				<a href='#about' title="О нас">
+					<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
 				</a>
 			</div>
 
 			<div class="flexMiddle menu"><!-- style='background-color: #eee;'-->
 				<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="#about_us" class="nav-spektr px-2 link-secondary">О нас</a></li>
-					<li><a href="#objects" class="nav-spektr px-2 link-secondary">Услуги</a></li>
-					<li><a href="#services" class="nav-spektr px-2 link-secondary">Каталог</a></li>
-					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
+					<li><a href="#katalog" class="nav-spektr px-2 link-secondary">Каталог</a></li>
+					<li><a href="#services" class="nav-spektr px-2 link-secondary">Услуги</a></li>
+					<li><a href="#about" class="nav-spektr px-2 link-secondary">О компании</a></li>
 					<li><a href="#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
+					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
 					<li><a href="admin/index.php" style="color: white;">.</a></li>
 				</ul>
 			</div>

@@ -31,6 +31,7 @@ h3 {
 	font-weight: normal;
 	text-transform: uppercase;
 	border-radius: 5px;
+	opacity: .5;
 }
 
 .rubric span {
@@ -45,6 +46,19 @@ h3 {
 .color-light {
 	color: #dee2e6; /* light-light-blue */
 }
+
+/* ********** */
+/*     IMG    */
+/* ********** */
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+   .rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }
+
 
 /* ********** */
 /*    MENU    */

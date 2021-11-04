@@ -8,7 +8,7 @@ include ("blocks/modal.php");
 
 
 <!-- annotation -->
-<div class="container px-4 my-4"><!-- style='background-color: #a1a1a1;' col-xxl-8 info py-4  -->
+<div id="main" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;' col-xxl-8 info py-4  -->
     <div class="row flex-lg-row-reverse align-items-center g-3"><!-- py-5-->
         
 		<div class="col-10 col-sm-8 col-lg-6 img-center">
@@ -24,8 +24,8 @@ include ("blocks/modal.php");
     </div>
 </div>
 
-<!-- objects -->
-<div id="objects" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;' px-4 py-4  -->
+<!-- services -->
+<div id="services" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;' px-4 py-4  -->
 	<h1 class="pb-2 border-bottom text-center test-custom">Строительные услуги</h1><!--<span></span>-->
 	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
@@ -90,34 +90,42 @@ include ("blocks/modal.php");
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div><!-- myCarousel -->
+	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
 </div><!-- objects -->
 
 <!-- about us -->
-<div id="about_us" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<div id="about" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
     <div class="row flex-lg-row align-items-center g-3">
 		<h1 class="pb-2 border-bottom text-center test-custom">Строительная компания "Спектр"</h1>
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="img/objects/spektr.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-        </div>
+            <img src="img/objects/offer3.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" align="left">
+        </div><!---->
 		<div class="col-lg-6">
-            <div class="bd-example">
-                <h2>Компания СПЕКТР</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item li-pointer">Основана в:</li>
-					<li class="list-group-item li-pointer">Оказываем услуги по:</li>
-					<li class="list-group-item li-pointer">100 бригад, которые одновременно работают на 100 объектах</li>
-                    <li class="list-group-item li-pointer">Производство пиломатериала на ленточной пилораме фирмы (БМВ)</li>
-					<li class="list-group-item li-pointer">В наличии цикулярные (фрезерные, токарные, не знаю какие ещё) для изготовления плинтусов, балясин, вагонки и прочее.</li>
-					<li class="list-group-item li-pointer">Качество нашей продукции ...</li>
-					<li class="list-group-item li-pointer">Что-то ещё в чём вы уникальны для клиента</li>
-                </ul>
+			<div class="flexBig color-dark">
+				<h2 class="flexTitle">О компании</h2>
+                <div class="flexTitle">
+                    <div class="flexMiddle"><p></p>
+						<p>Строительная компания "Спектр" уже 5 лет ведёт строительство домов из бруса и бревна, осуществляет каркасное строительство.</p>
+						<p>В перечень строительных услуг входят также все виды кровельных работ, строительство фундамента; продажа, доставка и установка теплиц и парников; изготовление и монтаж лестниц, резка и установка стекла и зеркал; сварочные работы.</p>
+					</div>
+				</div>
+				<h2 class="flexTitle border-bottom">Преимущества сотрудничества</h2>
+				<div class="flexTitle">
+                    <div class="flexMiddle"><p></p>
+					<p>Наш опыт позволяет вести несколько объектов одновременно.</p>
+					<p>Основная часть пиломатериала который мы продаем собственного производства, поэтому мы можем обеспечить высокое качество по доступным ценам.</p>
+					<p>В зависимости от объема возможно предоставление индивидуальной скидки.</p>
+					<p>Предоставляем высокое качество сервиса в плане подбора, распиловки пиломатериала и листового материала по индивидуальным размерам</p>
+					<p>Оказываем услуги по доставке товаров и услуг.</p>
+					</div>
+				</div>
 			</div>
 		</div>
     </div>
 </div>
 
-<!-- services -->
-<div id="services" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<!-- katalog -->
+<div id="katalog" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
     <h1 class="pb-2 border-bottom text-center test-custom">Каталог услуг и стройматериалов</h1>
     <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
         
@@ -130,11 +138,11 @@ include ("blocks/modal.php");
         </div>
         
 		<div class="feature col">
-            <h3 class="lead_p text-center">Теплицы</h3>
+            <h3 class="lead_p text-center">Теплицы и парники</h3>
 			<div>
 				<img src="img/objects/greenhouse.jpg" class="d-block mx-lg-auto img-fluid" alt="Теплицы" width="264" height="191" loading="lazy">
 			</div>
-            <div class="mx-5 text-center fw-bolder color-dark"><p>Доставка и установка, Пленка: парниковая, армированная, укрывной материал</p></div>
+            <div class="mx-5 text-center fw-bolder color-dark"><p>Доставка и установка. Парниковая и армированная плёнка, укрывной материал</p></div>
         </div>
         
 		<div class="feature col">
@@ -142,7 +150,7 @@ include ("blocks/modal.php");
 			<div>
 				<img src="img/objects/glass.jpg" class="d-block mx-lg-auto img-fluid" alt="Нарезка стекла" width="264" height="191" loading="lazy">
 			</div>
-            <div class="mx-5 text-center fw-bolder color-dark"><p>Нарезка и установка любой формы и размеров</p></div>
+            <div class="mx-5 text-center fw-bolder color-dark"><p>Простое, матовое, рифлёное. Нарезка и установка любой формы и размеров</p></div>
         </div>
     
 	</div>
@@ -191,7 +199,7 @@ include ("blocks/modal.php");
     <div class="row flex-lg-row align-items-center g-3"><!--row flex-lg-row align-items-center g-5 py-5-->
 		<h1 class="pb-2 border-bottom text-center test-custom">Наши контакты</h1>
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="img/objects/spektr.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="img/objects/spektrum.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
 		<div class="col-lg-6">
             <div class="flexBig color-dark">
@@ -214,18 +222,14 @@ include ("blocks/modal.php");
 				</div>
 				<h2 class="flexTitle mt-3">Режим работы</h2>
 				<div class="flexTitle border-bottom">
-                    <div class="flexMiddle">Понедельник - Пятница:</div>
+                    <div class="flexMiddle">понедельник - пятница:</div>
 					<div class="flexMiddle">9:00 - 18:00</div>
 				</div>
 				<div class="flexTitle border-bottom">
-					<div class="flexMiddle">Суббота</div>
+					<div class="flexMiddle">суббота, воскресенье</div>
 					<div class="flexMiddle">9:00 - 15:00</div>
 				</div>
-				<div class="flexTitle border-bottom">
-					<div class="flexMiddle">Воскресенье</div>
-					<div class="flexMiddle">выходной</div>
-				</div>
-            </div>
+			</div>
 			<a class="btn btn-primary my-4" href="#modal">Сделать заявку</a>
 		</div>
     </div>

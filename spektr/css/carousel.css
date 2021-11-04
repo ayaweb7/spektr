@@ -72,27 +72,27 @@
 
 /* IMAGE CSS   */
 .frame {
-background: url('../img/objects/frame.jpg') no-repeat bottom, #777;
+background: url('../img/objects/frame.jpg') no-repeat center, #dee2e6;
 }
 
 .fence {
-background: url('../img/objects/fence.jpg') no-repeat center, #777;
+background: url('../img/objects/fence.jpg') no-repeat center, #dee2e6;
 }
 
 .ladder {
-background: url('../img/objects/ladder.jpg') no-repeat bottom, #777;
+background: url('../img/objects/ladder.jpg') no-repeat bottom, #dee2e6;
 }
 
 .metal {
-background: url('../img/objects/metal.jpg') no-repeat center, #777;
+background: url('../img/objects/metal.jpg') no-repeat center, #dee2e6;
 }
 
 .wood {
-background: url('../img/objects/wood.jpg') no-repeat bottom, #777;
+background: url('../img/objects/wood.jpg') no-repeat bottom, #dee2e6;
 }
 
 .roof {
-background: url('../img/objects/roof.jpg') no-repeat center, #dee2e6;;
+background: url('../img/objects/roof.jpg') no-repeat center, #dee2e6;
 }
 
 /* RESPONSIVE CSS
