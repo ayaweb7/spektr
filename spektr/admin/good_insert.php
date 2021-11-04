@@ -3,15 +3,26 @@
 <!-- GOOD & CATEGORY -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
-			<label>Наименование товара или услуги - good <em>*</em><br>
-				<input type="text" name="good" id="good" size="80" value="" />
+			<label>Маркер категории страницы - marker <em>*</em><br>
+				<label><input type="radio" name="marker" value="good" checked="checked">Товары</label><br>
+				<label><input type="radio" name="marker" value="service">Услуги</label><br>
 			</label>
 		</div>
 		<div class='blockInput'>
 			<label>Категория - category <em>*</em><br>
-				<input type="text" name="category" id="category" size="50" value="" />
+				<select name='category' size='3'>
+					<option selected>Пиломатериалы</option>
+					<option>Стройматериалы</option>
+					<option>Услуги</option>
+				</select>
 			</label>
 		</div>
+		<div class='blockInput'>
+			<label>Наименование товара или услуги - good <em>*</em><br>
+				<input type="text" name="good" id="good" size="80" value="" />
+			</label>
+		</div>
+		
 	</div>
 
 <!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
@@ -33,7 +44,12 @@
 		</div>
 		<div class='blockInput'>
 			<label>Единица измерения - item<br>
-				<input type="text" name="item" id="item" size="20" value="" />
+				<select name='item' size='4'>
+					<option selected>шт.</option>
+					<option>кг.</option>
+					<option>кв.м.</option>
+					<option>куб.м.</option>
+				</select>
 			</label>
 		</div>
 		<div class='blockInput'>
@@ -44,28 +60,28 @@
 	</div>
 
 
-<!-- DETAIL -->
+<!-- DETAIL
 	<div class='flexSmall'>
 		<label>Подробные характеристики товара - detail <br>
 			<input type="text" name="detail" id="detail" size="100" value="" />
 		</label>
 	</div>
+ -->
 
-
-<!-- PHOTO			
+<!-- PHOTO -->	
 	<div class='flexSmall'>
 		<div class='blockInput'>
-			<label>Подпись под фотографией - photo_alt <br>
-				<input type="text" name="photo_alt" id="photo_alt" size="50" value="" />
-			</label>
+			<label>Подробные характеристики товара - detail <br>
+			<input type="text" name="detail" id="detail" size="100" value="" />
+		</label>
 		</div>
 		<div class='blockInput'>
 			<label>Имя файла с фотографией - photo_name <br>
-				<input type="text" name="photo_name" id="photo_name" size="50" value="" />
+				<input type="text" name="photo" id="photo" size="50" value="" />
 			</label>
 		</div>
 	</div>
- -->
+
 <!-- SUBMIT -->
 	<div class='flexSmall'>
 		<input class='inputSubmit' type="submit" name="submit" id="submit" value="Занести в базу" />

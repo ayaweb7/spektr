@@ -13,8 +13,8 @@ h1 {
 
 h2 {
 	color: #6c757d; /*dark-gray*/
-	text-shadow: 1px 1px black; /*text-shadow: 1px 1px 2px black; Параметры тени */
-    font-size: 1.3em;
+	/*text-shadow: 1px 1px black; text-shadow: 1px 1px 2px black; Параметры тени */
+    font-size: 1.4em;
 	/*margin: 1% 0 3% 0;*/
 }
 
@@ -36,7 +36,11 @@ h3 {
 
 .rubric span {
 	color: #dee2e6; /* light-light-blue */
+	background-color: #6c757d; /*dark-gray*/
+	padding: 0 10px;
 	font-weight: normal;
+	border-radius: 5px;
+	opacity: .5;
 }
 
 .color-dark {

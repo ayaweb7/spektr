@@ -2,9 +2,16 @@
 // Соединяемся с базой данных
 require_once 'blocks/date_base.php';
 
+// Определение надписи для титула страницы
+$page = 'index';
+if (isset($_GET['page'])) {$page = $_GET['page'];}
+
+
 // Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
-$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='index'");
+$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='$page'");
 $myrow1 = mysqli_fetch_array($result1);
+
+if (isset($myrow1['title'])) {$title = $myrow1['title'];}
 
 // Определение надписи для титула страницы
 //$title = $myrow1['title'];
@@ -24,7 +31,7 @@ $myrow1 = mysqli_fetch_array($result1);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><?php echo $myrow1['title'] ?></title>
+	<title><?php echo $title; ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="<?php echo $myrow1['keywords'] ?>">	
@@ -56,10 +63,11 @@ $myrow1 = mysqli_fetch_array($result1);
 
 			<div class="flexMiddle menu"><!-- style='background-color: #eee;'-->
 				<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="#katalog" class="nav-spektr px-2 link-secondary">Каталог</a></li>
-					<li><a href="#services" class="nav-spektr px-2 link-secondary">Услуги</a></li>
-					<li><a href="#about" class="nav-spektr px-2 link-secondary">О компании</a></li>
-					<li><a href="#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
+					<li><a href="index.php" class="nav-spektr px-2 link-secondary">Главная</a></li>
+					<li><a href="index.php#catalog" class="nav-spektr px-2 link-secondary">Каталог</a></li>
+					<li><a href="index.php#services" class="nav-spektr px-2 link-secondary">Услуги</a></li>
+					<li><a href="index.php#about" class="nav-spektr px-2 link-secondary">О компании</a></li>
+					<li><a href="index.php#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
 					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
 					<li><a href="admin/index.php" style="color: white;">.</a></li>
 				</ul>

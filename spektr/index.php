@@ -19,7 +19,7 @@ include ("blocks/modal.php");
 			<div class="d-grid gap-2 d-md-flex justify-content-md-start py-3">
 				<a class="btn btn-primary btn-lg px-4 me-md-2" href="#modal">Каталог</a>
             </div>
-            <h2 class="lead_p fst-italic"><?php echo $myrow1['extra'] ?></h2>
+            <h2 class="lead_p"><?php echo $myrow1['extra'] ?></h2>
 		</div>
     </div>
 </div>
@@ -41,7 +41,6 @@ include ("blocks/modal.php");
 					<div class="carousel-caption text-start">
 						<h1 class="services"><span>Строительство</span></h1>
 						<h2 class="rubric"><span>Срубы для дома и бани, из бревна и бруса, хозяйственные постройки</span></h2>
-						<p><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
 					</div>
 				</div>
 			</div>
@@ -52,7 +51,6 @@ include ("blocks/modal.php");
 					<div class="carousel-caption">
 						<h1 class="services"><span>Кровля</span></h1><!--<span></span>-->
 						<h2 class="rubric"><span>Монтаж стропильных систем любой сложности, утепление крыши и все виды кровельных материалов</span></h2>
-						<p><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +61,6 @@ include ("blocks/modal.php");
 					<div class="carousel-caption">
 						<h1 class="services"><span>Заборы</span></h1>
 						<h2 class="rubric"><span>Деревянный и металлический штакетник или профнастил, опоры из стальных труб или кирпича</span></h2>
-						<p><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
 					</div>
 				</div>
 			</div>
@@ -74,7 +71,6 @@ include ("blocks/modal.php");
 					<div class="carousel-caption text-end">
 						<h1 class="services"><span>Работы с металлом</span></h1>
 						<h2 class="rubric"><span>Печи, столбы, ограждения, лестницы, сварочные работы</span></h2>
-						<p><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
 					</div>
 				</div>
 			</div>
@@ -90,7 +86,7 @@ include ("blocks/modal.php");
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div><!-- myCarousel -->
-	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="#">Каталог услуг</a></p>
+	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог услуг</a></p>
 </div><!-- objects -->
 
 <!-- about us -->
@@ -124,8 +120,8 @@ include ("blocks/modal.php");
     </div>
 </div>
 
-<!-- katalog -->
-<div id="katalog" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<!-- catalog -->
+<div id="catalog" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
     <h1 class="pb-2 border-bottom text-center test-custom">Каталог услуг и стройматериалов</h1>
     <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
         
@@ -203,7 +199,7 @@ include ("blocks/modal.php");
         </div>
 		<div class="col-lg-6">
             <div class="flexBig color-dark">
-                <h2 class="flexTitle">Информация</h2>
+                <h3 class="flexTitle">Информация</h2>
                 <div class="flexTitle border-bottom">
                     <div class="flexMiddle">Адрес:</div>
 					<div class="flexMiddle">г.Коряжма, ул.Советская, 17 (цокольный этаж)</div>
@@ -213,14 +209,14 @@ include ("blocks/modal.php");
 					<div class="flexMiddle">911-551-81-91,<br>900-912-19-61,<br>921-075-26-56</div>
 				</div>
 				<div class="flexTitle border-bottom">
-					<div class="flexMiddle">Watsup:</div>
+					<div class="flexMiddle">WhatsApp:</div>
 					<div class="flexMiddle">911-551-81-91,<br>900-912-19-61</div>
                 </div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">E-mail:</div>
 					<div class="flexMiddle">vagin.sergey@mail.ru</div>
 				</div>
-				<h2 class="flexTitle mt-3">Режим работы</h2>
+				<h3 class="flexTitle mt-3">Режим работы</h2>
 				<div class="flexTitle border-bottom">
                     <div class="flexMiddle">понедельник - пятница:</div>
 					<div class="flexMiddle">9:00 - 18:00</div>
