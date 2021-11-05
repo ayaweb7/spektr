@@ -22,6 +22,7 @@ if (isset($_GET['good'])) {$good=$_GET['good'];}
 
 if (isset($_POST['id'])) {$id = $_POST['id'];}
 if (isset($_POST['date'])) {$date = $_POST['date'];}
+if (isset($_POST['marker'])) {$marker = $_POST['marker'];}
 if (isset($_POST['category'])) {$category = $_POST['category'];}
 if (isset($_POST['good'])) {$good = $_POST['good'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
@@ -30,6 +31,7 @@ if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
 if (isset($_POST['detail'])) {$detail = $_POST['detail'];}
 if (isset($_POST['item'])) {$item = $_POST['item'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
 
 $result = mysqli_query($db, "SELECT * FROM goods WHERE good='$good'");
 $myrow = mysqli_fetch_array($result);
@@ -43,27 +45,33 @@ $myrow = mysqli_fetch_array($result);
 <!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
-			<label>Ширина, мм. - width<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="width" id="width" size="20" value="<?php echo $myrow['width'] ?>" />
-			</label>
-		</div>
-		<div class='blockInput'>
-			<label>Толщина, мм. - height<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="height" id="height" size="20" value="<?php echo $myrow['height'] ?>" />
-			</label>
-		</div>
-		<div class='blockInput'>
-			<label>Длина, м. - lenght<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+			<label>Длина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
 				<input type="text" name="lenght" id="lenght" size="20" value="<?php echo $myrow['lenght'] ?>" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Единица измерения - item<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="item" id="item" size="20" value="<?php echo $myrow['item'] ?>" />
+			<label>Ширина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="width" id="width" size="20" value="<?php echo $myrow['width'] ?>" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Цена - price<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+			<label>Толщина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="height" id="height" size="20" value="<?php echo $myrow['height'] ?>" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Единица измерения<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<select name='item' size='5'>
+					<option selected>шт.</option>
+					<option>кг.</option>
+					<option>м.</option>
+					<option>кв.м.</option>
+					<option>куб.м.</option>
+				</select>
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Цена, руб.<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
 				<input type="text" name="price" id="price" size="20" value="<?php echo $myrow['price'] ?>" />
 			</label>
 		</div>
@@ -72,9 +80,22 @@ $myrow = mysqli_fetch_array($result);
 
 <!-- DETAIL -->
 	<div class='flexSmall'>
-		<label>Подробные характеристики товара - detail <br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-			<input type="text" name="detail" id="detail" size="100" value="<?php echo $myrow['detail'] ?>" />
-		</label>
+		<div class='blockInput'>
+			<label>Маркер категории страницы<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<label><input type="radio" name="marker" value="good" checked="checked">Товары</label><br>
+				<label><input type="radio" name="marker" value="service">Услуги</label><br>
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Подробные характеристики товара<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="detail" id="detail" size="80" value="<?php echo $myrow['detail'] ?>" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Имя файла с фотографией (английскими буквами)<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="photo" id="photo" size="30" value="<?php echo $myrow['photo'] ?>" />
+			</label>
+		</div>
 	</div>
 
 <!-- SUBMIT -->

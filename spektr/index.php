@@ -86,7 +86,7 @@ include ("blocks/modal.php");
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div><!-- myCarousel -->
-	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог услуг</a></p>
+	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог товаров и услуг</a></p>
 </div><!-- objects -->
 
 <!-- about us -->
@@ -112,7 +112,7 @@ include ("blocks/modal.php");
 					<p>Основная часть пиломатериала который мы продаем собственного производства, поэтому мы можем обеспечить высокое качество по доступным ценам.</p>
 					<p>В зависимости от объема возможно предоставление индивидуальной скидки.</p>
 					<p>Предоставляем высокое качество сервиса в плане подбора, распиловки пиломатериала и листового материала по индивидуальным размерам</p>
-					<p>Оказываем услуги по доставке товаров и услуг.</p>
+					<p>Оказываем услуги по доставке материалов до места строительства или ремонта.</p>
 					</div>
 				</div>
 			</div>
@@ -121,7 +121,7 @@ include ("blocks/modal.php");
 </div>
 
 <!-- catalog -->
-<div id="catalog" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<div id="good" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
     <h1 class="pb-2 border-bottom text-center test-custom">Каталог услуг и стройматериалов</h1>
     <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
         
@@ -176,6 +176,7 @@ include ("blocks/modal.php");
             <div class="mx-5 text-center fw-bolder color-dark"><p>Фанера, ДВП, ГКЛ, ОСП</p></div>
         </div>
     </div>
+	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог товаров и услуг</a></p>
 </div>
 
 <!-- sale

@@ -64,8 +64,9 @@ if (isset($myrow1['title'])) {$title = $myrow1['title'];}
 			<div class="flexMiddle menu"><!-- style='background-color: #eee;'-->
 				<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 					<li><a href="index.php" class="nav-spektr px-2 link-secondary">Главная</a></li>
-					<li><a href="index.php#catalog" class="nav-spektr px-2 link-secondary">Каталог</a></li>
+					<li><a href="catalog.php" class="nav-spektr px-2 link-secondary">Каталог</a></li>
 					<li><a href="index.php#services" class="nav-spektr px-2 link-secondary">Услуги</a></li>
+					<li><a href="index.php#good" class="nav-spektr px-2 link-secondary">Материалы</a></li>
 					<li><a href="index.php#about" class="nav-spektr px-2 link-secondary">О компании</a></li>
 					<li><a href="index.php#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
 					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->

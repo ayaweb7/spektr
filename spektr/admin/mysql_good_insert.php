@@ -41,7 +41,7 @@ function validate_category($field) {return ($field == "") ? "<p><em>! ! !</em> �
 
 if ($fail == "") {
 	echo "<p>Проверка формы прошла успешно:</p><br>
-<p>Название товара - GOOD: $good;<br> Категория товара - CATEGORY: $category.<p><br><br>";
+<p>Название товара: <em>$good;</em><br> Категория товара: <em>$category.</em><p><br><br>";
 
 
 
@@ -51,7 +51,7 @@ if ($fail == "") {
 	if ($result = mysqli_query($db, $query)) {
 		echo "Новый товар в базе";
 	} else {
-		  echo "У нас проблемы ! ! ! --- НЕудачный ввод - Error: " . $query . "<br>" . mysqli_error($db);
+		  echo "У нас проблемы ! ! ! --- НЕудачный ввод - Error: <em>" . $query . "<br></em>" . mysqli_error($db);
 	}
 
 } else {
