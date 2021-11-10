@@ -1,4 +1,12 @@
 <?php 
+// Соединяемся с базой данных
+require_once 'blocks/date_base.php';
+session_start();
+
+// Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
+$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='index'");
+$myrow1 = mysqli_fetch_array($result1);
+
 // Подключаем HEADER
 include ("blocks/header.php");
 
@@ -144,7 +152,7 @@ include ("blocks/modal.php");
 		<div class="feature col">
             <h3 class="lead_p text-center">Стекло и зеркала</h3>
 			<div>
-				<img src="img/objects/glass.jpg" class="d-block mx-lg-auto img-fluid" alt="Нарезка стекла" width="264" height="191" loading="lazy">
+				<img src="img/objects/glass5.jpg" class="d-block mx-lg-auto img-fluid" alt="Нарезка стекла" width="264" height="191" loading="lazy">
 			</div>
             <div class="mx-5 text-center fw-bolder color-dark"><p>Простое, матовое, рифлёное. Нарезка и установка любой формы и размеров</p></div>
         </div>

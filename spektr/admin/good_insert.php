@@ -20,10 +20,51 @@
 		</div>
 		<div class='blockInput'>
 			<label>Наименование товара или услуги <em>*</em><br>
-				<input type="text" name="good" id="good" size="80" value="" />
+				<input type="text" name="good" id="good" size="30" value="" />
 			</label>
 		</div>
-		
+		<div class='blockInput'>
+			<label>Имя файла с фотографией<br>(английскими буквами)<br>
+				<input type="text" name="photo" id="photo" size="30" value="" />
+			</label>
+		</div>
+	</div>
+
+<!-- DESCRIPTION -- KEYWORDS ---  -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>Краткое описание страницы для поисковых систем - description<br>
+				<textarea name="description" id="description" cols="70" rows="5">Купить ЧТО-ТО, строительные услуги в Коряжме</textarea>
+			</label>
+		</div>
+
+		<div class='blockInput'>
+			<label>Ключевые слова для поиска - keywords <br>
+				<textarea name="keywords" id="keywords" cols="70" rows="5">Купить ЧТО-ТО в Коряжме, ЧТО-ТО на заказ</textarea>
+			</label>
+		</div>
+	</div>
+
+<!-- P1 --- P2  -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>I - Первый абзац на странице - p1<br>
+				<textarea name="p1" id="p1" cols="70" rows="5"></textarea>
+			</label>
+		</div>
+
+		<div class='blockInput'>
+			<label>II - Второй абзац на странице - p2<br>
+				<textarea name="p2" id="p2" cols="70" rows="5"></textarea>
+			</label>
+		</div>
+	</div>
+
+<!-- P3 -->
+	<div class='flexSmall'>
+		<label>III - Третий абзац на странице - p3<br>
+			<textarea name="p3" id="p3" cols="100" rows="5"></textarea>
+		</label>
 	</div>
 
 <!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
@@ -39,7 +80,7 @@
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Толщина<br>
+			<label>Высота (толщина)<br>
 				<input type="text" name="height" id="height" size="20" value="" />
 			</label>
 		</div>
@@ -57,29 +98,6 @@
 		<div class='blockInput'>
 			<label>Цена, руб.<br>
 				<input type="text" name="price" id="price" size="20" value="" />
-			</label>
-		</div>
-	</div>
-
-
-<!-- DETAIL
-	<div class='flexSmall'>
-		<label>Подробные характеристики товара - detail <br>
-			<input type="text" name="detail" id="detail" size="100" value="" />
-		</label>
-	</div>
- -->
-
-<!-- PHOTO -->	
-	<div class='flexSmall'>
-		<div class='blockInput'>
-			<label>Подробные характеристики товара<br>
-			<input type="text" name="detail" id="detail" size="100" value="поясняющий комментарий (если необходимо)" />
-		</label>
-		</div>
-		<div class='blockInput'>
-			<label>Имя файла с фотографией (английскими буквами)<br>
-				<input type="text" name="photo" id="photo" size="50" value="" />
 			</label>
 		</div>
 	</div>

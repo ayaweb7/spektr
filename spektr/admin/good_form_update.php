@@ -25,13 +25,18 @@ if (isset($_POST['date'])) {$date = $_POST['date'];}
 if (isset($_POST['marker'])) {$marker = $_POST['marker'];}
 if (isset($_POST['category'])) {$category = $_POST['category'];}
 if (isset($_POST['good'])) {$good = $_POST['good'];}
+if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
+if (isset($_POST['description'])) {$description = $_POST['description'];}
+if (isset($_POST['keywords'])) {$keywords = $_POST['keywords'];}
+if (isset($_POST['p1'])) {$p1 = $_POST['p1'];}
+if (isset($_POST['p2'])) {$p2 = $_POST['p2'];}
+if (isset($_POST['p3'])) {$p3 = $_POST['p3'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['height'])) {$height = $_POST['height'];}
 if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
-if (isset($_POST['detail'])) {$detail = $_POST['detail'];}
 if (isset($_POST['item'])) {$item = $_POST['item'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
-if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
+
 
 $result = mysqli_query($db, "SELECT * FROM goods WHERE good='$good'");
 $myrow = mysqli_fetch_array($result);
@@ -41,6 +46,56 @@ $myrow = mysqli_fetch_array($result);
 	Вы собираетесь внести изменения в товар: <span><?php echo $myrow['good'] ?></span>
 </h1>
 <form name='form' action='mysql_good_update.php' method='post'>
+
+<!-- DESCRIPTION -- KEYWORDS ---  -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>Краткое описание страницы для поисковых систем - description<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<textarea name="description" id="description" cols="70" rows="5"><?php echo $myrow['description'] ?></textarea>
+			</label>
+		</div>
+
+		<div class='blockInput'>
+			<label>Ключевые слова для поиска - keywords<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<textarea name="keywords" id="keywords" cols="70" rows="5"><?php echo $myrow['keywords'] ?></textarea>
+			</label>
+		</div>
+	</div>
+
+<!-- P1 --- P2 -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>I - Первый абзац на странице - p1<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<textarea name="p1" id="p1" cols="70" rows="5"><?php echo $myrow['p1'] ?></textarea>
+			</label>
+		</div>
+
+		<div class='blockInput'>
+			<label>II - Второй абзац на странице - p2<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<textarea name="p2" id="p2" cols="70" rows="5"><?php echo $myrow['p2'] ?></textarea>
+			</label>
+		</div>
+	</div>
+
+<!-- MARKER --- P3 --- PHOTO -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>Маркер категории страницы<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<label><input type="radio" name="marker" value="good" checked="checked">Товары</label><br>
+				<label><input type="radio" name="marker" value="service">Услуги</label><br>
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>III - Третий абзац на странице - p3<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<textarea name="p3" id="p3" cols="80" rows="5"><?php echo $myrow['p3'] ?></textarea>
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Имя файла с фотографией<br>(английскими буквами)<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="photo" id="photo" size="30" value="<?php echo $myrow['photo'] ?>" />
+			</label>
+		</div>
+	</div>
 
 <!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
 	<div class='flexSmall'>
@@ -78,25 +133,7 @@ $myrow = mysqli_fetch_array($result);
 	</div>
 
 
-<!-- DETAIL -->
-	<div class='flexSmall'>
-		<div class='blockInput'>
-			<label>Маркер категории страницы<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<label><input type="radio" name="marker" value="good" checked="checked">Товары</label><br>
-				<label><input type="radio" name="marker" value="service">Услуги</label><br>
-			</label>
-		</div>
-		<div class='blockInput'>
-			<label>Подробные характеристики товара<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="detail" id="detail" size="80" value="<?php echo $myrow['detail'] ?>" />
-			</label>
-		</div>
-		<div class='blockInput'>
-			<label>Имя файла с фотографией (английскими буквами)<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="photo" id="photo" size="30" value="<?php echo $myrow['photo'] ?>" />
-			</label>
-		</div>
-	</div>
+
 
 <!-- SUBMIT -->
 	<div class='flexSmall'>

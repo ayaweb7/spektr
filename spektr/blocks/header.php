@@ -1,21 +1,33 @@
 ﻿<?php
 // Соединяемся с базой данных
-require_once 'blocks/date_base.php';
+require_once 'date_base.php';
+session_start();
 
-// Определение надписи для титула страницы
-$page = 'index';
-if (isset($_GET['page'])) {$page = $_GET['page'];}
+// Определение надписи для титула страницы и ключевых слов
+if (isset($_GET['category'])) {
+	$category = $_GET['category'];
+	$title = $_GET['category'];
+	$keywords = $myrow1['keywords'];
+	$description = $myrow1['description'];
+	
+} elseif (isset($_GET['good'])) {
+	$good = $_GET['good'];
+	$title = $_GET['good'];
+	$keywords = $_SESSION['keywords'];
+	$description = $_SESSION['description'];
+
+} else {
+	$title = $myrow1['title'];
+	$keywords = $myrow1['keywords'];
+	$description = $myrow1['description'];
+}
 
 
-// Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
-$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='$page'");
-$myrow1 = mysqli_fetch_array($result1);
 
-if (isset($myrow1['title'])) {$title = $myrow1['title'];}
 
-// Определение надписи для титула страницы
-//$title = $myrow1['title'];
-//if (isset($_GET['gruppa'])) {$title = $_GET['gruppa'];}
+
+
+//if (isset($_GET['category'])) {$title = $_GET['good'];}
 //if (isset($_POST['shop_search'])) {$title = $_POST['shop_search'][0];}
 //if (isset($_POST['name_search'])) {$title = $_POST['name_search'][0];}
 //if (isset($_POST['date_search'])) {$title = $_POST['date_search'];}
@@ -34,8 +46,8 @@ if (isset($myrow1['title'])) {$title = $myrow1['title'];}
 	<title><?php echo $title; ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="<?php echo $myrow1['keywords'] ?>">	
-	<meta name="description" content="<?php echo $myrow1['description'] ?>">
+    <meta name="keywords" content="<?php echo $keywords; ?>">	
+	<meta name="description" content="<?php echo $description; ?>">
 	<link href="css/screen.css" type="text/css" rel="stylesheet" />
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />

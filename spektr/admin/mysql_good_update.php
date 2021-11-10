@@ -22,17 +22,21 @@ if (isset($_POST['date'])) {$date = $_POST['date'];}
 if (isset($_POST['marker'])) {$marker = $_POST['marker'];}
 if (isset($_POST['category'])) {$category = $_POST['category'];}
 if (isset($_POST['good'])) {$good = $_POST['good'];}
+if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
+if (isset($_POST['description'])) {$description = $_POST['description'];}
+if (isset($_POST['keywords'])) {$keywords = $_POST['keywords'];}
+if (isset($_POST['p1'])) {$p1 = $_POST['p1'];}
+if (isset($_POST['p2'])) {$p2 = $_POST['p2'];}
+if (isset($_POST['p3'])) {$p3 = $_POST['p3'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['height'])) {$height = $_POST['height'];}
 if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
-if (isset($_POST['detail'])) {$detail = $_POST['detail'];}
 if (isset($_POST['item'])) {$item = $_POST['item'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
-if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
 //$id = (int) $id;
 	
-	$query = "UPDATE goods SET date='$date', marker='$marker', width='$width', height='$height', lenght='$lenght', detail='$detail', item='$item',
-	price='$price', photo='$photo' WHERE id='$id'";
+	$query = "UPDATE goods SET date='$date', marker='$marker', photo='$photo', description='$description', keywords='$keywords',
+	p1='$p1', p2='$p2', p3='$p3', width='$width', height='$height', lenght='$lenght', item='$item', price='$price' WHERE id='$id'";
 	
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {

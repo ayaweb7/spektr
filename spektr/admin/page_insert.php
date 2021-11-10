@@ -57,15 +57,13 @@
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Краткое описание страницы для поисковых систем - description<br>
-				<textarea name="description" id="description" cols="50" rows="5">
-				</textarea>
+				<textarea name="description" id="description" cols="50" rows="5"></textarea>
 			</label>
 		</div>
 
 		<div class='blockInput'>
 			<label>Ключевые слова для поиска - keywords <br>
-				<textarea name="keywords" id="keywords" cols="50" rows="5">
-				</textarea>
+				<textarea name="keywords" id="keywords" cols="50" rows="5"></textarea>
 			</label>
 		</div>
 	</div>

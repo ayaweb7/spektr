@@ -4,7 +4,7 @@ require_once 'blocks/date_base.php';
 session_start();
 
 // Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
-$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='catalog'");
+$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='category'");
 $myrow1 = mysqli_fetch_array($result1);
 
 // Подключаем HEADER
@@ -25,56 +25,39 @@ printf ("<div class='container'>
 
 printf ("<div id='catalog' class='container px-4 my-4'>
     <h1 class='pb-2 border-bottom text-center test-custom'>%s</h1>
-	<div class='row g-4 py-3 row-cols-1 row-cols-lg-3'>", $myrow1['h1']);
+	<nav style='--bs-breadcrumb-divider: &quot;>' aria-label='breadcrumb'>
+					<ol class='breadcrumb'>
+						<li class='breadcrumb-item'><a href='index.php'>Главная</a></li>
+						<li class='breadcrumb-item'><a href='catalog.php'>Каталог</a></li>
+						<li class='breadcrumb-item active'>%s</a></li>
+					</ol>
+				</nav>
+	<div class='row g-4 py-3 row-cols-1 row-cols-lg-3'>", $category, $category);
+
+
 
 
 // Выборка в цикле всех существующих категорий услуг и товаров
-$result2 = mysqli_query($db, "SELECT * FROM goods ORDER BY marker DESC, category");
+$result2 = mysqli_query($db, "SELECT * FROM goods WHERE category='$category' ORDER BY good");
 $myrow2 = mysqli_fetch_array($result2);
-$category='';
+$good='';
 
 	do
 	{
-		if ($myrow2['category'] != $category)
+		if ($myrow2['good'] != $good)
 		{
-		$category = $myrow2['category'];
+		$good = $myrow2['good'];
 		printf ("<div class='feature col'>
-						<h3 class='lead_p text-center'>%s</h3>
-						<div>
-							<a href='category.php?category=%s' title='%s'>
-								<img src='img/objects/%s.jpg' class='d-block mx-lg-auto img-fluid' width='264' height='191'>
-							</a>
-						</div>
-<!--						<div class='mx-5 text-center fw-bolder color-dark'><p>%s</p></div>-->
-				</div>", $myrow2['category'], $myrow2['category'], $myrow2['category'], $myrow2['photo'], $myrow2['good']);
-// Выборка в цикле всех существующих товаров внутри категории
-//			$result3 = mysqli_query($db, "SELECT * FROM goods WHERE category='$category' ORDER BY good"); // 
-//			$myrow3 = mysqli_fetch_array($result3);
+					<h3 class='lead_p text-center'>%s</h3>
+					<div>
+						<a href='good.php?good=%s' title='%s'>
+							<img src='img/objects/%s.jpg' class='d-block mx-lg-auto img-fluid' title='%s' width='264' height='191'>
+						</a>
+					</div>
+<!--					<div class='mx-5 text-center fw-bolder color-dark'><p>%s</p></div>-->
+				</div>", $myrow2['good'], $myrow2['good'], $myrow2['good'], $myrow2['photo'], $myrow2['good'], $myrow2['good']);
 
-//			$good='';
-//			do
-//			{
-//				if ($myrow3['good'] != $good)
-//				{
-//					printf ("<div class='feature col'>
-//						<h3 class='lead_p text-center'>%s</h3>
-//						<div>
-//							<img src='img/objects/%s.jpg' class='d-block mx-lg-auto img-fluid' title='%s' width='264' height='191'>
-//						</div>
-//						<div class='mx-5 text-center fw-bolder color-dark'><p>%s</p></div>
-//					</div>", $myrow3['good'], $myrow3['photo'], $myrow3['good'], $myrow3['detail']);
-
-		// Окончание цикла групп
-				
-//					$good = $myrow3['good'];
-//				}
-			
-//			}
-			
-//			while ($myrow3 = mysqli_fetch_array($result3));
 		}
-//			printf ("</div>");
-	
 	}
 	
 	while ($myrow2 = mysqli_fetch_array($result2));

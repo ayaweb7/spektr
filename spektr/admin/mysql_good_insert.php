@@ -22,13 +22,17 @@ if (isset($_POST['date'])) {$date = $_POST['date'];}
 if (isset($_POST['marker'])) {$marker = $_POST['marker'];}
 if (isset($_POST['category'])) {$category = $_POST['category'];}
 if (isset($_POST['good'])) {$good = $_POST['good'];}
+if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
+if (isset($_POST['description'])) {$description = $_POST['description'];}
+if (isset($_POST['keywords'])) {$keywords = $_POST['keywords'];}
+if (isset($_POST['p1'])) {$p1 = $_POST['p1'];}
+if (isset($_POST['p2'])) {$p2 = $_POST['p2'];}
+if (isset($_POST['p3'])) {$p3 = $_POST['p3'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['height'])) {$height = $_POST['height'];}
 if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
-if (isset($_POST['detail'])) {$detail = $_POST['detail'];}
 if (isset($_POST['item'])) {$item = $_POST['item'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
-if (isset($_POST['photo'])) {$photo = $_POST['photo'];}
 $id = (int) $id;
 
 // Проверка на ошибки средствами PHP
@@ -45,7 +49,7 @@ if ($fail == "") {
 
 
 
-	$query = "INSERT INTO goods(id, date, marker, category, good, width, height, lenght, detail, item, price, photo) VALUES ('$id', '$date', '$marker', '$category', '$good', '$width', '$height', '$lenght', '$detail', '$item', '$price', '$photo')";
+	$query = "INSERT INTO goods(id, date, marker, category, good, photo, description, keywords, p1, p2, p3, width, height, lenght, item, price) VALUES ('$id', '$date', '$marker', '$category', '$good', '$photo', '$description', '$keywords', '$p1', '$p2', '$p3', '$width', '$height', '$lenght', '$item', '$price')";
 
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {
