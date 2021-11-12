@@ -65,12 +65,12 @@ $myrow = mysqli_fetch_array($result);
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Основное предложение - offer<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="offer" id="offer" size="80" value="<?php echo $myrow['offer'] ?>" />
+				<input type="text" name="offer" id="offer" size="70" value="<?php echo $myrow['offer'] ?>" />
 			</label>
 		</div>
 		<div class='blockInput'>
 			<label>Заголовок страницы на ярлыке - title <em>*</em><br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="title" id="title" size="50" value="<?php echo $myrow['title'] ?>" />
+				<input type="text" name="title" id="title" size="70" value="<?php echo $myrow['title'] ?>" />
 			</label>
 		</div>
 	</div>
@@ -85,13 +85,13 @@ $myrow = mysqli_fetch_array($result);
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Краткое описание страницы для поисковых систем - description<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<textarea name="description" id="description" cols="50" rows="5"><?php echo $myrow['description'] ?></textarea>
+				<textarea name="description" id="description" cols="70" rows="5"><?php echo $myrow['description'] ?></textarea>
 			</label>
 		</div>
 
 		<div class='blockInput'>
 			<label>Ключевые слова для поиска - keywords<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<textarea name="keywords" id="keywords" cols="50" rows="5"><?php echo $myrow['keywords'] ?></textarea>
+				<textarea name="keywords" id="keywords" cols="70" rows="5"><?php echo $myrow['keywords'] ?></textarea>
 			</label>
 		</div>
 	</div>
@@ -100,13 +100,13 @@ $myrow = mysqli_fetch_array($result);
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Основной заголовок на странице - h1<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="h1" id="h1" size="50" value="<?php echo $myrow['h1'] ?>" />
+				<input type="text" name="h1" id="h1" size="70" value="<?php echo $myrow['h1'] ?>" />
 			</label>
 		</div>
 
 		<div class='blockInput'>
 			<label>Подзаголовок на странице - h2<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="h2" id="h2" size="80" value="<?php echo $myrow['h2'] ?>" />
+				<input type="text" name="h2" id="h2" size="70" value="<?php echo $myrow['h2'] ?>" />
 			</label>
 		</div>
 	</div>

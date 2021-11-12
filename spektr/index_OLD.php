@@ -72,23 +72,9 @@ include ("blocks/modal.php");
   <symbol id="geo-fill" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
   </symbol>
-  <symbol id="glass" viewBox="0 0 107.23 122.88"><defs><style>.a{fill-rule:evenodd;}</style></defs><title>glass-window</title><path class="a" d="M4.21,0H103a4.22,4.22,0,0,1,4.21,4.21V118.67a4.23,4.23,0,0,1-4.21,4.21H4.21A4.23,4.23,0,0,1,0,118.67V4.21A4.23,4.23,0,0,1,4.21,0ZM69,80.67a1.8,1.8,0,0,1,2.12,2.9l-4.87,3.59a1.8,1.8,0,0,1-2.12-2.9L69,80.67Zm19.12-16a1.8,1.8,0,1,1,2.33,2.74L75.9,79.72A1.8,1.8,0,1,1,73.58,77L88.11,64.65ZM89,78.92A1.79,1.79,0,1,1,91.3,81.7L68.41,100.39a1.79,1.79,0,1,1-2.26-2.78L89,78.92ZM37.18,42.55a1.8,1.8,0,1,1-2.13-2.9l4.87-3.59A1.8,1.8,0,1,1,42,39l-4.86,3.59Zm-19.13,16a1.8,1.8,0,1,1-2.32-2.74L30.26,43.5a1.8,1.8,0,0,1,2.32,2.74L18.05,58.57ZM17.13,44.3a1.79,1.79,0,0,1-2.26-2.78L37.75,22.83A1.79,1.79,0,1,1,40,25.61L17.13,44.3Zm-8.76-36H49.5V114.61H8.37V8.27Zm49.36,0H98.86V114.61H57.73V8.27Z"/>
-  </symbol>
-  <symbol id="ladder" viewBox="0 0 94.36 122.88" style="enable-background:new 0 0 94.36 122.88" xml:space="preserve"><g><path d="M61.33,84.97H22.27v-0.01c-0.12,0-0.24-0.01-0.36-0.04c-0.82-0.2-1.33-1.03-1.13-1.85l3.88-15.86 c0.11-0.74,0.75-1.3,1.52-1.3h39.07v0.01c0.12,0,0.24,0.01,0.36,0.04c0.82,0.2,1.33,1.03,1.13,1.85l-3.88,15.86 C62.74,84.41,62.1,84.97,61.33,84.97L61.33,84.97z M18.75,96.28h39.07v0.01c0.12,0,0.24,0.01,0.36,0.04 c0.82,0.2,1.33,1.03,1.13,1.85l-3.83,15.65c-0.4,1.66-0.09,3.33,0.73,4.68c0.82,1.35,2.16,2.39,3.82,2.79l0,0 c1.66,0.4,3.33,0.09,4.68-0.73c1.35-0.82,2.39-2.16,2.79-3.82L94.18,7.64c0.4-1.66,0.09-3.32-0.73-4.68 c-0.82-1.35-2.16-2.39-3.82-2.79c-1.66-0.4-3.33-0.09-4.68,0.73c-1.35,0.82-2.39,2.17-2.79,3.82l-4.6,18.82 c-0.11,0.74-0.75,1.3-1.52,1.3H36.97v-0.01c-0.12,0-0.24-0.01-0.36-0.04c-0.82-0.2-1.33-1.03-1.13-1.85l3.4-13.9 c0.4-1.66,0.09-3.32-0.73-4.68C37.32,3.03,35.99,2,34.33,1.59l-0.01,0C32.66,1.19,31,1.5,29.65,2.33 c-1.35,0.82-2.39,2.17-2.79,3.82L0.17,115.24c-0.4,1.66-0.09,3.32,0.73,4.68c0.82,1.35,2.16,2.39,3.82,2.79 c1.66,0.4,3.32,0.09,4.68-0.73c1.35-0.82,2.39-2.17,2.79-3.82l5.03-20.57C17.34,96.84,17.98,96.28,18.75,96.28L18.75,96.28z M33.45,36.16h39.07v0.01c0.12,0,0.24,0.01,0.36,0.04c0.82,0.2,1.33,1.03,1.13,1.85l-3.73,15.25c-0.11,0.74-0.75,1.3-1.52,1.3 H29.69V54.6c-0.12,0-0.24-0.01-0.36-0.04c-0.82-0.2-1.33-1.03-1.13-1.85l3.73-15.25C32.05,36.72,32.68,36.16,33.45,36.16 L33.45,36.16z"/></g>
-  </symbol>
-  <symbol id="frame" viewBox="0 0 122.88 104.81" style="enable-background:new 0 0 122.88 104.81" xml:space="preserve"><style type="text/css"><![CDATA[
-	.st0{fill-rule:evenodd;clip-rule:evenodd;}
-]]></style><g><path class="st0" d="M11.51,102.9v-44c-2.34,0.9-4.53,0.92-6.35,0.3c-1.42-0.48-2.62-1.34-3.5-2.45c-0.88-1.11-1.44-2.46-1.61-3.95 c-0.26-2.31,0.43-4.92,2.4-7.37l0,0c0.1-0.12,0.21-0.24,0.34-0.34L59.85,0.55c0.74-0.68,1.88-0.75,2.7-0.11l57.19,44.46l0,0 c0.09,0.07,0.17,0.14,0.25,0.23c2.65,2.85,3.31,6.01,2.67,8.68c-0.32,1.32-0.95,2.5-1.82,3.48c-0.87,0.98-1.98,1.74-3.24,2.19 c-2,0.72-4.38,0.7-6.79-0.44v43.74h-5.6v-46.2c0-1.01-39.23-32.02-43.56-35.39c-4.59,3.49-44.54,34.25-44.54,35.55v46.18 L11.51,102.9L11.51,102.9z M63.34,55.69v17.99h16.14v-0.05c0-4.96-2.03-9.47-5.3-12.74C71.33,58.04,67.54,56.13,63.34,55.69 L63.34,55.69z M63.34,77.48v15.62h16.14V77.48H63.34L63.34,77.48z M59.54,93.09V77.48H43.4v15.62H59.54L59.54,93.09z M59.54,73.68 V55.69c-4.21,0.45-7.99,2.35-10.84,5.2c-3.27,3.27-5.3,7.78-5.3,12.74v0.05H59.54L59.54,73.68z M35.59,101.02h51.69v3.8H35.59 V101.02L35.59,101.02z M61.44,51.79c6.01,0,11.47,2.46,15.42,6.41c3.96,3.96,6.41,9.42,6.41,15.42v23.26H39.6V73.62 c0-6.01,2.46-11.47,6.41-15.42C49.97,54.25,55.43,51.79,61.44,51.79L61.44,51.79z M93.76,3.55l17.17,0.7v23.19L93.76,16.11V3.55 L93.76,3.55L93.76,3.55z"/></g>
-</symbol>
-<symbol id="found" viewBox="0 0 122.88 114.94" style="enable-background:new 0 0 122.88 114.94" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M1.71,0h20.82c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H1.71C0.77,24.78,0,24.02,0,23.08 V1.71C0,0.77,0.77,0,1.71,0L1.71,0z M1.92,90.16h40.76c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H1.92 c-0.94,0-1.71-0.77-1.71-1.71V91.86C0.22,90.92,0.98,90.16,1.92,90.16L1.92,90.16z M100.51,90.16h20.53c0.94,0,1.71,0.77,1.71,1.71 v21.37c0,0.94-0.77,1.71-1.71,1.71h-20.53c-0.94,0-1.71-0.77-1.71-1.71V91.86C98.8,90.92,99.57,90.16,100.51,90.16L100.51,90.16z M51.34,90.16H92.1c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H51.34c-0.94,0-1.71-0.77-1.71-1.71V91.86 C49.63,90.92,50.4,90.16,51.34,90.16L51.34,90.16z M80.41,60.1h40.76c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71 H80.41c-0.94,0-1.71-0.77-1.71-1.71V61.81C78.7,60.87,79.47,60.1,80.41,60.1L80.41,60.1z M31.13,60.1h40.76 c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H31.13c-0.94,0-1.71-0.77-1.71-1.71V61.81 C29.43,60.87,30.19,60.1,31.13,60.1L31.13,60.1z M1.71,60.1h20.82c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71 H1.71C0.77,84.89,0,84.12,0,83.18V61.81C0,60.87,0.77,60.1,1.71,60.1L1.71,60.1z M1.92,30.05h40.76c0.94,0,1.71,0.77,1.71,1.71 v21.37c0,0.94-0.77,1.71-1.71,1.71H1.92c-0.94,0-1.71-0.77-1.71-1.71V31.76C0.22,30.82,0.98,30.05,1.92,30.05L1.92,30.05z M100.51,30.05h20.53c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71h-20.53c-0.94,0-1.71-0.77-1.71-1.71V31.76 C98.8,30.82,99.57,30.05,100.51,30.05L100.51,30.05z M51.34,30.05H92.1c0.94,0,1.71,0.77,1.71,1.71v21.37 c0,0.94-0.77,1.71-1.71,1.71H51.34c-0.94,0-1.71-0.77-1.71-1.71V31.76C49.63,30.82,50.4,30.05,51.34,30.05L51.34,30.05z M80.41,0 h40.76c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H80.41c-0.94,0-1.71-0.77-1.71-1.71V1.71 C78.7,0.77,79.47,0,80.41,0L80.41,0z M31.13,0h40.76c0.94,0,1.71,0.77,1.71,1.71v21.37c0,0.94-0.77,1.71-1.71,1.71H31.13 c-0.94,0-1.71-0.77-1.71-1.71V1.71C29.43,0.77,30.19,0,31.13,0L31.13,0z"/></g>
-</symbol>
-<symbol id="fence" viewBox="0 0 122.88 114.06" style="enable-background:new 0 0 122.88 114.06" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M22.64,0c1.19,2.12,12.71,22.15,12.71,22.4V42.6h12.19V22.4c0-0.24,11.52-20.27,12.71-22.4 c1.19,2.12,12.71,22.15,12.71,22.4V42.6h12.19V22.4c0-0.24,11.52-20.27,12.71-22.4c1.19,2.12,12.71,22.15,12.71,22.4V42.6h12.33 v4.86h-12.33V79.9h12.33v4.86h-12.33v29c0,0.16-0.13,0.3-0.3,0.3H85.43c-0.16,0-0.3-0.13-0.3-0.3v-29H72.94v29 c0,0.16-0.13,0.3-0.3,0.3H47.83c-0.16,0-0.3-0.13-0.3-0.3v-29H35.34v29c0,0.16-0.13,0.3-0.3,0.3H10.23c-0.16,0-0.3-0.13-0.3-0.3 v-29H0V79.9h9.93V47.46H0V42.6h9.93V22.4C9.93,22.15,21.44,2.12,22.64,0L22.64,0z M97.84,79.42c1.62,0,2.93,1.31,2.93,2.93 c0,1.62-1.31,2.93-2.93,2.93s-2.93-1.31-2.93-2.93C94.91,80.74,96.22,79.42,97.84,79.42L97.84,79.42z M97.84,41.54 c1.62,0,2.93,1.31,2.93,2.93c0,1.62-1.31,2.93-2.93,2.93s-2.93-1.31-2.93-2.93C94.91,42.85,96.22,41.54,97.84,41.54L97.84,41.54z M60.24,79.42c1.62,0,2.93,1.31,2.93,2.93c0,1.62-1.31,2.93-2.93,2.93c-1.62,0-2.93-1.31-2.93-2.93 C57.31,80.74,58.62,79.42,60.24,79.42L60.24,79.42z M60.24,41.54c1.62,0,2.93,1.31,2.93,2.93c0,1.62-1.31,2.93-2.93,2.93 c-1.62,0-2.93-1.31-2.93-2.93C57.31,42.85,58.62,41.54,60.24,41.54L60.24,41.54z M85.13,79.9V47.46H72.94V79.9H85.13L85.13,79.9z M47.53,79.9V47.46H35.34V79.9H47.53L47.53,79.9z M14.56,82c0.01,0.11,0.02,0.21,0.02,0.32c0,0.11-0.01,0.22-0.02,0.32v26.78h16.15 V22.4c0-0.97-4.58-7.29-8.07-13.11c-3.5,5.82-8.07,12.14-8.07,13.11v22.31c0.01,0.11,0.02,0.21,0.02,0.32 c0,0.11-0.01,0.22-0.02,0.32V82L14.56,82z M105.91,22.4c0-0.97-4.58-7.29-8.07-13.11c-3.5,5.82-8.07,12.14-8.07,13.11v87.03h16.15 V22.4L105.91,22.4z M68.31,22.4c0-0.96-4.58-7.29-8.07-13.11c-3.5,5.82-8.08,12.14-8.08,13.11v87.03h16.15V22.4L68.31,22.4z M22.63,79.42c1.62,0,2.93,1.31,2.93,2.93c0,1.62-1.31,2.93-2.93,2.93c-1.62,0-2.93-1.31-2.93-2.93 C19.71,80.74,21.02,79.42,22.63,79.42L22.63,79.42z M22.63,41.54c1.62,0,2.93,1.31,2.93,2.93c0,1.62-1.31,2.93-2.93,2.93 c-1.62,0-2.93-1.31-2.93-2.93C19.71,42.85,21.02,41.54,22.63,41.54L22.63,41.54z"/></g>
-</symbol>
-<symbol id="roof" viewBox="0 0 122.88 61.86" style="enable-background:new 0 0 122.88 61.86" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M11.51,61.86v-2.95c-2.34,0.9-4.53,0.92-6.35,0.3c-1.42-0.48-2.62-1.34-3.5-2.45 c-0.88-1.11-1.44-2.46-1.61-3.95c-0.26-2.31,0.43-4.92,2.4-7.37l0,0c0.1-0.12,0.21-0.24,0.34-0.34L59.85,0.55 c0.74-0.68,1.88-0.75,2.7-0.11l57.19,44.46l0,0c0.09,0.07,0.17,0.14,0.25,0.23c2.65,2.85,3.31,6.01,2.67,8.68 c-0.32,1.32-0.95,2.5-1.82,3.48c-0.87,0.98-1.98,1.74-3.24,2.19c-2,0.72-4.38,0.7-6.79-0.44v2.82h-5.6v-5.28 c0-1.01-39.23-32.02-43.56-35.39c-4.59,3.49-44.54,34.25-44.54,35.55v5.13H11.51L11.51,61.86z M93.77,3.55l17.17,0.7v23.19 L93.77,16.11V3.55L93.77,3.55z"/></g>
-</symbol>
 </svg>
 
-<!---->
+
 <!-- annotation -->
 <div id="main" class="container col-xxl-8 px-4 py-5"><!-- style='background-color: #a1a1a1;' px-4 my-4 col-xxl-8 info py-4  -->
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5"><!--row flex-lg-row-reverse align-items-center g-3 py-5-->
@@ -112,7 +98,7 @@ include ("blocks/modal.php");
 
 <div class="b-example-divider"></div>
 <!---->
-<!-- good -->
+<!-- catalog -->
 <div id="good" class="container px-4 py-5"><!-- style='background-color: #a1a1a1;' container px-4 my-4-->
     <h1 class="pb-2 border-bottom text-center test-custom">Товары</h1><!---->
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"><!--row g-4 py-3 row-cols-1 row-cols-lg-3-->
@@ -159,97 +145,69 @@ include ("blocks/modal.php");
 <div class="b-example-divider"></div>
 
 <!-- services -->
-<div class="container px-4 py-5" id="services">
-	<h1 class="pb-2 border-bottom text-center test-custom">Строительные услуги</h1>
-	<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#glass"/></svg>
+<div id="services" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;' px-4 py-4  -->
+	<h1 class="pb-2 border-bottom text-center test-custom">Строительные услуги</h1><!--<span></span>-->
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+		</div>
+		<div class="carousel-inner">
+<!-- frame -->
+			<div class="carousel-item frame active">
+				<div class="container">
+					<div class="carousel-caption text-start">
+						<h1 class="services"><span>Строительство</span></h1>
+						<h2 class="rubric"><span>Срубы для дома и бани, из бревна и бруса, хозяйственные постройки</span></h2>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h2>Стекло</h2>
-				<p>Профессиональная резка стекла и зеркал по размерам заказчика. Простое, матовое, рифлёное стекло и зеркала.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-      
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#ladder"/></svg>
+<!-- frame -->
+<!-- ladder -->
+			<div class="carousel-item roof">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1 class="services"><span>Кровля</span></h1><!--<span></span>-->
+						<h2 class="rubric"><span>Монтаж стропильных систем любой сложности, утепление крыши и все виды кровельных материалов</span></h2>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h2>Лестницы</h2>
-				<p>Проектирование лестниц любого типа и сложности. Замеры, изготовление элементов, доставка, монтаж на месте.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-      
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#frame"/></svg>
+<!-- ladder -->
+<!-- fence -->
+			<div class="carousel-item fence">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1 class="services"><span>Заборы</span></h1>
+						<h2 class="rubric"><span>Деревянный и металлический штакетник или профнастил, опоры из стальных труб или кирпича</span></h2>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h2>Срубы</h2>
-				<p>Срубы домов и бань из бревна и бруса. Проектирование, изготовление на базе или непосредственно на место.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-	</div><!--row1-->
-	
-	<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#fence"/></svg>
+<!-- fenced -->
+<!-- metal -->
+			<div class="carousel-item metal">
+				<div class="container">
+					<div class="carousel-caption text-end">
+						<h1 class="services"><span>Работы с металлом</span></h1>
+						<h2 class="rubric"><span>Печи, столбы, ограждения, лестницы, сварочные работы</span></h2>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h2>Заборы</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-      
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#roof"/></svg>
-			</div>
-			<div>
-				<h2>Кровля</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-      
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-				<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#found"/></svg>
-			</div>
-			<div>
-				<h2>Фундаменты</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
-					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-				</a>
-			</div><!--roof-->
-		</div><!--col-->
-	</div><!--row2-->
+<!-- metal -->
+
+		</div><!-- carousel-inner -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div><!-- myCarousel -->
 	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог товаров и услуг</a></p>
-</div><!--container-->
+</div><!-- objects -->
 
 <div class="b-example-divider"></div>
 

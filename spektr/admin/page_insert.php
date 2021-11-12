@@ -36,12 +36,12 @@
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Основное предложение - offer <br>
-				<input type="text" name="offer" id="offer" size="80" value="" />
+				<input type="text" name="offer" id="offer" size="70" value="" />
 			</label>
 		</div>
 		<div class='blockInput'>
 			<label>Заголовок страницы на ярлыке - title <em>*</em><br>
-				<input type="text" name="title" id="title" size="50" value="" />
+				<input type="text" name="title" id="title" size="70" value="" />
 			</label>
 		</div>
 	</div>
@@ -57,13 +57,13 @@
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Краткое описание страницы для поисковых систем - description<br>
-				<textarea name="description" id="description" cols="50" rows="5"></textarea>
+				<textarea name="description" id="description" cols="70" rows="5"></textarea>
 			</label>
 		</div>
 
 		<div class='blockInput'>
 			<label>Ключевые слова для поиска - keywords <br>
-				<textarea name="keywords" id="keywords" cols="50" rows="5"></textarea>
+				<textarea name="keywords" id="keywords" cols="70" rows="5"></textarea>
 			</label>
 		</div>
 	</div>
@@ -72,13 +72,13 @@
 	<div class='flexSmall'>
 		<div class='blockInput'>
 			<label>Основной заголовок на странице - h1<br>
-				<input type="text" name="h1" id="h1" size="50" value="" />
+				<input type="text" name="h1" id="h1" size="70" value="" />
 			</label>
 		</div>
 
 		<div class='blockInput'>
 			<label>Подзаголовок на странице - h2<br>
-				<input type="text" name="h2" id="h2" size="80" value="" />
+				<input type="text" name="h2" id="h2" size="70" value="" />
 			</label>
 		</div>
 	</div>

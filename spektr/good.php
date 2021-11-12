@@ -48,7 +48,14 @@ $_SESSION['description'] = $myrow2['description'];
 					<p><strong>Цена: </strong><?php echo $myrow2['price']; ?> руб.</p>
 					<p><?php echo $myrow2['good']; ?> продаётся оптом и в розницу по доступным ценам в нашем магазине.<br> Сделать заказ прямо на нашем сайте можно нажав на кнопку <a href="#">"Сделать заказ".</a><br> Вы также можете оформить заказ и доставку по телефону, нажав на кнопку <a href="#">"Позвонить"</a> или <a href="#">"Заказать звонок"</a>.</p>
 				</p>
+<?php 		
+// Подключаем HEADER
+include ("blocks/order.php");
+?>
+				
 			</div><!--grid-->
+
+
 		
 <!--accordion-->
 			<div class="col-md-4"><!--col-md-3 room-left wow fadeIn animated" data-wow-delay=".5s"-->
@@ -192,6 +199,7 @@ $good_header='';
 			</div><!--col-md-4-->
 <!---->
 		</div><!--row-->
+
 	</div><!--flex-nowrap-->
 </div><!--container-->
 
