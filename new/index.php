@@ -677,14 +677,14 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top test-custom-top">
         <div class="col-md-4 d-flex align-items-center">
             <a href='#about-me' title="Обо мне" class="me-3">
-				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50" loading="lazy">
+				<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" alt="about-me" width="46" height="50">
 			</a>
             <span class="text-muted">   &copy; 2021 Nikolaj Arteev</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-2">
-				<a class="text-muted" href="https://vk.com/id465255382"  target="_blank">
+				<a class="text-muted" href="https://vk.com/id465255382" target="_blank">
 					<img src="img/vk.png" class="d-block mx-lg-auto img-fluid" alt="VKontakte" width="50" height="50">
 				</a>
 			</li>

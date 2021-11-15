@@ -5,38 +5,30 @@ session_start();
 
 // Определение надписи для титула страницы и ключевых слов
 if (isset($_GET['category'])) {
-	$category = $_GET['category'];
 	$title = $_GET['category'];
 	$keywords = $myrow1['keywords'];
 	$description = $myrow1['description'];
+	$category = $_GET['category'];
 	
+		
 } elseif (isset($_GET['good'])) {
 	$good = $_GET['good'];
 	$title = $_GET['good'];
 	$keywords = $_SESSION['keywords'];
 	$description = $_SESSION['description'];
+	
+} elseif (isset($_GET['marker'])) {
+	$good = $_GET['good'];
+	$title = $_GET['good'];
+	$keywords = $_SESSION['keywords'];
+	$description = $_SESSION['description'];
+	$marker = $_GET['marker'];
 
 } else {
 	$title = $myrow1['title'];
 	$keywords = $myrow1['keywords'];
 	$description = $myrow1['description'];
 }
-
-
-
-
-
-
-//if (isset($_GET['category'])) {$title = $_GET['good'];}
-//if (isset($_POST['shop_search'])) {$title = $_POST['shop_search'][0];}
-//if (isset($_POST['name_search'])) {$title = $_POST['name_search'][0];}
-//if (isset($_POST['date_search'])) {$title = $_POST['date_search'];}
-//if (isset($_POST['month_search'])) {$title = $_POST['month_search'];}
-//if (isset($_POST['price_search'])) {$title = $_POST['price_search'];}
-//if (isset($_POST['name_update'])) {$title = $_POST['name_update'];}
-//if (isset($_POST['shop_update'])) {$title = $_POST['shop_update'];}
-//if (isset($_POST['id_update'])) {$title = 'id=' . $_POST['id_update'];}
-//if (isset($_GET['id'])) {$title = $_GET['id'];}
 
 ?>
 
@@ -64,58 +56,35 @@ if (isset($_GET['category'])) {
 
 <!--  -->
 <!-- header -->
-<div id="header" class="container my-2"><!-- style='background-color: #a1a1a1;'-->
-    <header class="flexBig"><!-- style='background-color: yellow;' test-custom d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom-->
-        <div class="flexTitle"><!-- style='background-color: green;'-->
-			<div class="flexMiddle logo"><!-- style='background-color: #ccc;'-->
-				<a href='#about' title="О нас">
-					<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
-				</a>
-			</div>
+<div id="header"  class="container">
+	<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+		<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+			<img src="img/logo.png" class="me-2" title="О нас" width="70" height="70"><!--d-block mx-lg-auto img-fluid-->
+		</a>
 
-			<div class="flexMiddle menu"><!-- style='background-color: #eee;'-->
-				<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="index.php" class="nav-spektr px-2 link-secondary">Главная</a></li>
-					<li><a href="catalog.php" class="nav-spektr px-2 link-secondary">Каталог</a></li>
-					<li><a href="index.php#services" class="nav-spektr px-2 link-secondary">Услуги</a></li>
-					<li><a href="index.php#good" class="nav-spektr px-2 link-secondary">Материалы</a></li>
-					<li><a href="index.php#about" class="nav-spektr px-2 link-secondary">О компании</a></li>
-					<li><a href="index.php#contact" class="nav-spektr px-2 link-secondary">Контакты</a></li>
-					<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
-					<li><a href="admin/index.php" style="color: white;">.</a></li>
-				</ul>
-			</div>
+		<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+			<li><a href="/" class="nav-spektr px-2">Главная</a></li>
+			<!--<li><a href="catalog.php" class="nav-spektr px-2">Каталог</a></li>-->
+			<li><a href="/#good" class="nav-spektr px-2">Товары</a></li>
+			<li><a href="/#services" class="nav-spektr px-2">Услуги</a></li>
+			<li><a href="/#about" class="nav-spektr px-2">О компании</a></li>
+			<li><a href="/#contact" class="nav-spektr px-2">Контакты</a></li>
+			<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
+			<li><a href="admin/index.php" style="color: white;">.</a></li>
+		</ul>
 
-			<div class="flexTitle mobil"><!-- style='background-color: #bbb;'-->
-				<div class="ms-2 align-middle flexPhone"><!-- style='background-color: #a1a1a1;'-->
-					<div class="text-start">
-						<a class="" href="tel:+79115518191"><!--text-muted-->
-							<img src="img/tel.png" class="" title="Телефон" width="30" height="30"><!--d-block mx-lg-auto img-fluid-->
-						</a>
-					</div>
-					<!--
-					<div class="text-start">
-						<a class="" href="https://wa.me/79115518191" target="_blank">
-							<img src="img/ws.png" class="" title="WhatsApp" width="30" height="30">
-						</a>
-					</div>
-					-->
-							
-				</div>
-				<div class="ms-2 align-middle flexPhone fw-bold"><!---->
-					<div class="text-start">+7 (911) 551-81-91</h3></div>
-					<!--<div class="text-start">WhatsApp</div>-->
-				</div>
-			</div>
-			<!--<div class="ms-2 flexMiddle tel" style='background-color: #c1c3a4;' align-middle>-->
-						<!--<a class="btn btn-primary" href="#modal">ТЕЛЕФОН</a>
-				<h3>+7 (911) 551-81-91<br>WhatsApp</h3>
-			</div>-->
-			
-
-		</div> <!--flexTitle -->
-    </header>
+		
+		<div class="col-md-3 text-end">
+			<a class="btn-phone" href="tel:+79115518191" >
+				<img src="img/tel.png" class="" title="" width="30" height="30"/>
+				<p class="phone mb-0 ">+7 (911) 551-81-91</p>
+			</a>
+		</div>
+	</header>
 </div>
+
+
+
 
 <!-- Кнопка заказа звонка
 <div type="button" class="callback-bt">

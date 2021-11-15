@@ -88,24 +88,20 @@ include ("blocks/modal.php");
 </symbol>
 </svg>
 
-<!---->
 <!-- annotation -->
 <div id="main" class="container col-xxl-8 px-4 py-5"><!-- style='background-color: #a1a1a1;' px-4 my-4 col-xxl-8 info py-4  -->
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5"><!--row flex-lg-row-reverse align-items-center g-3 py-5-->
         
 		<div class="col-10 col-sm-8 col-lg-6"><!--col-10 col-sm-8 col-lg-6 img-center-->
-            <img src="img/objects/offer.jpg" class="d-block mx-lg-auto img-fluid" alt="Спектр" width="700" height="500" loading="lazy"><!---->
+            <img src="img/objects/offer.jpg" class="d-block mx-lg-auto img-fluid" alt="Спектр" width="700" height="500"><!---->
         </div>
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3"><?php echo $myrow1['offer'] ?></h1><!--display-7 fw-bolder mb-6-->
-			<h2 class="lead"><?php echo $myrow1['extra'] ?></h2><!--lead_p-->
-			<div class="d-grid gap-2 d-md-flex justify-content-md-start"><!--d-grid gap-2 d-md-flex justify-content-md-start py-3-->
-				<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Сделать заявку</button>
-				<button type="button" class="btn btn-outline-secondary btn-lg px-4">Заказать звонок</button>
-				<button type="button" class="btn btn-outline-secondary btn-lg px-4">Позвонить</button>
-				<!--<a class="btn btn-primary btn-lg px-4 me-md-2" href="#modal">Сделать заявку</a>-->
-            </div>
-            
+			<h4 class=" pt-5"><?php echo $myrow1['extra'] ?></h4><!--lead_p-->
+<?php
+// Подключаем кнопки обратной связи
+include ("blocks/order.php");
+?>
 		</div>
     </div>
 </div>
@@ -118,42 +114,47 @@ include ("blocks/modal.php");
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"><!--row g-4 py-3 row-cols-1 row-cols-lg-3-->
         
 		<div class="feature col"><!---->
-            <div class="feature-icon"><!-- bg-primary bg-gradient-->
-				<img src="img/objects/wood.jpg" class="d-block mx-lg-auto img-fluid" alt="Пиломатериалы" width="264" height="191" loading="lazy">
+            <div class=""><!--feature-icon bg-primary bg-gradient-->
+				<a href='category.php?category=Пиломатериалы' title='Пиломатериалы' class="icon-link">
+					<img src="img/objects/wood.jpg" class="d-block mx-lg-auto img-fluid" alt="Пиломатериалы" width="264" height="191">
+				</a>
 			</div>
             <h3 class="">Пиломатериалы</h3><!--lead_p text-center-->
 			<p>Брус, доска, плинтус ... </p><!---->
-			<a href="#" class="icon-link">
-				Call to action
+			<a href='category.php?category=Пиломатериалы' title='Пиломатериалы' class="icon-link">
+				Все товары категории
 				<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			</a>
         </div>
         
-		<div class="feature-icon"><!-- bg-primary bg-gradient-->
-			<div class="feature-icon"><!-- bg-primary bg-gradient-->
-				<img src="img/objects/playwood.jpg" class="d-block mx-lg-auto img-fluid" alt="Стройматериалы" width="264" height="191" loading="lazy">
+		<div class="feature col"><!-- bg-primary bg-gradient-->
+			<div class=""><!--feature-icon bg-primary bg-gradient-->
+				<a href='category.php?category=Стройматериалы' title='Стройматериалы' class="icon-link">
+					<img src="img/objects/playwood.jpg" class="d-block mx-lg-auto img-fluid" alt="Стройматериалы" width="264" height="191">
+				</a>	
 			</div>
             <h3 class="">Стройматериалы</h3><!--lead_p text-center-->
 			<p>Гипсокартон, стекло, фанера ... </p><!---->
-			<a href="#" class="icon-link">
-				Call to action
+			<a href='category.php?category=Стройматериалы' title='Стройматериалы' class="icon-link">
+				Все товары категории
 				<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			</a>
         </div>
 		
-		<div class="feature-icon"><!-- bg-primary bg-gradient-->
-			<div class="feature-icon"><!-- bg-primary bg-gradient-->
-				<img src="img/objects/ladder.jpg" class="d-block mx-lg-auto img-fluid" alt="Элементы лестниц" width="264" height="191" loading="lazy">
+		<div class="feature col"><!-- bg-primary bg-gradient-->
+			<div class=""><!--feature-icon bg-primary bg-gradient-->
+				<a href='category.php?category=Элементы лестниц' title='Элементы лестниц' class="icon-link">
+					<img src="img/objects/ladder_element.jpg" class="d-block mx-lg-auto img-fluid" alt="Элементы лестниц" width="264" height="191">
+				</a>	
 			</div>
             <h3 class="">Элементы лестниц</h3><!--lead_p text-center-->
 			<p>Балясина, колонна, тетива ... </p><!---->
-			<a href="#" class="icon-link">
-				Call to action
+			<a href='category.php?category=Элементы лестниц' title='Элементы лестниц' class="icon-link">
+				Все товары категории
 				<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			</a>
 		</div>
 	</div>
-    <p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог товаров и услуг</a></p>
 </div>
 
 <div class="b-example-divider"></div>
@@ -169,8 +170,8 @@ include ("blocks/modal.php");
 			<div>
 				<h2>Стекло</h2>
 				<p>Профессиональная резка стекла и зеркал по размерам заказчика. Простое, матовое, рифлёное стекло и зеркала.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<a href='service.php?good=Резка стекла' title='Резка стекла' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1.5em" height="1.5em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
@@ -183,8 +184,8 @@ include ("blocks/modal.php");
 			<div>
 				<h2>Лестницы</h2>
 				<p>Проектирование лестниц любого типа и сложности. Замеры, изготовление элементов, доставка, монтаж на месте.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<a href='service.php?good=Лестницы' title='Лестницы' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
@@ -196,9 +197,9 @@ include ("blocks/modal.php");
 			</div>
 			<div>
 				<h2>Срубы</h2>
-				<p>Срубы домов и бань из бревна и бруса. Проектирование, изготовление на базе или непосредственно на место.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<p>Срубы домов и бань из бревна и бруса. Проектирование, изготовление на базе или непосредственно на месте.</p>
+				<a href='service.php?good=Срубы' title='Срубы' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
@@ -212,9 +213,9 @@ include ("blocks/modal.php");
 			</div>
 			<div>
 				<h2>Заборы</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<p>Металлический или деревянный штакетник, профнастил или сетка рабица. Доставка материала, установка "под ключ".</p>
+				<a href='service.php?good=Заборы' title='Установка заборов' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
@@ -226,9 +227,9 @@ include ("blocks/modal.php");
 			</div>
 			<div>
 				<h2>Кровля</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<p>Профнастил, металлочерепица, мягкая кровля. Изготовление стропильных систем любой сложности.</p>
+				<a href='service.php?good=Кровля' title='Кровля' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
@@ -240,43 +241,43 @@ include ("blocks/modal.php");
 			</div>
 			<div>
 				<h2>Фундаменты</h2>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-				<a href="#" class="icon-link">
-					Call to action
+				<p>Свайно-винтовой и ленточный. Выполнение работ в соответствии с установленными стандартами.</p>
+				<a href='service.php?good=Фундамент' title='Фундамент' class="icon-link">
+					Подробнее об услуге
 					<svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 				</a>
 			</div><!--roof-->
 		</div><!--col-->
 	</div><!--row2-->
-	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href="catalog.php">Каталог товаров и услуг</a></p>
+	<p class="text-center my-3"><a class="btn btn-lg btn-primary" href='category.php?category=Услуги' title='Все услуги'>Каталог услуг</a></p>
 </div><!--container-->
 
 <div class="b-example-divider"></div>
 
 <!-- about us -->
-<div id="about" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<div class="container px-4 py-5"><!-- style='background-color: #a1a1a1;'-->
     <div class="row flex-lg-row align-items-center g-3">
 		<h1 class="pb-2 border-bottom text-center test-custom">Строительная компания "Спектр"</h1>
         <div class="col-10 col-sm-8 col-lg-6">
             <img src="img/objects/offer3.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" align="left">
         </div><!---->
 		<div class="col-lg-6">
-			<div class="flexBig color-dark">
-				<h2 class="flexTitle">О компании</h2>
+			<div id="about" class="flexBig">
+				<h2 class="flexTitle ms-3">О компании</h2>
                 <div class="flexTitle">
-                    <div class="flexMiddle"><p></p>
-						<p>Строительная компания "Спектр" уже 5 лет ведёт строительство домов из бруса и бревна, осуществляет каркасное строительство.</p>
-						<p>В перечень строительных услуг входят также все виды кровельных работ, строительство фундамента; продажа, доставка и установка теплиц и парников; изготовление и монтаж лестниц, резка и установка стекла и зеркал; сварочные работы.</p>
+                    <div class="flexMiddle">
+						<p>Строительная компания "Спектр" уже 5 лет делает срубы домов и бань из бруса и бревна, ведёт каркасное строительство.</p>
+						<p>Мы оказываем строительные услуги по всем видам кровельных работ и строительству фундамента; изготавливаем и устанавливаем теплицы и парники; проектируем лестницы любой сложности; производим резку и установку стекла и зеркал по размерам заказчика.</p>
 					</div>
 				</div>
-				<h2 class="flexTitle border-bottom">Преимущества сотрудничества</h2>
+				<h2 class="flexTitle ms-3">Преимущества сотрудничества</h2>
 				<div class="flexTitle">
-                    <div class="flexMiddle"><p></p>
+                    <div class="flexMiddle">
 					<p>Наш опыт позволяет вести несколько объектов одновременно.</p>
-					<p>Основная часть пиломатериала который мы продаем собственного производства, поэтому мы можем обеспечить высокое качество по доступным ценам.</p>
-					<p>В зависимости от объема возможно предоставление индивидуальной скидки.</p>
-					<p>Предоставляем высокое качество сервиса в плане подбора, распиловки пиломатериала и листового материала по индивидуальным размерам</p>
+					<p>Мы продаём пиломатериал собственного производства, и поэтому можем обеспечить высокое качество по доступным ценам.</p>
+					<p>Гарантируем высокое качество сервиса в плане распиловки пиломатериала и листового материала по индивидуальным размерам</p>
 					<p>Оказываем услуги по доставке материалов до места строительства или ремонта.</p>
+					<p class="text-center"><strong>При оптовой продаже стройматериалов -<br>предоставляем индивидуальную скидку !</strong></p>
 					</div>
 				</div>
 			</div>
@@ -284,56 +285,42 @@ include ("blocks/modal.php");
     </div>
 </div>
 
-
-<!-- sale
-<div id="sale" class="container px-4 my-4">
-    <div class="row flex-lg-row align-items-center g-3">
-		<h2 class="pb-2 border-bottom text-center test-custom">Горячие предложения - подумать как лучше назвать этот блок</h2>
-		<div>
-			<p class="lead_p fst-italic">Не могу определиться с формой этого блока:<br>
-			или это будет табличка в виде прайса с перечислением какой-то продукции,<br>
-			или в виде блога - картинка, цена, скидки за что-нибудь, акции за покупку чего-то для привлечения клиента!</p>
-		</div>
-	</div>
-</div>
- -->
-
 <div class="b-example-divider"></div>
 
 <!-- contact -->
-<div id="contact" class="container px-4 my-4"><!-- style='background-color: #a1a1a1;'-->
+<div class="container px-4 py-5"><!-- style='background-color: #a1a1a1;'-->
     <div class="row flex-lg-row align-items-center g-3"><!--row flex-lg-row align-items-center g-5 py-5-->
 		<h1 class="pb-2 border-bottom text-center test-custom">Наши контакты</h1>
         <div class="col-10 col-sm-8 col-lg-6">
             <img src="img/objects/spektrum.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
 		<div class="col-lg-6">
-            <div class="flexBig color-dark">
-                <h3 class="flexTitle">Информация</h2>
+            <div id="contact" class="flexBig">
+                <h3 class="flexTitle ms-3">Информация</h2>
                 <div class="flexTitle border-bottom">
                     <div class="flexMiddle">Адрес:</div>
 					<div class="flexMiddle">г.Коряжма, ул.Советская, 17 (цокольный этаж)</div>
 				</div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">Телефоны:</div>
-					<div class="flexMiddle">911-551-81-91,<br>900-912-19-61,<br>921-075-26-56</div>
+					<div class="flexMiddle">+7 (911) 551-81-91,<br>+7 (900) 912-19-61,<br>+7 (921) 075-26-56</div>
 				</div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">WhatsApp:</div>
-					<div class="flexMiddle">911-551-81-91,<br>900-912-19-61</div>
+					<div class="flexMiddle">+7 (911) 551-81-91,<br>+7 (900) 912-19-61</div>
                 </div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">E-mail:</div>
 					<div class="flexMiddle">vagin.sergey@mail.ru</div>
 				</div>
-				<h3 class="flexTitle mt-3">Режим работы</h2>
+				<h3 class="flexTitle mt-3 ms-3">Режим работы</h2>
 				<div class="flexTitle border-bottom">
                     <div class="flexMiddle">понедельник - пятница:</div>
-					<div class="flexMiddle">9:00 - 18:00</div>
+					<div class="flexMiddle">9:00 - 19:00</div>
 				</div>
 				<div class="flexTitle border-bottom">
-					<div class="flexMiddle">суббота, воскресенье</div>
-					<div class="flexMiddle">9:00 - 15:00</div>
+					<div class="flexMiddle">суббота, воскресенье:</div>
+					<div class="flexMiddle">9:00 - 18:00</div>
 				</div>
 			</div>
 			<a class="btn btn-primary my-4" href="#modal">Сделать заявку</a>
@@ -341,7 +328,6 @@ include ("blocks/modal.php");
     </div>
 </div>
 
-<div class="b-example-divider"></div>
 
 <?php 
 // Подключаем FOOTER

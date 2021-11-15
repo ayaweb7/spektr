@@ -51,6 +51,9 @@ h3 {*/
 	color: #dee2e6; /* light-light-blue */
 }
 
+.color-black {
+	color: black; /*dark-gray*/
+}
 /* ********** */
 /*     IMG    */
 /* ********** */
@@ -83,7 +86,35 @@ h3 {*/
 .nav-spektr:hover,
 .nav-spektr:focus,
 .nav-spektr:active {
-  color: #dee2e6; /* light-light-blue */
+  color: black; /* #dee2e6 - light-light-blue */
+}
+
+/* ******************* */
+/*    MENU-BUTSTRUP    */
+/* ******************* */
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	}
+
+	@media (min-width: 768px) {
+		.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.btn-phone {
+	opacity: 0.8;
+}
+.btn-phone:hover {
+	opacity: 1;
+}
+
+.phone {
+	display: inline-block;
 }
 
 /* ********** */
@@ -115,7 +146,7 @@ h3 {*/
 /*   HEROES.CSS   */
 /* ************** */
 .b-example-divider {
-  height: 2rem;
+  height: 1rem;
   background-color: rgba(0, 0, 0, .1);
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
