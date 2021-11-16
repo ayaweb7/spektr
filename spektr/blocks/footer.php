@@ -32,15 +32,18 @@
 </div>
 
 <!-- Scripts -->
-<!-- button callback -->
-<script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script-->
-<!-- <script type="text/javascript" src="js/maskedinput.min.js"></script>			
-<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script> --><!---->
 <!-- modal_form -->
-<script type="text/javascript" src="js/remodal.min.js"></script>
-<script type="text/javascript" src="/mail/js/mail.js"></script>
-<script type="text/javascript" src="/mail/js/browser.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/remodal.min.js"></script>
 
+<!-- Маска ввода номера телефона -->
+<!-- jQuery Mask Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/mail/js/mail.js"></script>
+ 	<script>
+		$(function() {
+			$('.contact-form__input_tel').mask('+7(000) 000-00-00');
+		});
+	</script><!-- -->
 </body>
 </html>

@@ -107,9 +107,11 @@ h3 {*/
 }
 
 .btn-phone {
+	color: #6c757d; /*dark-gray*/
 	opacity: 0.8;
 }
 .btn-phone:hover {
+	color: #0a58ca;
 	opacity: 1;
 }
 

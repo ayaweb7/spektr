@@ -9,9 +9,6 @@ $myrow1 = mysqli_fetch_array($result1);
 
 // Подключаем HEADER
 include ("blocks/header.php");
-
-// Подключаем modal_form
-include ("blocks/modal.php");
 ?>
 
 <!-- SVG -->

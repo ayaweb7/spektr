@@ -9,7 +9,7 @@ if (isset($_GET['category'])) {
 	$keywords = $myrow1['keywords'];
 	$description = $myrow1['description'];
 	$category = $_GET['category'];
-	
+	$file = $_SESSION['file'];
 		
 } elseif (isset($_GET['good'])) {
 	$good = $_GET['good'];
@@ -29,7 +29,6 @@ if (isset($_GET['category'])) {
 	$keywords = $myrow1['keywords'];
 	$description = $myrow1['description'];
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +40,8 @@ if (isset($_GET['category'])) {
     <meta name="keywords" content="<?php echo $keywords; ?>">	
 	<meta name="description" content="<?php echo $description; ?>">
 	<link href="css/screen.css" type="text/css" rel="stylesheet" />
-	<script src="js/jquery-3.6.0.min.js"></script>
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 	
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <!-- /Yandex.Metrika counter -->
@@ -64,48 +60,26 @@ if (isset($_GET['category'])) {
 
 		<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 			<li><a href="/" class="nav-spektr px-2">Главная</a></li>
-			<!--<li><a href="catalog.php" class="nav-spektr px-2">Каталог</a></li>-->
 			<li><a href="/#good" class="nav-spektr px-2">Товары</a></li>
 			<li><a href="/#services" class="nav-spektr px-2">Услуги</a></li>
 			<li><a href="/#about" class="nav-spektr px-2">О компании</a></li>
 			<li><a href="/#contact" class="nav-spektr px-2">Контакты</a></li>
-			<!--<li><a href="#sale" class="nav-spektr px-2 link-secondary">Горячие предложения</a></li>-->
 			<li><a href="admin/index.php" style="color: white;">.</a></li>
 		</ul>
 
 		
 		<div class="col-md-3 text-end">
-			<a class="btn-phone" href="tel:+79115518191" >
-				<img src="img/tel.png" class="" title="" width="30" height="30"/>
-				<p class="phone mb-0 ">+7 (911) 551-81-91</p>
-			</a>
+			<a class="btn-phone" href="tel:+79115518191" ><img src="img/tel.png" class="" title="" width="30" height="30"/></a>
+			<a class="btn-phone" href="tel:+79115518191" ><p class="phone mb-0 ">+7 (911) 551-81-91</p></a>
 		</div>
 	</header>
 </div>
 
+<?php
+// Подключаем modal_form
+include ("blocks/modal.php");
+?>
 
-
-
-<!-- Кнопка заказа звонка
-<div type="button" class="callback-bt">
-    <div class="text-call">
-		<a class="" href="tel:+79115518191">
-			<i class="fa fa-phone"></i>
-			<span>Сделать<br>звонок</span>
-		</a>
-    </div>
-</div>
- -->            
-<!-- Кнопка обратной связи
-<div type="button" class="email-bt">
-    <div class="text-call">
-		<a class="" href="https://wa.me/79115518191" target="_blank">
-			<i class="fa fa-envelope" aria-hidden="true"></i>
-			<span>Письмо в<br>WhatsApp</span>
-		</a>
-    </div>
-</div>
- -->
 <!-- Кнопка Наверх страницы -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 	<symbol id="arrow-up-circle-fill" viewBox="0 0 16 16">

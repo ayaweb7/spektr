@@ -195,7 +195,7 @@
 <!-- ДАТА, ВРЕМЯ -->
 		<div class="contact-form__input-wrapper">		
 			<input type="hidden" id="start_time" name="start_time" action="javascript:date_time()" />
-			<input type="hidden" id="send_time" name="send_time" action="javascript:date_time()" />
+			<input type="text" id="send_time" name="send_time" action="javascript:date_time()" />
 			<input type="hidden" id="unix_time" name="unix_time" />
 		</div>
 			<input type="submit" name="submit" class="btn_modal" value="ОТПРАВИТЬ ЗАЯВКУ">

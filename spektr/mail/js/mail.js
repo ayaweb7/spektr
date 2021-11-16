@@ -77,17 +77,6 @@
 					}, 5000);
 				}
 */
-				if (respond.success) {
-					$.ajax({
-						url: "php/mysql_form_insert.php",
-						type: "POST",
-						data: fd,
-						processData: false,
-						contentType: false,
-						success: function success(res) {
-						},
-					});
-				}
 
 				if (respond.success) {
 					window.location.replace("/thank-you-page.php?status=success"); 
@@ -96,6 +85,8 @@
 		});
 	});
 }(jQuery));
+
+
 
 // ЭТО ФУНКЦИИ ВВОДА ДАТЫ    
     /* функция добавления ведущих нулей */
@@ -123,66 +114,8 @@ function date_time()
 	return year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
 }
 
-    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
-    /*document.getElementById('current_date_time_block').innerHTML = date_time();*/
-	
-	/* каждую секунду получаем текущую дату и время */
-    /* и вставляем значение в блок с id "current_date_time_block2" 
-    setInterval(function () {
-        document.getElementById('current_date_time_block2').innerHTML = date_time();
-    }, 1000);
-	*/
-	/* выводим текущую дату и время на сайт в поле формы с id "start_time" */
-document.getElementById('start_time').value = date_time();
 
-	/* выводим текущую дату и ТЕКУЩЕЕ время на сайт в поле формы с id "send_time" */
+/* выводим текущую дату и ТЕКУЩЕЕ время на сайт в поле формы с id "send_time" */
 setInterval(function () {
 	document.getElementById('send_time').value = date_time();
 }, 1000);
-	
-	/* выводим текущее время в формате UNIX time на сайт в поле формы с id "unix_time" */
-setInterval(function () {
-	document.getElementById('unix_time').value = new Date().getTime();
-}, 1000);
-	
-	
-// Маска ввода номера телефона
-
-$(function() {
-	$('.contact-form__input_tel').mask('+7(000) 000-00-00');
-});
-
-// Location
-$.get("https://ipinfo.io", function (response) { 
-//		$("#ip").html("IP: " + response.ip); 
-//		$("#address").html("Location: " + response.region + ", City: " + response.city); 
-//		$("#details").html(JSON.stringify(response, null, 4)); 
-//		console.log(response);
-		document.getElementById('ip').value = response.ip;
-		document.getElementById('location').value = response.loc;
-		document.getElementById('hostname').value = response.hostname;
-		document.getElementById('city').value = response.city;
-		document.getElementById('region').value = response.region;
-	}, "jsonp");
-
-/*
-// PRIMER
-$.ajax({
-    url: 'news.php',
-    method: 'POST',
-    dataType: 'JSON',
-    data:{textnews:'naserver'},
-    success: function(answer){
-        $("#novosti").html(answer.textnews);
-        $.ajax({
-            url: 'success.php',
-            method: 'POST',
-            dataType: 'JSON',
-            data:{asd:'qwe'},
-            success: function(ans){
-                $("#novosti2").html(ans.asd);
-            }
-        });
-    }
-});
-*/
