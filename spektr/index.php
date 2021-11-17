@@ -300,15 +300,24 @@ include ("blocks/order.php");
 				</div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">Телефоны:</div>
-					<div class="flexMiddle">+7 (911) 551-81-91,<br>+7 (900) 912-19-61,<br>+7 (921) 075-26-56</div>
+					<div class="flexMiddle">
+						<a class="" href="tel:+79115518191">+7 (911) 551-81-91</a>
+						<a class="" href="tel:+79009121961">+7 (900) 912-19-61</a>
+						<a class="" href="tel:+79210752656">+7 (921) 075-26-56</a>
+					</div>
 				</div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">WhatsApp:</div>
-					<div class="flexMiddle">+7 (911) 551-81-91,<br>+7 (900) 912-19-61</div>
+					<div class="flexMiddle">
+						<a class="" href="https://wa.me/79115518191" target="_blank">+7 (911) 551-81-91</a>
+						<a class="" href="https://wa.me/79009121961" target="_blank">+7 (900) 912-19-61</a>
+					</div>
                 </div>
 				<div class="flexTitle border-bottom">
 					<div class="flexMiddle">E-mail:</div>
-					<div class="flexMiddle">vagin.sergey@mail.ru</div>
+					<div class="flexMiddle">
+						<a href="mailto:vagin.sergey@mail.ru">vagin.sergey@mail.ru</a>
+					</div>
 				</div>
 				<h3 class="flexTitle mt-3 ms-3">Режим работы</h2>
 				<div class="flexTitle border-bottom">

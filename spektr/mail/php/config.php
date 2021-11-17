@@ -32,18 +32,21 @@
 	// ***YANDEX - 'ssl://smtp.yandex.ru' SMTP *** Gmail - 'smtp.gmail.com'  ***  Mail.ru - 'ssl://smtp.mail.ru'
 
 //		require_once($_SERVER['DOCUMENT_ROOT'] . '/mail/phpmailer/smtp.php');
-//		const HOST = 'smtp.gmail.com';
-//		const LOGIN = 'ayaweb7@gmail.com';
+//		const HOST = 'ssl://smtp.yandex.ru';
+//		const LOGIN = 'ayaweb7@yandex.ru';
 //		const PASS = 'arteeva12';
 //		const PORT = '465';
 
 	// *** /SMTP *** //
 
   // Почта с которой будет приходить письмо
-	const SENDER = 'ayaweb7@yandex.ru';
+	const SENDER = 'info@spektrkor.ru';
+//	const SENDER = 'ayaweb7@yandex.ru';
 	
 	// Почта на которую будет приходить письмо
-	const CATCHER = 'ayaweb7@gmail.com';
+	//const CATCHER = 'ayaweb7@gmail.com';
+	const CATCHER = 'vagin.sergey@mail.ru';
+	//const CATCHER = 'ayaweb7@mail.ru';
 	
 	// Тема письма
 	const SUBJECT = 'У вас новая заявка с сайта SPEKTRKOR.RU';

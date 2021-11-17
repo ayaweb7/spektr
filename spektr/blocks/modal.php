@@ -25,7 +25,7 @@
 			</div>
 <!-- ДАТА, ВРЕМЯ -->
 			<div class="contact-form__input-wrapper">		
-				<input type="text" id="send_time" name="send_time" action="javascript:date_time()" />
+				<input type="hidden" id="send_time" name="send_time" action="javascript:date_time()" />
 			</div>
 			
 			<input type="submit" name="submit" class="btn_modal" value="отправить заявку">

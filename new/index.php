@@ -28,7 +28,7 @@
 <!-- jQuery Mask Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 	
-    <script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script--><!--
+    <script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script<!---->
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 
 <!-- Yandex.Metrika counter -->

@@ -143,6 +143,16 @@ h3 {*/
 	/*margin: 1% 0 3% 0;*/
 }
 
+a[href^="mailto"] {
+    text-decoration: none; /* Убираем подчёркивание */
+   }
+
+a[href^="mailto"]::after {
+	content: '\1F4E9'; /* Иконка */
+	padding-left: 5px; /* Расстояние от иконки до текста */
+	vertical-align: text-bottom; /* Выравнивание по вертикали */
+	font-size: 0.8em; /* Размер иконки */
+}
 
 /* ************** */
 /*   HEROES.CSS   */
@@ -382,7 +392,25 @@ h3 {*/
 
 }
 
+/* **************** */
+/*     ACCORDION    */
+/* **************** */
+.accordion a {
+	text-decoration: none;
+	color: #6c757d; /*dark-gray*/
+}
+
+.accordion a:hover {
+	color: black;
+}
+
+.accordion ul {
+	list-style-type: none;
+}
+
+/* **************************** */
 /* Стили страницы благодарности */
+/* **************************** */
 
 .thank-you-page {
     background: url('./img/bg.png') top center no-repeat;

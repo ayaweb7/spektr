@@ -119,3 +119,8 @@ function date_time()
 setInterval(function () {
 	document.getElementById('send_time').value = date_time();
 }, 1000);
+
+// Маска ввода номера телефона
+$(function() {
+			$('.contact-form__input_tel').mask('+7(000) 000-00-00');
+		});

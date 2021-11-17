@@ -29,10 +29,10 @@ printf ("<div class='container px-4 my-4'>
 $result2 = mysqli_query($db, "SELECT * FROM goods WHERE category='$category' ORDER BY good");
 $myrow2 = mysqli_fetch_array($result2);
 
-if ($category = 'Услуги') {
-	$file = 'service';
-} else {
+if ($category != 'Услуги') {
 	$file = 'good';
+} else {
+	$file = 'service';
 }
 
 $good='';

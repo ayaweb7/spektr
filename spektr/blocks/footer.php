@@ -33,17 +33,16 @@
 
 <!-- Scripts -->
 <!-- modal_form -->
-	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="js/remodal.min.js"></script>
-
+<script type="text/javascript" src="js/remodal.min.js"></script>
+<script type="text/javascript" src="/mail/js/mail.js"></script>
+<!-- -->
 <!-- Маска ввода номера телефона -->
 <!-- jQuery Mask Plugin -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-	<script type="text/javascript" src="/mail/js/mail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
  	<script>
 		$(function() {
 			$('.contact-form__input_tel').mask('+7(000) 000-00-00');
 		});
-	</script><!-- -->
+	</script>
 </body>
 </html>
