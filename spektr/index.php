@@ -113,7 +113,7 @@ include ("blocks/order.php");
 		<div class="feature col"><!---->
             <div class=""><!--feature-icon bg-primary bg-gradient-->
 				<a href='category.php?category=Пиломатериалы' title='Пиломатериалы' class="icon-link">
-					<img src="img/objects/wood.jpg" class="d-block mx-lg-auto img-fluid" alt="Пиломатериалы" width="264" height="191">
+					<img src="img/objects/wood.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Пиломатериалы" width="264" height="191">
 				</a>
 			</div>
             <h3 class="">Пиломатериалы</h3><!--lead_p text-center-->
@@ -127,7 +127,7 @@ include ("blocks/order.php");
 		<div class="feature col"><!-- bg-primary bg-gradient-->
 			<div class=""><!--feature-icon bg-primary bg-gradient-->
 				<a href='category.php?category=Стройматериалы' title='Стройматериалы' class="icon-link">
-					<img src="img/objects/playwood.jpg" class="d-block mx-lg-auto img-fluid" alt="Стройматериалы" width="264" height="191">
+					<img src="img/objects/playwood.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Стройматериалы" width="264" height="191">
 				</a>	
 			</div>
             <h3 class="">Стройматериалы</h3><!--lead_p text-center-->
@@ -141,7 +141,7 @@ include ("blocks/order.php");
 		<div class="feature col"><!-- bg-primary bg-gradient-->
 			<div class=""><!--feature-icon bg-primary bg-gradient-->
 				<a href='category.php?category=Элементы лестниц' title='Элементы лестниц' class="icon-link">
-					<img src="img/objects/ladder_element.jpg" class="d-block mx-lg-auto img-fluid" alt="Элементы лестниц" width="264" height="191">
+					<img src="img/objects/ladder_element.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Элементы лестниц" width="264" height="191">
 				</a>	
 			</div>
             <h3 class="">Элементы лестниц</h3><!--lead_p text-center-->

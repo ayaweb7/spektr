@@ -28,7 +28,7 @@
 				<input type="text" name="photo" id="photo" size="30" value="" />
 			</label>
 		</div>
-	</div>
+	</div><!--flexSmall-->
 
 <!-- DESCRIPTION -- KEYWORDS ---  -->
 	<div class='flexSmall'>
@@ -43,7 +43,7 @@
 				<textarea name="keywords" id="keywords" cols="70" rows="5">Купить ЧТО-ТО в Коряжме, ЧТО-ТО на заказ</textarea>
 			</label>
 		</div>
-	</div>
+	</div><!--flexSmall-->
 
 <!-- P1 --- P2  -->
 	<div class='flexSmall'>
@@ -58,32 +58,68 @@
 				<textarea name="p2" id="p2" cols="70" rows="5"></textarea>
 			</label>
 		</div>
-	</div>
+	</div><!--flexSmall-->
 
 <!-- P3 -->
 	<div class='flexSmall'>
 		<label>III - Третий абзац на странице - p3<br>
 			<textarea name="p3" id="p3" cols="100" rows="5"></textarea>
 		</label>
-	</div>
+	</div><!--flexSmall-->
 
-<!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
+<!-- GABARITE -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
-			<label>Длина<br>
-				<input type="text" name="lenght" id="lenght" size="20" value="" />
+			<label>Заголовок_1<br>
+				<input type="text" name="title_g1" id="title_g1" size="20" value="Толщина:" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Ширина<br>
-				<input type="text" name="width" id="width" size="20" value="" />
+			<label>Габарит_1<br>
+				<input type="text" name="g1" id="g1" size="15" value="" />
+			</label>
+		</div>
+		
+		<div class='blockInput'>||<br>||</div>
+		
+		<div class='blockInput'>
+			<label>Заголовок_2<br>
+				<input type="text" name="title_g2" id="title_g2" size="20" value="Ширина:" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Высота (толщина)<br>
-				<input type="text" name="height" id="height" size="20" value="" />
+			<label>Габарит_2<br>
+				<input type="text" name="g2" id="g2" size="15" value="" />
 			</label>
 		</div>
+		
+		<div class='blockInput'>||<br>||</div>
+		
+		<div class='blockInput'>
+			<label>Заголовок_3<br>
+				<input type="text" name="title_g3" id="title_g3" size="20" value="Длина:" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Габарит_3<br>
+				<input type="text" name="g3" id="g3" size="15" value="" />
+			</label>
+		</div>
+	</div><!--flexSmall-->
+
+<!-- PRICE -- ITEM -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>Заголовок_цена<br>
+				<input type="text" name="title_price" id="title_price" size="20" value="Цена:" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Цена, руб.<br>
+				<input type="text" name="price" id="price" size="15" value="" />
+			</label>
+		</div>
+		
 		<div class='blockInput'>
 			<label>Единица измерения<br>
 				<select name='item' size='5'>
@@ -95,18 +131,14 @@
 				</select>
 			</label>
 		</div>
-		<div class='blockInput'>
-			<label>Цена, руб.<br>
-				<input type="text" name="price" id="price" size="20" value="" />
-			</label>
-		</div>
-	</div>
+	</div><!--flexSmall-->
+
 
 <!-- SUBMIT -->
 	<div class='flexSmall'>
 		<input class='inputSubmit' type="submit" name="submit" id="submit" value="Занести в базу" />
 		<input class='inputReset' type="reset" name="set_filter" value="Сброс" />
-	</div>
+	</div><!--flexSmall-->
 
 <!-- HIDDEN -->
 	<input type="hidden" name="date" value="<?php echo (new DateTime())->format('Y-m-d'); ?>"></input>

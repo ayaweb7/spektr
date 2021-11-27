@@ -31,11 +31,15 @@ if (isset($_POST['keywords'])) {$keywords = $_POST['keywords'];}
 if (isset($_POST['p1'])) {$p1 = $_POST['p1'];}
 if (isset($_POST['p2'])) {$p2 = $_POST['p2'];}
 if (isset($_POST['p3'])) {$p3 = $_POST['p3'];}
-if (isset($_POST['width'])) {$width = $_POST['width'];}
-if (isset($_POST['height'])) {$height = $_POST['height'];}
-if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
-if (isset($_POST['item'])) {$item = $_POST['item'];}
+if (isset($_POST['title_g1'])) {$title_g1 = $_POST['title_g1'];}
+if (isset($_POST['title_g2'])) {$title_g2 = $_POST['title_g2'];}
+if (isset($_POST['title_g3'])) {$title_g3 = $_POST['title_g3'];}
+if (isset($_POST['title_price'])) {$title_price = $_POST['title_price'];}
+if (isset($_POST['g1'])) {$g1 = $_POST['g1'];}
+if (isset($_POST['g2'])) {$g2 = $_POST['g2'];}
+if (isset($_POST['g3'])) {$g3 = $_POST['g3'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['item'])) {$item = $_POST['item'];}
 
 
 $result = mysqli_query($db, "SELECT * FROM goods WHERE good='$good'");
@@ -97,23 +101,59 @@ $myrow = mysqli_fetch_array($result);
 		</div>
 	</div>
 
-<!-- GABARITE -- ITEM -- QUANTITY -- PRICE -->
+<!-- GABARITE -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
-			<label>Длина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="lenght" id="lenght" size="20" value="<?php echo $myrow['lenght'] ?>" />
+			<label>Заголовок_1<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="title_g1" id="title_g1" size="20" value="<?php echo $myrow['title_g1'] ?>" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Ширина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="width" id="width" size="20" value="<?php echo $myrow['width'] ?>" />
+			<label>Габарит_1<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="g1" id="g1" size="15" value="<?php echo $myrow['g1'] ?>" />
+			</label>
+		</div>
+		
+		<div class='blockInput'>||<br>||<br>||</div>
+		
+		<div class='blockInput'>
+			<label>Заголовок_2<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="title_g2" id="title_g2" size="20" value="<?php echo $myrow['title_g2'] ?>" />
 			</label>
 		</div>
 		<div class='blockInput'>
-			<label>Толщина<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="height" id="height" size="20" value="<?php echo $myrow['height'] ?>" />
+			<label>Габарит_2<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="g2" id="g2" size="15" value="<?php echo $myrow['g2'] ?>" />
 			</label>
 		</div>
+		
+		<div class='blockInput'>||<br>||<br>||</div>
+		
+		<div class='blockInput'>
+			<label>Заголовок_3<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="title_g3" id="title_g3" size="20" value="<?php echo $myrow['title_g3'] ?>" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Габарит_3<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="g3" id="g3" size="15" value="<?php echo $myrow['g3'] ?>" />
+			</label>
+		</div>
+	</div><!--flexSmall-->
+
+<!-- PRICE -- ITEM -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>Заголовок_цена<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="title_price" id="title_price" size="20" value="<?php echo $myrow['title_price'] ?>" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>Цена, руб.<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
+				<input type="text" name="price" id="price" size="15" value="<?php echo $myrow['price'] ?>" />
+			</label>
+		</div>
+		
 		<div class='blockInput'>
 			<label>Единица измерения<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
 				<select name='item' size='5'>
@@ -125,14 +165,7 @@ $myrow = mysqli_fetch_array($result);
 				</select>
 			</label>
 		</div>
-		<div class='blockInput'>
-			<label>Цена, руб.<br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-				<input type="text" name="price" id="price" size="20" value="<?php echo $myrow['price'] ?>" />
-			</label>
-		</div>
-	</div>
-
-
+	</div><!--flexSmall-->
 
 
 <!-- SUBMIT -->

@@ -28,15 +28,19 @@ if (isset($_POST['keywords'])) {$keywords = $_POST['keywords'];}
 if (isset($_POST['p1'])) {$p1 = $_POST['p1'];}
 if (isset($_POST['p2'])) {$p2 = $_POST['p2'];}
 if (isset($_POST['p3'])) {$p3 = $_POST['p3'];}
-if (isset($_POST['width'])) {$width = $_POST['width'];}
-if (isset($_POST['height'])) {$height = $_POST['height'];}
-if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
-if (isset($_POST['item'])) {$item = $_POST['item'];}
+if (isset($_POST['title_g1'])) {$title_g1 = $_POST['title_g1'];}
+if (isset($_POST['title_g2'])) {$title_g2 = $_POST['title_g2'];}
+if (isset($_POST['title_g3'])) {$title_g3 = $_POST['title_g3'];}
+if (isset($_POST['title_price'])) {$title_price = $_POST['title_price'];}
+if (isset($_POST['g1'])) {$g1 = $_POST['g1'];}
+if (isset($_POST['g2'])) {$g2 = $_POST['g2'];}
+if (isset($_POST['g3'])) {$g3 = $_POST['g3'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['item'])) {$item = $_POST['item'];}
 //$id = (int) $id;
 	
 	$query = "UPDATE goods SET date='$date', marker='$marker', photo='$photo', description='$description', keywords='$keywords',
-	p1='$p1', p2='$p2', p3='$p3', width='$width', height='$height', lenght='$lenght', item='$item', price='$price' WHERE id='$id'";
+	p1='$p1', p2='$p2', p3='$p3', title_g1='$title_g1', title_g2='$title_g2', title_g3='$title_g3', title_price='$title_price', g1='$g1', g2='$g2', g3='$g3', price='$price', item='$item' WHERE id='$id'";
 	
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {

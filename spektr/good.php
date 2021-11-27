@@ -38,15 +38,16 @@ $_SESSION['description'] = $myrow2['description'];
 		<div class="row g-5">
 			<div class="col-md-8">
 				<div class="col-md-6 col-sm-6 leftimg">
-					<img src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
+					<img class='d-block mx-lg-auto img-fluid img-thumbnail' src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
 				</div><!--col-md-6-->
 				<p>
 					<p><?php echo $myrow2['p1']; ?></p>
 					<p><?php echo $myrow2['p2']; ?></p>
 					<p><?php echo $myrow2['p3']; ?></p>
-					<p><strong>Профиль (высота (толщина) / ширина):<br> </strong><?php echo $myrow2['height']; ?> / <?php echo $myrow2['width']; ?> мм.</p>
-					<p><strong>Длина: </strong><?php echo $myrow2['lenght']; ?> м.</p>
-					<p><strong>Цена: </strong><?php echo $myrow2['price']; ?> руб.</p>
+					<p><strong><?php echo $myrow2['title_g1'] ?></strong> <?php echo $myrow2['g1']; ?></p>
+					<p><strong><?php echo $myrow2['title_g2'] ?></strong> <?php echo $myrow2['g2']; ?></p>
+					<p><strong><?php echo $myrow2['title_g3'] ?></strong> <?php echo $myrow2['g3']; ?></p>
+					<p><strong><?php echo $myrow2['title_price'] ?></strong> <?php echo $myrow2['price'] . " " . $myrow2['item']; ?></p>
 					<p><?php echo $myrow2['good']; ?> продаётся оптом и в розницу по доступным ценам в нашем магазине.<br> Сделать заказ прямо на нашем сайте можно нажав на кнопку <a href="#modal">"Сделать заявку".</a><br> Вы также можете оформить заказ и доставку по телефону, нажав на кнопку <a class="" href="tel:+79115518191" >"Позвонить"</a> или <a href="#modal">"Заказать звонок"</a>.</p>
 				</p>
 <?php

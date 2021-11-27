@@ -38,12 +38,16 @@ $_SESSION['description'] = $myrow2['description'];
 		<div class="row g-5">
 			<div class="col-md-8">
 				<div class="col-md-6 col-sm-6 leftimg">
-					<img src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
+					<img class='d-block mx-lg-auto img-fluid img-thumbnail' src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
 				</div><!--col-md-6-->
 				<p>
 					<p><?php echo $myrow2['p1']; ?></p>
 					<p><?php echo $myrow2['p2']; ?></p>
 					<p><?php echo $myrow2['p3']; ?></p>
+					<p><strong><?php echo $myrow2['title_g1'] ?></strong> <?php echo $myrow2['g1']; ?></p>
+					<p><strong><?php echo $myrow2['title_g2'] ?></strong> <?php echo $myrow2['g2']; ?></p>
+					<p><strong><?php echo $myrow2['title_g3'] ?></strong> <?php echo $myrow2['g3']; ?></p>
+					<p><strong><?php echo $myrow2['title_price'] ?></strong> <?php echo $myrow2['price']; ?></p>
 					<p>Получить консультацию Вы можете по телефону: <a class="" href="tel:+79115518191" >+7 (911) 551-81-91.</a><br>Вы можете также <a href="#modal">Заказать обратный звонок</a> и Вам перезвонят в указанное Вами время.</p>
 				</p>
 <?php
