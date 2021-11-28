@@ -45,7 +45,8 @@ if (isset($_GET['category'])) {
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script
-<!-- Yandex.Metrika counter -->
+
+<!-- Yandex.Metrika counter - Спектр - спасибо -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -59,7 +60,23 @@ if (isset($_GET['category'])) {
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/86501076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter - Спектр - спасибо -->
+
+<!-- Yandex.Metrika counter - Спектр - активность на сайте-->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(86646610, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86646610" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- Yandex.Metrika counter - Спектр - активность на сайте-->
 
 </head>
 
@@ -84,8 +101,8 @@ if (isset($_GET['category'])) {
 
 		
 		<div class="col-md-3 text-end">
-			<a class="btn-phone" href="tel:+79115518191" ><img src="img/tel.png" class="" title="" width="30" height="30"/></a>
-			<a class="btn-phone" href="tel:+79115518191" ><p class="phone mb-0 ">+7 (911) 551-81-91</p></a>
+			<a class="btn-phone" href="tel:+79210752656" ><img src="img/tel.png" class="" title="" width="30" height="30"/></a>
+			<a class="btn-phone" href="tel:+79210752656" ><p class="phone mb-0 ">+7 (921) 075-26-56</p></a>
 		</div>
 	</header>
 </div>

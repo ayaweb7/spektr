@@ -42,10 +42,10 @@ do
 	{
 	$good = $myrow2['good'];
 	printf ("<div class=''><!--feature col-->
-				<h3 class='lead_p'>%s</h3>
+				<h4 class='lead_p'>%s</h4>
 				<div>
 					<a href='%s.php?good=%s' title='%s'>
-						<img src='img/objects/%s.jpg' class='d-block mx-lg-auto img-fluid img-thumbnail' title='%s' width='200' height='191'>
+						<img src='img/objects/%s.jpg' class='d-block mx-lg-auto img-fluid img-thumbnail' title='%s' width='264' height='191'>
 					</a>
 				</div>
 <!--					<div class='mx-5 text-center fw-bolder color-dark'><p>%s</p></div>-->

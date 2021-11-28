@@ -38,7 +38,9 @@ $_SESSION['description'] = $myrow2['description'];
 		<div class="row g-5">
 			<div class="col-md-8">
 				<div class="col-md-6 col-sm-6 leftimg">
-					<img class='d-block mx-lg-auto img-fluid img-thumbnail' src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
+					<a href="<?php echo 'img/origin/' . $myrow2['photo'] . '.jpg'; ?>" title='Оригинал фото' target='_blank'>
+						<img class='d-block mx-lg-auto img-fluid img-thumbnail' src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
+					</a>
 				</div><!--col-md-6-->
 				<p>
 					<p><?php echo $myrow2['p1']; ?></p>
