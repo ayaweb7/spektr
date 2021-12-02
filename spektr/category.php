@@ -56,8 +56,12 @@ do
 	
 while ($myrow2 = mysqli_fetch_array($result2));
 
-printf ("</div><!--row-->
-</div><!--col-md-8-->");
+		printf ("</div><!--row-->");
+
+// Подключаем кнопки обратной связи
+include ("blocks/order_call_921.php");
+
+	printf ("</div><!--col-md-8-->");
 
 // Подключаем accordion
 include ("blocks/accordion.php");

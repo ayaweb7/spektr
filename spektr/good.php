@@ -46,15 +46,17 @@ $_SESSION['description'] = $myrow2['description'];
 					<p><?php echo $myrow2['p1']; ?></p>
 					<p><?php echo $myrow2['p2']; ?></p>
 					<p><?php echo $myrow2['p3']; ?></p>
+					<p><strong><?php echo $myrow2['good']; ?></strong> от строительной компании<strong>"Спектр"</strong> имеет размеры:</p>
 					<p><strong><?php echo $myrow2['title_g1'] ?></strong> <?php echo $myrow2['g1']; ?></p>
 					<p><strong><?php echo $myrow2['title_g2'] ?></strong> <?php echo $myrow2['g2']; ?></p>
 					<p><strong><?php echo $myrow2['title_g3'] ?></strong> <?php echo $myrow2['g3']; ?></p>
 					<p><strong><?php echo $myrow2['title_price'] ?></strong> <?php echo $myrow2['price'] . " " . $myrow2['item']; ?></p>
-					<p><?php echo $myrow2['good']; ?> продаётся оптом и в розницу по доступным ценам в нашем магазине.<br> Сделать заказ прямо на нашем сайте можно нажав на кнопку <a href="#modal">"Сделать заявку".</a><br> Вы также можете оформить заказ и доставку по телефону, нажав на кнопку <a class="" href="tel:+79115518191" >"Позвонить"</a> или <a href="#modal">"Заказать звонок"</a>.</p>
+					<p><?php echo $myrow2['good']; ?> продаётся оптом и в розницу по доступным ценам в нашем магазине по адресу:<br><strong class="fst-italic"> Архангельская область, г.Коряжма, ул.Советская, д.17 (цокольный этаж со стороны ул.Архангельской).</strong></p>
+					<p>Сделать заказ прямо на нашем сайте можно нажав на кнопку <a href="#modal">"Сделать заявку"</a><br> Вы также можете оформить заказ и доставку по телефону: <a class="" href="tel:+79210752656" > +7 (921) 075-26-56</a>, нажав на кнопку <a class="" href="tel:+79210752656" >"Позвонить"</a> или <a href="#modal">"Заказать звонок"</a>.</p>
 				</p>
 <?php
 // Подключаем кнопки обратной связи
-include ("blocks/order_call.php");
+include ("blocks/order_call_921.php");
 ?>			
 			</div><!--col-md-8-->
 
