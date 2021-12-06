@@ -41,16 +41,15 @@ $_SESSION['description'] = $myrow2['description'];
 					<img class='d-block mx-lg-auto img-fluid img-thumbnail' src="<?php echo 'img/objects/' . $myrow2['photo'] . '.jpg'; ?>" alt='<?php echo $myrow2['good']; ?>' width='264' height='191'>
 				</div><!--col-md-6-->
 				<p>
-					<p><?php echo $myrow2['p1']; ?></p>
-					<p><?php echo $myrow2['p2']; ?></p>
-					<p><?php echo $myrow2['p3']; ?></p>
-					<p>Строительная компания<strong>"Спектр"</strong> оказывает следующие услуги:</p>
 					<p><strong><?php echo $myrow2['title_g1'] ?></strong> <?php echo $myrow2['g1']; ?></p>
 					<p><strong><?php echo $myrow2['title_g2'] ?></strong> <?php echo $myrow2['g2']; ?></p>
 					<p><strong><?php echo $myrow2['title_g3'] ?></strong> <?php echo $myrow2['g3']; ?></p>
-					<p><strong><?php echo $myrow2['title_price'] ?></strong> <?php echo $myrow2['price']; ?></p>
-					<p>Получить консультацию по услуге Вы можете в нашем магазине по адресу:<br><strong class="fst-italic"> Архангельская область, г.Коряжма, ул.Советская, д.17 (цокольный этаж со стороны ул.Архангельской).</strong><br>
-					а также по телефону: <a class="" href="tel:+79115518191" > +7 (911) 551-81-91</a>, нажав на кнопку <a class="" href="tel:+79115518191" >"Позвонить"</a> или <a href="#modal">"Заказать звонок"</a> и Вам перезвонят в указанное Вами время.</p>
+					<p class="color-price pb-3"><strong><?php echo $myrow2['title_price'] ?></strong> <?php echo $myrow2['price']; ?></p>
+					<p>Получить консультацию по услуге Вы можете в магазине "Спектр" по адресу:<br><strong class="fst-italic"> Архангельская область, г.Коряжма, ул.Советская, д.17 (цокольный этаж со стороны ул.Архангельской).</strong></p>
+					<p><?php echo $myrow2['p1']; ?></p>
+					<p><?php echo $myrow2['p2']; ?></p>
+					<p><?php echo $myrow2['p3']; ?></p>
+					<p>Консультации доступны по телефону: <a class="" href="tel:+79115518191" > +7 (911) 551-81-91</a>, по кнопке <a class="" href="tel:+79115518191" >"Позвонить"</a><br>Вы также можете <a href="#modal">"Заказать звонок"</a> и Вам перезвонят в указанное Вами время.</p>
 				</p>
 <?php
 // Подключаем кнопки обратной связи
