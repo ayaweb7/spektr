@@ -46,37 +46,6 @@ if (isset($_GET['category'])) {
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="https://kit.fontawesome.com/03ab4f6e6d.js" crossorigin="anonymous"></script
 
-<!-- Yandex.Metrika counter - Спектр - спасибо -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(86501076, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/86501076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- Yandex.Metrika counter - Спектр - спасибо -->
-
-<!-- Yandex.Metrika counter - Спектр - активность на сайте-->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(86646610, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/86646610" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- Yandex.Metrika counter - Спектр - активность на сайте-->
 
 </head>
 
@@ -87,23 +56,18 @@ if (isset($_GET['category'])) {
 <div id="header"  class="container">
 	<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 		<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-			<img src="img/logo.png" class="me-2" title="О нас" width="70" height="70"><!--d-block mx-lg-auto img-fluid-->
+			<img src="img/logo.png" class="me-2" title="О нас" width="90" height="70"><!-- d-block mx-lg-auto img-fluid-->
 		</a>
 
 		<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-			<li><a href="/" class="nav-spektr px-2">Главная</a></li>
-			<li><a href="/#good" class="nav-spektr px-2">Товары</a></li>
+			<li><a href="/" class="nav-spektr px-2"></a></li>
+			<li><a href="/#good" class="nav-spektr px-2">Общие сведения</a></li>
 			<li><a href="/#services" class="nav-spektr px-2">Услуги</a></li>
-			<li><a href="/#about" class="nav-spektr px-2">О компании</a></li>
+			<li><a href="/#about" class="nav-spektr px-2">Родителям</a></li>
 			<li><a href="/#contact" class="nav-spektr px-2">Контакты</a></li>
 			<li><a href="admin/index.php" style="color: white;">.</a></li>
 		</ul>
 
-		
-		<div class="col-md-3 text-end">
-			<a class="btn-phone" href="tel:+79210752656" ><img src="img/tel.png" class="" title="" width="30" height="30"/></a>
-			<a class="btn-phone" href="tel:+79210752656" ><p class="phone mb-0 ">+7 (921) 075-26-56</p></a>
-		</div>
 	</header>
 </div>
 
@@ -117,9 +81,12 @@ include ("blocks/modal.php");
 	<symbol id="arrow-up-circle-fill" viewBox="0 0 16 16">
 		<path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
 	</symbol>
-</svg>			
+</svg>
+<!--
 <div type="button" id='top' class="top-bt">
 	<div class="text-call">
 		<a href='#header' title="Наверх страницы"><i class="fas fa-arrow-circle-up"></i></i></a>
 	</div>
-</div><!--<svg class="bi" width="3.5rem" height="3.5rem"><use xlink:href="#arrow-up-circle-fill"/></svg>#arrow-up-circle-fill<!---->
+</div>
+-->
+

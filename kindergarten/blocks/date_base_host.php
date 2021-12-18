@@ -1,7 +1,7 @@
 <?php  // date_base.php
 $hostname = 'localhost';
-$database = 'u116166_spektr';
-$username = 'u116166_nikart';
+$database = 'arte0374_agency';
+$username = 'arte0374_nikart';
 $password = 'arteeva12';
 
 $db = mysqli_connect($hostname, $username, $password) or die("Нет связи с СЕРВЕРОМ"); // Can't connect to SERVER

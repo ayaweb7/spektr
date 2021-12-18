@@ -1,6 +1,6 @@
 <?php  // date_base.php
 $hostname = 'localhost';
-$database = 'spektr';
+$database = 'kinder';
 $username = 'nikart';
 $password = 'arteeva12';
 

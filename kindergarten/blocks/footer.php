@@ -23,7 +23,7 @@
 		<a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
 			<img src="img/logo.png" class="d-block mx-lg-auto img-fluid" title="О нас" width="70" height="70" loading="lazy">
 		</a>
-		<span class="text-muted">&copy; 2021 строительная компания "Спектр"</span>
+		<span class="text-muted">&copy; 2021 Елена Синельникова</span>
 	</div>
 	<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
 		<li class="ms-3"><a class="text-muted" href="https://vk.com/spektrkoryazhma" target="_blank"><svg class="bi" width="40" height="40"><use xlink:href="#vkontakte"/></svg></a></li>
@@ -31,18 +31,5 @@
 </footer>
 </div>
 
-<!-- Scripts -->
-<!-- modal_form -->
-<script type="text/javascript" src="js/remodal.min.js"></script>
-<script type="text/javascript" src="/mail/js/mail.js"></script>
-<!-- -->
-<!-- Маска ввода номера телефона -->
-<!-- jQuery Mask Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
- 	<script>
-		$(function() {
-			$('.contact-form__input_tel').mask('+7(000) 000-00-00');
-		});
-	</script>
 </body>
 </html>
