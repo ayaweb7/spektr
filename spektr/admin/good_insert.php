@@ -67,6 +67,38 @@
 		</label>
 	</div><!--flexSmall-->
 
+<!-- TABLE_SPECIFICATION_TITLE - ROW_1 -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>name_title<br>
+				<input type="text" name="name_title" id="name_title" size="20" value="Сечение, мм." />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>size_title<br>
+				<input type="text" name="size_title" id="size_title" size="30" value="Количество в 1 куб.м. при длине:" />
+			</label>
+		</div>
+		
+		<div class='blockInput'>||<br>||</div>
+		
+		<div class='blockInput'>
+			<label>size_1<br>
+				<input type="text" name="size_1" id="size_1" size="20" value="4.3" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>size_2<br>
+				<input type="text" name="size_2" id="size_2" size="20" value="5.2" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>size_3<br>
+				<input type="text" name="size_3" id="size_3" size="20" value="6.1" />
+			</label>
+		</div>
+	</div><!--flexSmall-->
+
 <!-- GABARITE -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
@@ -107,6 +139,34 @@
 		</div>
 	</div><!--flexSmall-->
 
+<!-- TABLE_SPECIFICATION_PRICE_TITLE - ROW_1 -->
+	<div class='flexSmall'>
+		<div class='blockInput'>
+			<label>толщина - deptp<br>
+				<input type="text" name="depth" id="depth" size="20" value="толщина" />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>ширина - width<br>
+				<input type="text" name="width" id="width" size="20" value="ширина" />
+			</label>
+		</div>
+
+		<div class='blockInput'>||<br>||</div>
+
+		<div class='blockInput'>
+			<label>1 Подзаголовок цена 1<br>
+				<input type="text" name="price_title_1" id="price_title_1" size="20" value="1 пог.м." />
+			</label>
+		</div>
+		<div class='blockInput'>
+			<label>2 Подзаголовок цена 2<br>
+				<input type="text" name="price_title_1" id="price_title_1" size="20" value="1 куб.м." />
+			</label>
+		</div>
+	</div><!--flexSmall-->
+
+
 <!-- PRICE -- ITEM -->
 	<div class='flexSmall'>
 		<div class='blockInput'>
@@ -125,7 +185,7 @@
 				<select name='item' size='5'>
 					<option selected>шт.</option>
 					<option>кг.</option>
-					<option>м.</option>
+					<option selected>м.</option>
 					<option>кв.м.</option>
 					<option>куб.м.</option>
 				</select>

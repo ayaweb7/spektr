@@ -32,10 +32,19 @@ if (isset($_POST['title_g1'])) {$title_g1 = $_POST['title_g1'];}
 if (isset($_POST['title_g2'])) {$title_g2 = $_POST['title_g2'];}
 if (isset($_POST['title_g3'])) {$title_g3 = $_POST['title_g3'];}
 if (isset($_POST['title_price'])) {$title_price = $_POST['title_price'];}
+if (isset($_POST['name_title'])) {$name_title = $_POST['name_title'];}
+if (isset($_POST['size_title'])) {$size_title = $_POST['size_title'];}
+if (isset($_POST['size_1'])) {$size_1 = $_POST['size_1'];}
+if (isset($_POST['size_2'])) {$size_2 = $_POST['size_2'];}
+if (isset($_POST['size_3'])) {$size_3 = $_POST['size_3'];}
 if (isset($_POST['g1'])) {$g1 = $_POST['g1'];}
 if (isset($_POST['g2'])) {$g2 = $_POST['g2'];}
 if (isset($_POST['g3'])) {$g3 = $_POST['g3'];}
+if (isset($_POST['depth'])) {$depth = $_POST['depth'];}
+if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['price_title_1'])) {$price_title_1 = $_POST['price_title_1'];}
+if (isset($_POST['price_title_2'])) {$price_title_2 = $_POST['price_title_2'];}
 if (isset($_POST['item'])) {$item = $_POST['item'];}
 $id = (int) $id;
 
@@ -53,7 +62,7 @@ if ($fail == "") {
 
 
 
-	$query = "INSERT INTO goods(id, date, marker, category, good, photo, description, keywords, p1, p2, p3, title_g1, title_g2, title_g3, title_price, g1, g2, g3, price, item) VALUES ('$id', '$date', '$marker', '$category', '$good', '$photo', '$description', '$keywords', '$p1', '$p2', '$p3', '$title_g1', '$title_g2', '$title_g3', '$title_price', '$g1', '$g2', '$g3', '$price', '$item')";
+	$query = "INSERT INTO goods(id, date, marker, category, good, photo, description, keywords, p1, p2, p3, title_g1, title_g2, title_g3, title_price, name_title, size_title, size_1, size_2, size_3, g1, g2, g3, depth, width, price, item) VALUES ('$id', '$date', '$marker', '$category', '$good', '$photo', '$description', '$keywords', '$p1', '$p2', '$p3', '$title_g1', '$title_g2', '$title_g3', '$title_price', '$g1', '$g2', '$g3', '$depth', '$width', '$price', '$price_title_1', '$price_title_2', '$item')";
 
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {
