@@ -158,8 +158,9 @@ img {
 #nav li a em:hover {
     color: #d01e1e; /*red*/
     }
-    
-#nav ul { /* ВЫПАДАЮЩИЕ ПУНКТЫ */
+
+/* ВЫПАДАЮЩИЕ ПУНКТЫ */
+#nav ul { 
 	list-style: none;
 	position: absolute;
 	display: none;

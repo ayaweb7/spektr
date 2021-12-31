@@ -25,6 +25,7 @@ $_monthsList = array(
 
 //текущий месяц
 $month = $_monthsList[date("n")];
+$current_year = date('Y');
  
 //echo $month;
 //выведет, например, для 7 месяца "Июль"
@@ -78,9 +79,9 @@ $myrow3 = mysqli_fetch_array($result3);
 		else
 		{
 printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
-		<h2 class='pb-2 border-bottom'>Актуальные цены на %s 2021</h2>
+		<h2 class='pb-2 border-bottom'>Актуальные цены на %s %s</h2>
 		<div class='table-responsive'>
-			<table class='table table-striped table-sm text-center'>", $month);
+			<table class='table table-striped table-sm text-center'>", $month, $current_year);
 
 // Начало проверки условий для вывода информации разных товаров - БРУС
 			if ($myrow3['name'] == 'Брус') {

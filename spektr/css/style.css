@@ -75,13 +75,13 @@ h3 {*/
 /* ********** */
 /*    MENU    */
 /* ********** */
-
+/**/
 .nav-spektr {
   display: block;
-  padding: 0.5rem 1rem;
+  /*padding: 0.5rem 1rem;*/
   color: #6c757d; /*dark-gray*/
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;/**/
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-spektr {
@@ -116,12 +116,113 @@ h3 {*/
 	opacity: 0.8;
 }
 .btn-phone:hover {
-	color: #0a58ca;
+	color: black; /*#0a58ca - blue*/
 	opacity: 1;
 }
 
 .phone {
 	display: inline-block;
+}
+
+/*------------------------------------*\
+	СКАЧАННЫЙ КОД НАВИГАЦИИ
+\*------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+*{box-sizing: border-box;}
+
+.nav {
+/*  background: white;
+  box-shadow: 0 2px 0 0 #ECF1F2;
+  border-top: 1px solid #ECF1F2;
+  text-align: center;*/
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+/**/  transition: .2s linear;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**/
+.topmenu > li {
+  display: inline-block;
+/**/  position: relative;
+  margin-right: -4px;
+/*  border-left: 1px solid #ECF1F2;*/
+}
+.topmenu > li:last-child {/*border-right: 1px solid #ECF1F2;*/}
+.topmenu > li > a {
+/*  font-weight: bold;*/
+  padding: 20px 10px;
+/*  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;*/
+  color: #6c757d; /*dark-gray*/
+}
+
+.active-menu:after, .submenu-link:after {
+  content: "\f107";
+/**/  font-family: "FontAwesome";
+/* color: #6c757d; dark-gray*/
+  margin-left: 5px;
+}
+.topmenu .active-menu,
+.topmenu > li > a:hover,
+.submenu li a:hover {
+	color: black; /*blue - #0a58ca pink- #ddbe86;*/
+	
+}
+
+.submenu li a:hover {
+	background: #555;
+	opacity: 0.9;
+	font-weight: bolder;
+}
+
+
+.submenu {
+  position: absolute;
+  left: -1px;
+  z-index: 5;
+  width: 220px;
+  letter-spacing: 4px;
+  border-bottom: 1px solid #ECF1F2;
+  visibility: hidden;
+/*  opacity: 0;
+  transform: translateY(10px);*/
+  transition: .2s ease-in-out;
+}
+.submenu li {
+	position: relative;
+	
+}
+
+.submenu a {
+  background: #999;
+  border-top: 1px solid #ECF1F2;
+  border-right: 1px solid #ECF1F2;
+  border-left: 1px solid #ECF1F2;
+  color: white; /*#6c757d - dark-gray*/ /*#1c1c1c*/
+  font-weight: bolder;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0;
+  padding: 10px 20px;
+}
+.submenu .submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  left: -webkit-calc(100% - 1px);
+}
+.nav li:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+/*  transform: translateY(0px);*/
 }
 
 /* ********** */
