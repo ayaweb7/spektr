@@ -66,7 +66,6 @@ $current_year = date('Y');
 					<p><?php echo $myrow2['p2']; ?></p>
 					<p><?php echo $myrow2['p3']; ?></p>
 					<p>Сделать заказ прямо на нашем сайте можно нажав на кнопку <a href="#modal">"Сделать заявку"</a><br> Вы также можете оформить заказ и доставку по телефону: <a class="" href="tel:+79210752656" > +7 (921) 075-26-56</a>, нажав на кнопку <a class="" href="tel:+79210752656" >"Позвонить"</a> или <a href="#modal">"Заказать звонок"</a>.</p>
-
 				</p>
 
 <?php
@@ -107,7 +106,7 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 				$cut = $myrow3['depth'] * $myrow3['width'];
 				$count = round(1000000/($cut * $myrow2['size_1']),1);
 				$price_count = round($myrow3['price']/$count);
-					printf  ("<tr>
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
 								<td>%s</td>
 								<td>%s</td>
 								<td>%s шт.</td>
@@ -115,7 +114,7 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 								<td>%s руб.</td>
 							</tr>
 						</tbody>", $myrow3['depth'], $myrow3['width'], $count, $price_count, $myrow3['price']); 
-					
+				$even=!$even;
 				}
 
 // Окончание цикла печати товаров в категории
@@ -154,7 +153,7 @@ printf  ("</table>
 				$count_52 = round(1000000/($cut * $myrow2['size_2']));
 				$count_61 = round(1000000/($cut * $myrow2['size_3']));
 				$price_count = round(1000000/$cut) * $myrow3['price'];
-					printf  ("<tr>
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
 								<td>%s</td>
 								<td>%s</td>
 								<td>%s шт.</td>
@@ -164,7 +163,7 @@ printf  ("</table>
 								<td>%s руб.</td>
 							</tr>
 						</tbody>", $myrow3['depth'], $myrow3['width'], $count_43, $count_52, $count_61, $myrow3['price'], $price_count); 
-					
+				$even=!$even;	
 				}
 
 // Окончание цикла печати товаров в категории
@@ -180,6 +179,7 @@ printf  ("</table>
 ?>				
 				<p>
 				</p>
+
 <?php
 // Подключаем кнопки обратной связи
 include ("blocks/order_call_921.php");

@@ -23,14 +23,17 @@ if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['depth'])) {$depth = $_POST['depth'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['material'])) {$material = $_POST['material'];}
+if (isset($_POST['list'])) {$list = $_POST['list'];}
+if (isset($_POST['item'])) {$item = $_POST['item'];}
 //$id = (int) $id;
 	
-	$query = "UPDATE specif SET date='$date', depth='$depth', width='$width', price='$price' WHERE id='$id'";
+	$query = "UPDATE specif SET date='$date', depth='$depth', width='$width', price='$price', material='$material', list='$list', item='$item' WHERE id='$id'";
 	
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {
 		echo "<p>Характеристики товара (услуги) <em>$good</em> успешно изменены</p><br>
-<p>Название товара: <em>$name;</em><br> Толщина: <em>$depth.</em><br> Ширина: <em>$width.</em><br> Цена: <em>$price.</em><p><br><br>";
+<p>Название товара: <em>$name;</em><br> Толщина: <em>$depth.</em><br> Ширина: <em>$width.</em><br> Цена: <em>$price.</em><br> Материал: <em>$material.</em><p><br><br>";
 	} else {
 		  echo "<p>У нас проблемы ! ! ! --- НЕудачный ввод - <em>Error: " . $query . "<br>" . mysqli_error($db) . "</em></p>";
 	}

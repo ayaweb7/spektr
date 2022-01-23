@@ -15,6 +15,20 @@ $result2 = mysqli_query($db, "SELECT * FROM goods WHERE good='$good'");
 $myrow2 = mysqli_fetch_array($result2);
 $_SESSION['keywords'] = $myrow2['keywords'];
 $_SESSION['description'] = $myrow2['description'];
+
+//список месяцев с названиями для замены
+$_monthsList = array(
+"1"=>"январь","2"=>"февраль","3"=>"март",
+"4"=>"апрель","5"=>"май", "6"=>"июнь",
+"7"=>"июль","8"=>"август","9"=>"сентябрь",
+"10"=>"октябрь","11"=>"ноябрь","12"=>"декабрь");
+
+//текущий месяц
+$month = $_monthsList[date("n")];
+$current_year = date('Y');
+ 
+//echo $month;
+//выведет, например, для 7 месяца "Июль"
 ?>
 
 
@@ -51,6 +65,110 @@ $_SESSION['description'] = $myrow2['description'];
 					<p><?php echo $myrow2['p3']; ?></p>
 					<p>Консультации доступны по телефону: <a class="" href="tel:+79115518191" > +7 (911) 551-81-91</a>, по кнопке <a class="" href="tel:+79115518191" >"Позвонить"</a><br>Вы также можете <a href="#modal">"Заказать звонок"</a> и Вам перезвонят в указанное Вами время.</p>
 				</p>
+
+<?php
+// Выборка всех существующих спецификаций в каждом из товаров, отсортированных по толщине и ширине
+$result3 = mysqli_query($db, "SELECT * FROM specif WHERE name='$myrow2[good]' ORDER BY material");
+$myrow3 = mysqli_fetch_array($result3);
+
+// Проверка наличия спецификаций у товара для необходимости печати таблицы
+		if (!isset($myrow3['id'])) {'<script language="javascript">document.getElementsByClassName("absent").style.display="none";<script>';}                     
+		else
+		{
+printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
+		<h2 class='pb-2 border-bottom'>Актуальные цены на %s %s</h2>
+		<div class='table-responsive'>
+			<table class='table table-striped table-sm text-center'>", $month, $current_year);
+
+// Начало проверки условий для вывода информации разных товаров - СРУБЫ
+			if ($myrow3['name'] == 'Срубы') {
+
+					printf ("<thead>
+					<tr class='fw-bold'>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s</th>
+						<th scope='col'>Стоимость за 1 %s</th>
+					</tr>
+				</thead>
+				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow3['item']);
+// Начало цикла печати спецификаций товара       
+				do
+				{
+//				$cut = $myrow3['depth'] * $myrow3['width'];
+//				$count = round(1000000/($cut * $myrow2['size_1']),1);
+//				$price_count = round($myrow3['price']/$count);
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td class='text-start'>%s</td>
+								<td>%s</td>
+								<td>%s руб.</td>
+							</tr>
+						</tbody>", $myrow3['material'], $myrow3['list'], $myrow3['price']); 
+				$even=!$even;	
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+
+// Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ДОСКА СТРОГАНАЯ		
+			} else {
+					
+					printf ("<thead>
+					<tr class='fw-bold'>
+						<td style='border: 0;' colspan='2'>%s</td>
+						<td style='border: 0;' colspan='3'>%s</td>
+						<td style='border: 0;' colspan='2'>Стоимость</td>
+					</tr>
+					<tr>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s м.</th>
+						<th scope='col'>%s м.</th>
+						<th scope='col'>%s м.</th>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s</th>
+					</tr>
+				</thead>
+				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['size_1'], $myrow2['size_2'], $myrow2['size_3'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+// Начало цикла печати спецификаций товара       
+				do
+				{
+				$cut = $myrow3['depth'] * $myrow3['width'];
+				$count_43 = round(1000000/($cut * $myrow2['size_1']));
+				$count_52 = round(1000000/($cut * $myrow2['size_2']));
+				$count_61 = round(1000000/($cut * $myrow2['size_3']));
+				$price_count = round(1000000/$cut) * $myrow3['price'];
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s</td>
+								<td>%s</td>
+								<td>%s шт.</td>
+								<td>%s шт.</td>
+								<td>%s шт.</td>
+								<td>%s руб.</td>
+								<td>%s руб.</td>
+							</tr>
+						</tbody>", $myrow3['depth'], $myrow3['width'], $count_43, $count_52, $count_61, $myrow3['price'], $price_count); 
+				$even=!$even;	
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+			}
+// Окончание проверок, связанных с выводом таблиц
+		}
+	
+?>				
+				<p>
+				</p>
+
 <?php
 // Подключаем кнопки обратной связи
 include ("blocks/order_call_911.php");

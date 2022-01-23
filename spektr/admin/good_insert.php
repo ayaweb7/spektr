@@ -185,7 +185,7 @@
 				<select name='item' size='5'>
 					<option selected>шт.</option>
 					<option>кг.</option>
-					<option selected>м.</option>
+					<option selected>пог.м.</option>
 					<option>кв.м.</option>
 					<option>куб.м.</option>
 				</select>

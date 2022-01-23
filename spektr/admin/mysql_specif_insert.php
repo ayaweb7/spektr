@@ -23,6 +23,9 @@ if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['depth'])) {$depth = $_POST['depth'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
+if (isset($_POST['material'])) {$material = $_POST['material'];}
+if (isset($_POST['list'])) {$list = $_POST['list'];}
+if (isset($_POST['item'])) {$item = $_POST['item'];}
 $id = (int) $id;
 
 // Проверка на ошибки средствами PHP
@@ -39,11 +42,11 @@ function validate_price($field) {return ($field == "") ? "<p><em>! ! !</em> Не
 
 if ($fail == "") {
 	echo "<p>Проверка формы прошла успешно:</p><br>
-<p>Название товара: <em>$name;</em><br> Толщина: <em>$depth.</em><br> Ширина: <em>$width.</em><br> Цена: <em>$price.</em><p><br><br>";
+<p>Название товара: <em>$name;</em><br> Толщина: <em>$depth.</em><br> Ширина: <em>$width.</em><br> Цена: <em>$price.</em><br> Материал: <em>$material.</em><p><br><br>";
 
 
 
-	$query = "INSERT INTO specif(id, date, name, depth, width, price) VALUES ('$id', '$date', '$name', '$depth', '$width', '$price')";
+	$query = "INSERT INTO specif(id, date, name, depth, width, price, material, list, item) VALUES ('$id', '$date', '$name', '$depth', '$width', '$price', '$material', '$list', '$item')";
 
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {

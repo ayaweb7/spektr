@@ -24,6 +24,17 @@ h3 {*/
     font-weight: bold;
 }*/
 
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+/*  border-color: inherit;
+  border-width: 0;*/
+  border-style: none;
+}
+
 .services span {
 	color: #dee2e6; /* light-light-blue */
 	background-color: #6c757d; /*dark-gray*/

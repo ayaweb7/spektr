@@ -24,27 +24,55 @@ $result->close(); // Товары, отсортированные по алфа�
 ?>
 			</select><br>
 		</div>
-		
-		<div class='blockInput'>||<br>||</div>
-		
 		<div class='blockInput'>
-			<label>Габариты - толщина <em>*</em><br>
-				<input type="text" name="depth" id="depth" size="20" value="" />
-			</label>
+		
+			<div>Цифровые параметры - для товаров</div>
+			
+			<div>
+				<label>Габариты - толщина <em>*</em><br>
+					<input type="text" name="depth" id="depth" size="20" value="20" />
+				</label>
+			</div>
+			<div>
+				<label>Габариты - ширина <em>*</em><br>
+					<input type="text" name="width" id="width" size="20" value="80" />
+				</label>
+			</div>
+			
+			<div>
+				<label>Цена <em>*</em><br>
+					<input type="text" name="price" id="price" size="20" value="1000" />
+				</label>
+			</div>
 		</div>
 		<div class='blockInput'>
-			<label>Габариты - ширина <em>*</em><br>
-				<input type="text" name="width" id="width" size="20" value="" />
-			</label>
+		
+			<div>Словесные характеристики - для услуг</div>
+			
+			<div>
+				<label>Описание материала <em>*</em><br>
+					<input type="text" name="material" id="material" size="70" value="Строганое бревно" />
+				</label>
+			</div>
+			<div>
+				<label>Перечень услуг <em>*</em><br>
+					<input type="text" name="list" id="list" size="70" value="Материал + работа" />
+				</label>
+			</div>
+			<div>
+				<label>Единица измерения<br>
+					<select name='item' size='5'>
+						<option>шт.</option>
+						<option>кг.</option>
+						<option>пог.м.</option>
+						<option>кв.м.</option>
+						<option selected>куб.м.</option>
+					</select>
+				</label>
+			</div>
+			
 		</div>
 		
-		<div class='blockInput'>||<br>||</div>
-		
-		<div class='blockInput'>
-			<label>Цена <em>*</em><br>
-				<input type="text" name="price" id="price" size="20" value="" />
-			</label>
-		</div>
 	</div><!--flexSmall-->
 
 
