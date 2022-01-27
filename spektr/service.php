@@ -110,8 +110,15 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 		while ($myrow3 = mysqli_fetch_array($result3));
 
 printf  ("</table>
-		</div><!--table-responsive-->
-	</div>");
+		</div><!--table-responsive-->");
+
+// Подключаем карусель с фотографиями срубов
+//include ("blocks/carousel.php");
+
+// Подключаем калькулятор объёма и стоимости сруба
+include ("blocks/calc.php");
+
+	printf  ("</div>");
 
 
 // Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ДОСКА СТРОГАНАЯ		
