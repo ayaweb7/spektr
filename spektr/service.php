@@ -112,8 +112,8 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 printf  ("</table>
 		</div><!--table-responsive-->");
 
-// Подключаем карусель с фотографиями срубов
-//include ("blocks/carousel.php");
+// Подключаем галерею с фотографиями срубов
+include ("blocks/gallery.php");
 
 // Подключаем калькулятор объёма и стоимости сруба
 include ("blocks/calc.php");

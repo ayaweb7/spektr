@@ -84,8 +84,8 @@
 				<select name='partition' size='3'>
 					<option selected>0</option>
 <?php
-	for($i=3;$i<=21;$i++ )
-		printf("<option>%s</option>",$i);
+	for($i = 3; $i <= 21; $i++ )
+		printf("<option>%s</option>", $i);
 ?>
 				</select>
 			</div>
@@ -97,74 +97,6 @@
 		</div><!--flexSmall-->
 		</form>
 	</div><!-- initial -->
-
-
-
-<!--
-<div id='calculator' class=''>
-
-	<div style="text-align: center;">
-		<a href="#openModal">Открыть модальное окно</a>
-	</div>
-	<div id="openModal" class="myModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title">Расчёт материалов и стоимости</h3>
-					<a href="#close" title="Close" class="close">×</a>
-				</div>
-				<div class="modal-body">
-	<div id='result' class='flexBig'>
-		<div id='' class='flexTitle' style='background-color: lightgreen;'><h2 class='text-center'>Расчёт материалов и стоимости</h2></div><!--divTop - flexTitle --/>
-		<div id='' class='flexTitle' style='background-color: yellow;'>
-			<div id='' class='flexMiddle' style='background-color: brown;'>
-				<div id='' class='flexSmall' style='background-color: olive;'>
-					<div id='' class=''>
-						<h4 class=''>Исходные данные:</h4>
-						<h6 class='color-price'>Общая информация:</h6>
-						<p>Строение: <strong><?php echo $building ?></strong></p>
-						<p>Материал: <strong><?php echo $material ?></strong></p>
-						<h6 class='color-price'>Габариты стен:</h6>
-						<p>Длина стены фасада: <strong><?php echo $width ?></strong> м.</p>
-						<p>Длина боковой стены: <strong><?php echo $length ?></strong> м.</p>
-						<p>Высота стены сруба: <strong><?php echo $height ?></strong> м.</p>
-						<?php echo $mess_part_initial ?>
-						<?php echo $mess ?>
-						<h6 class='color-price'>Вес и стоимость 1 куб.м.:</h6>
-						<p>Вес: <strong><?php echo $weight ?></strong> кг.</p>
-						<p>Стоимость: <strong><?php echo $price ?></strong> руб.</p>
-					</div>
-				</div><!--divTown - flexSmall--/>
-			</div><!--divMiddle - flexMiddle --/>
-			
-			<div id='divMiddle' class='flexMiddle' style='background-color: red;'>
-				<div id='' class='flexSmall' style='background-color: olive;'>
-					<div id='' class=''>
-						<h4 class=''>Результаты:</h4>
-						<h6 class='color-price'>Основной сруб:</h6>
-						<p>Количество венцов: <strong><?php echo $row ?></strong> шт.</p>
-						<p>Длина бревна фасада: <strong><?php echo $front ?></strong> м.</p>
-						<p>Длина бревна боковой стороны: <strong><?php echo $side ?></strong> м.</p>
-						<p>Периметр: <strong><?php echo $perimeter ?></strong> м.</p>
-						<p>Длина брёвен: <strong><?php echo $length_main ?></strong> м.</p>
-						<p>Объём: <strong><?php echo $volume_main ?></strong> куб.м.</p>
-						<?php echo $mess_part_result ?>
-						<h6 class='color-price'>Всего:</h6>
-						<p>Общая длина брёвен: <strong><?php echo $length_full ?></strong> м.</p>
-						<p>Общий объём: <strong><?php echo $volume_full ?></strong> куб.м.</p>
-						<p>Вес: <strong><?php echo $weight_full ?></strong> кг.</p>
-						<p>Стоимость: <strong><?php echo $price_full ?></strong> руб.</p>
-					</div>
-				</div><!--divTown - flexSmall--/>
-			</div>
-		</div><!--divTop - flexTitle --/>
-	</div><!-- result --/>
-				</div><!--modal-body--/>
-			</div><!--modal-content--/>
-		</div><!--modal-dialog--/>
-	</div><!--myModal--/>
-</div><!--calculator---/>
--->
 
 <?php
 // !***************** Закрытие объектов с результатами и подключение к базе данных *********************! //
