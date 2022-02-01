@@ -89,7 +89,7 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 					<tr class='fw-bold'>
 						<td style='border: 0;' colspan='2'>%s</td>
 						<td style='border: 0;'>%s</td>
-						<td style='border: 0;' colspan='2'>Стоимость</td>
+						<td style='border: 0;' colspan='2'>Цена</td>
 					</tr>
 					<tr>
 						<th scope='col'>%s</th>
@@ -124,6 +124,48 @@ printf  ("</table>
 		</div><!--table-responsive-->
 	</div>");
 
+// Продолжение проверки условий для вывода информации разных товаров - ШТАКЕТНИК
+			} elseif ($myrow3['name'] == 'Штакетник') {
+
+					printf ("<thead>
+					<tr class='fw-bold'>
+						<td style='border: 0;' colspan='2'>%s</td>
+						<td style='border: 0;'>%s</td>
+						<td style='border: 0;' colspan='2'>Цена</td>
+					</tr>
+					<tr>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s</th>
+						<th scope='col'>в 1 куб.м.</th>
+						<th scope='col'>%s</th>
+						<th scope='col'>%s</th>
+					</tr>
+				</thead>
+				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+// Начало цикла печати спецификаций товара       
+				do
+				{
+				$cut = 20 * $myrow3['width'];
+				$count = round(1000000/($cut * $myrow3['depth']/1000),0);
+				$price_count = round($myrow3['price'] * $count);
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s</td>
+								<td>%s</td>
+								<td>%s шт.</td>
+								<td>%s руб.</td>
+								<td>%s руб.</td>
+							</tr>
+						</tbody>", $myrow3['depth']/1000, $myrow3['width'], $count, $myrow3['price'], $price_count); 
+				$even=!$even;
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
 
 // Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ДОСКА СТРОГАНАЯ		
 			} else {
@@ -132,7 +174,7 @@ printf  ("</table>
 					<tr class='fw-bold'>
 						<td style='border: 0;' colspan='2'>%s</td>
 						<td style='border: 0;' colspan='3'>%s</td>
-						<td style='border: 0;' colspan='2'>Стоимость</td>
+						<td style='border: 0;' colspan='2'>Цена</td>
 					</tr>
 					<tr>
 						<th scope='col'>%s</th>

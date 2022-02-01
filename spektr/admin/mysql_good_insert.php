@@ -62,7 +62,7 @@ if ($fail == "") {
 
 
 
-	$query = "INSERT INTO goods(id, date, marker, category, good, photo, description, keywords, p1, p2, p3, title_g1, title_g2, title_g3, title_price, name_title, size_title, size_1, size_2, size_3, g1, g2, g3, depth, width, price, item) VALUES ('$id', '$date', '$marker', '$category', '$good', '$photo', '$description', '$keywords', '$p1', '$p2', '$p3', '$title_g1', '$title_g2', '$title_g3', '$title_price', '$g1', '$g2', '$g3', '$depth', '$width', '$price', '$price_title_1', '$price_title_2', '$item')";
+	$query = "INSERT INTO goods(id, date, marker, category, good, photo, description, keywords, p1, p2, p3, title_g1, title_g2, title_g3, title_price, name_title, size_title, size_1, size_2, size_3, g1, g2, g3, depth, width, price, price_title_1, price_title_2, item) VALUES ('$id', '$date', '$marker', '$category', '$good', '$photo', '$description', '$keywords', '$p1', '$p2', '$p3', '$title_g1', '$title_g2', '$title_g3', '$title_price', '$name_title', '$size_title', '$size_1', '$size_2', '$size_3', '$g1', '$g2', '$g3', '$depth', '$width', '$price', '$price_title_1', '$price_title_2', '$item')";
 
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {
