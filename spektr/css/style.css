@@ -70,6 +70,9 @@ th {
 	color: #0d6efd; /*light-blue*/
 	font-size: 1.25rem;
 }
+.fence_italic {
+	font-style: italic;
+}
 /* ********** */
 /*     IMG    */
 /* ********** */
@@ -201,7 +204,7 @@ th {
   z-index: 5;
   width: 220px;
   letter-spacing: 4px;
-  border-bottom: 1px solid #ECF1F2;
+  border-bottom: 1px solid #ecf1f2;
   visibility: hidden;
 /*  opacity: 0;
   transform: translateY(10px);*/
@@ -568,6 +571,8 @@ a[href^="mailto"]::after {
   background: #fff;
   cursor: zoom-out;
 }
+
+
 
 /* **************************** */
 /* Стили страницы благодарности */

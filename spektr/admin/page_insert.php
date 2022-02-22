@@ -49,8 +49,7 @@
 <!-- EXTRA -->
 	<div class='flexSmall'>
 		<label>Дополнительное предложение к офферу - extra <br>
-			<textarea name="extra" id="extra" cols="100" rows="2">
-			</textarea>
+			<textarea name="extra" id="extra" cols="100" rows="2"></textarea>
 		</label>
 	</div>
 

@@ -4,7 +4,7 @@ require_once 'blocks/date_base.php';
 session_start();
 
 // Выборка из таблицы 'pages' для подписи титулов страниц и печати заголовков
-$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='calc_frame'");
+$result1 = mysqli_query($db, "SELECT * FROM pages WHERE page='result_frame'");
 $myrow1 = mysqli_fetch_array($result1);
 
 // Подключаем HEADER

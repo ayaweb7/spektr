@@ -1,7 +1,7 @@
 ﻿
 	<div id='initial' class=''>
 		<h2>Онлайн калькулятор деревянного сруба</h2>
-		<form name='form' action='calc_frame.php' method='post'>
+		<form name='form' action='result_frame.php' method='post'>
 	
 <!-- BUILDING & MATERIALS & METHODS -->
 		<div class='flexSmall'>

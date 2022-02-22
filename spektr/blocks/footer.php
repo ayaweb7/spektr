@@ -35,6 +35,7 @@
 <!-- modal_form -->
 <script type="text/javascript" src="js/remodal.min.js"></script>
 <script type="text/javascript" src="/mail/js/mail.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <!-- -->
 <!-- Маска ввода номера телефона -->
 <!-- jQuery Mask Plugin -->

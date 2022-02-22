@@ -12,9 +12,61 @@ label {float: left;}
 .blockButton input {display: none;}
 .blockButton label {padding: .2em .5em;}
 .blockButton label:hover {background: #ddd; cursor:pointer; border-radius: 3px;}
-.blockButton input:checked + label {color: black; font-weight: bold; background: #95fc69; /* lime */ border-radius: 3px;} /* red */
+.blockButton input:checked + label {
+	color: black;
+	font-weight: bold; 
+	background: url(../img/inputbg.jpg) top repeat-x; /*dark-blue, #95fc69 lime */
+	border: 1px solid #eef7fd; /* light-blue*/
+	border-radius: 3px;} /* red */
 .inputSubmit:hover {cursor:pointer;}
 
+/* ******************** */
+/*    CALCULATIONS      */
+/* ******************** */
+#initial span {
+	color: #0d6efd; /*light-blue*/
+	font-style: inherit;
+	font-weight: inherit;
+	font-size: 1.25rem;
+}
+
+#result .flexSmall,
+#initial .flexSmall {
+	border-bottom: none;
+}
+/*
+#result .flexTitle {
+	border-bottom: 1px solid #19910f;
+}
+*/
+.blockInput input,
+.blockInput select {
+	border: 1px solid #eef7fd; /* light-blue*/
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	height: auto;
+	padding-left: 3px;
+    }
+
+.blockInput input {
+	background: url(../img/inputbg.jpg) top repeat-x;/**/
+  }
+
+.blockInput input:hover {
+    border: 1px solid #0d6efd; /* dark-blue*/
+    color: #0d6efd; /* dark-blue*/
+/*    text-shadow: 1px 1px 2px #FFF300; yellow */
+}
+	
+.blockInput select {
+	background-color: #eef7fd; /* light-blue*/
+	}
+
+.blockInput input:focus,
+.blockInput select:focus {
+   border: 1px solid red;  /*#007c37 light-blue*/
+}
 
 /* ********************** */
 /*    СТИЛИ ДЛЯ DIV-ов    */
@@ -55,13 +107,13 @@ label {float: left;}
 	
 }
 
-.flexSmall {/**/
+.flexSmall {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;/**/
 	padding: 1% 1%;
 	margin: 0 1%;
-	border-bottom: 1px solid #19910f;
+	/*border-bottom: 1px solid #19910f;*/
 }
 /**/
 .blockInput {
@@ -80,7 +132,7 @@ label {float: left;}
 .blockInput span,
 .flexSmall span, 
 #divTop {
-	color: #19910f;/*green*/
+	color: #19910f;/* green*/
 	font-style: italic;
 	font-weight: bold;
 	font-size: 1.5em;
@@ -98,9 +150,8 @@ label {float: left;}
   border-bottom: 1px solid #986D4B; /* light-brown */
 }
 
-/*, #townHidden, #divShop, #town_hidden,*/
-#date_hidden,
-#price_hidden {
+#height_hidden,
+#color_hidden {
 	display: none;
 }
 

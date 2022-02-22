@@ -68,12 +68,12 @@ $myrow = mysqli_fetch_array($result);
 			
 			<div>
 				<label>Описание материала <em>*</em><br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-					<input type="text" name="material" id="material" size="70" value="Строганое бревно" />
+					<input type="text" name="material" id="material" size="70" value="<?php echo $myrow['material'] ?>" />
 				</label>
 			</div>
 			<div>
 				<label>Перечень услуг <em>*</em><br><span style="font-size: 1em; font-style: italic;">изменить на</span><br>
-					<input type="text" name="list" id="list" size="70" value="Материал + работа" />
+					<textarea name="list" id="list" cols="70" rows="4"><?php echo $myrow['list'] ?></textarea>
 				</label>
 			</div>
 			<div>

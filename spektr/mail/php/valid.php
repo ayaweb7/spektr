@@ -81,5 +81,4 @@ if (isset($_POST['send_time']) ) {$send_time = "<b>Время отправки �
 // Отправка формы в формате UNIX time
 if (isset($_POST['unix_time']) ) {$unix_time = "<b>Отправка формы в формате UNIX time: </b> " . trim(strip_tags($_POST['unix_time'])) . "<br>";}
 
-
 ?>

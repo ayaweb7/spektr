@@ -85,7 +85,7 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 
 					printf ("<thead>
 					<tr class='fw-bold'>
-						<th scope='col'>%s</th>
+						<th scope='col' class='text-start'>%s</th>
 						<th scope='col'>%s</th>
 						<th scope='col'>Стоимость за 1 %s</th>
 					</tr>
@@ -113,52 +113,38 @@ printf  ("</table>
 		</div><!--table-responsive-->");
 
 // Подключаем галерею с фотографиями срубов
-include ("blocks/gallery.php");
+include ("blocks/gallery_frame.php");
 
 // Подключаем калькулятор объёма и стоимости сруба
-include ("blocks/calc.php");
+include ("blocks/calc_frame.php");
 
 	printf  ("</div>");
 
+// Продолжение проверки условий для вывода информации разных товаров - ТЕПЛИЦЫ
+			} elseif ($myrow3['name'] == 'Теплицы') {
 
-// Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ДОСКА СТРОГАНАЯ		
-			} else {
-					
 					printf ("<thead>
 					<tr class='fw-bold'>
-						<td style='border: 0;' colspan='2'>%s</td>
-						<td style='border: 0;' colspan='3'>%s</td>
-						<td style='border: 0;' colspan='2'>Стоимость</td>
-					</tr>
-					<tr>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
+						<th scope='col' class='text-start'>Название теплицы, длина</th>
+						<th scope='col'>Высота, м.</th>
+						<th scope='col'>Ширина, м.</th>
+						<th scope='col'>Цена, руб.</th>
 					</tr>
 				</thead>
-				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['size_1'], $myrow2['size_2'], $myrow2['size_3'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+				<tbody>");
 // Начало цикла печати спецификаций товара       
 				do
 				{
-				$cut = $myrow3['depth'] * $myrow3['width'];
-				$count_43 = round(1000000/($cut * $myrow2['size_1']));
-				$count_52 = round(1000000/($cut * $myrow2['size_2']));
-				$count_61 = round(1000000/($cut * $myrow2['size_3']));
-				$price_count = round(1000000/$cut) * $myrow3['price'];
+				$height = round(($myrow3['depth']/100),1);
+				$width = round(($myrow3['width']/100),1);				
+//				$price_count = round($myrow3['price']/$count);
 					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td class='text-start'>%s</td>
 								<td>%s</td>
 								<td>%s</td>
-								<td>%s шт.</td>
-								<td>%s шт.</td>
-								<td>%s шт.</td>
-								<td>%s руб.</td>
-								<td>%s руб.</td>
+								<td>%s</td>
 							</tr>
-						</tbody>", $myrow3['depth'], $myrow3['width'], $count_43, $count_52, $count_61, $myrow3['price'], $price_count); 
+						</tbody>", $myrow3['material'], $height, $width, $myrow3['price']); 
 				$even=!$even;	
 				}
 
@@ -166,8 +152,55 @@ include ("blocks/calc.php");
 		while ($myrow3 = mysqli_fetch_array($result3));
 
 printf  ("</table>
-		</div><!--table-responsive-->
-	</div>");
+		</div><!--table-responsive-->");
+
+// Подключаем галерею с фотографиями теплиц
+include ("blocks/gallery_green.php");
+
+	printf  ("</div>");
+
+// Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ЗАБОРЫ		
+			} elseif ($myrow3['name'] == 'Заборы') {
+					
+					printf ("<thead>
+					<tr class='fw-bold'>
+						<th scope='col' class='text-start'>Материал</th>
+						<th scope='col'>Высота<br>столба, м.</th>
+						<th scope='col'>Пролёт,<br>м.</th>
+						<th scope='col'>Цена,<br>руб./1 пог.м</th>
+					</tr>
+				</thead>
+				<tbody>");
+// Начало цикла печати спецификаций товара       
+				do
+				{
+//				$height = round(($myrow3['depth']/100),1);
+//				$width = round(($myrow3['width']/100),1);				
+//				$price_count = round($myrow3['price']/$count);
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td class='text-start'>%s</td>
+								<td>%s</td>
+								<td>%s</td>
+								<td>%s*</td>
+							</tr>
+						</tbody>", $myrow3['material'], $myrow3['depth'], $myrow3['width'], $myrow3['price']); 
+				$even=!$even;	
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		<p class='fence_italic'><strong>*</strong> Цена указана за 1 погонный метр при длине забора 50 и более метров.</p>
+		</div><!--table-responsive-->");
+
+// Подключаем галерею с фотографиями заборов
+include ("blocks/gallery_fence.php");
+
+// Подключаем калькулятор стоимости забора
+include ("blocks/calc_fence.php");
+
+	printf  ("</div>");
 			}
 // Окончание проверок, связанных с выводом таблиц
 		}

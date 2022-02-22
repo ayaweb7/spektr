@@ -56,7 +56,7 @@ $result->close(); // Товары, отсортированные по алфа�
 			</div>
 			<div>
 				<label>Перечень услуг <em>*</em><br>
-					<input type="text" name="list" id="list" size="70" value="Материал + работа" />
+					<textarea name="list" id="list" cols="70" rows="4">Материал + работа</textarea>
 				</label>
 			</div>
 			<div>
