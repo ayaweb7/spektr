@@ -69,6 +69,15 @@ label {float: left;}
 }
 
 /* ********************** */
+/*         SPECIF         */
+/* ********************** */
+table tr .subtitle {
+	background-color: #eef7fd; /* - light-blue*/
+	font-weight: bold;
+}
+
+
+/* ********************** */
 /*    СТИЛИ ДЛЯ DIV-ов    */
 /* ********************** */
 
