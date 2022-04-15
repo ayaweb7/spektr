@@ -222,7 +222,6 @@ $result7->close(); // Характеристики поликарбоната
 
 // Подключаем галерею с фотографиями теплиц
 include ("blocks/gallery_green.php");
-//include ("blocks/gallery_green2.php");
 
 	printf  ("</div>");
 
