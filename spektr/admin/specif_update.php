@@ -11,8 +11,8 @@ $myrow = mysqli_fetch_array($result);
 	do
 	{
 		printf  ("<p class='absent' style='background-color:".($even?'white':'#eaeaea')."'>
-					<a href='specif_form_update.php?id=%s'>%s</a> - %s * %s, %s
-				</p>  ",$myrow['id'], $myrow['name'], $myrow['depth'], $myrow['width'], $myrow['material']); 
+					<a href='specif_form_update.php?id=%s'>%s</a> - %s * %s * %s, %s - <span class='color-price pb-3'>%s</span> ₽
+				</p>  ",$myrow['id'], $myrow['name'], $myrow['lenght_mat'], $myrow['depth'], $myrow['width'], $myrow['material'], $myrow['price']); 
 				
 		$even=!$even;
 	}

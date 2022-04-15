@@ -121,37 +121,32 @@ include ("blocks/calc_frame.php");
 	printf  ("</div>");
 
 
-
-
-
-// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-          
-
-
-// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-
-
-
 // Продолжение проверки условий для вывода информации разных товаров - ТЕПЛИЦЫ
 			} elseif ($myrow3['name'] == 'Теплицы') {
 
 					printf ("<thead>
 					<tr class='fw-bold'>
+						<td style='border: 0;'></td>
+						<td style='border: 0;'></td>
+						<td style='border: 0;'></td>
+						<td style='border: 0;' colspan='3'>Фундамент</td>
+						<td style='border: 0;'></td>
+						<td style='border: 0;' colspan='3'>Стоимость</td>
+					</tr>
+					<tr class='fw-lighter'>
 						<th scope='col' class='text-start'>Длина</th>
 						<th scope='col'>Каркас</th>
 						<th scope='col'>Поликарбонат</th>
-						<th scope='col'>Фундамент<br>100*100</th>
+						<th scope='col'>100*100</th>
 						<th scope='col'>/</th>
-						<th scope='col'>Фундамент<br>150*150</th>
+						<th scope='col'>150*150</th>
 						<th scope='col'>Сборка</th>
-						<th scope='col'>Стоимость</th>
+						<th scope='col'>100*100</th>
+						<th scope='col'>/</th>
+						<th scope='col'>150*150</th>
 					</tr>
 				</thead>
 				<tbody>");
-				
-				
 				
 // Выборка в цикле всех существующих моделей теплиц (поле 'material')
 $result = mysqli_query($db, "SELECT * FROM specif ORDER BY material");
@@ -170,7 +165,7 @@ $myrow5 = mysqli_fetch_array($result5);
 			if (!isset($myrow5['id'])) {'<script language="javascript">document.getElementsByClassName("absent").style.display="none";<script>';}                     
 			else
 			{
-				printf ("<tr><td class='subtitle' colspan='8'>%s</td></tr>", $myrow['material']);
+				printf ("<tr><td class='subtitle' colspan='10'>%s</td></tr>", $myrow['material']);
 
 	// Печать полосатых строк таблицы								
 				$even=true;
@@ -178,43 +173,10 @@ $myrow5 = mysqli_fetch_array($result5);
 	// Начало цикла печати теплиц в категории       
 					do
 					{
-// Выборка всех длин теплиц на основании предыдущей выборки - $myrow5
-$result6 = mysqli_query($db, "SELECT * FROM specif WHERE material='$myrow5[material]'");
-$myrow6 = mysqli_fetch_array($result6);
-
-// Стоимость поликарбоната и фундамента в зависимости от длины теплицы
-if ($myrow5['lenght'] == 4 ) {
-	$carbonat = 10800; $fund_100 = 5800; $fund_150 = 7800;
-} elseif ($myrow5['lenght'] == 6 ) {
-	$carbonat = 14400; $fund_100 = 6500; $fund_150 = 8800;
-} elseif ($myrow5['lenght'] == 8 ) {
-	$carbonat = 18000; $fund_100 = 7500; $fund_150 = 10800;
-} elseif ($myrow5['lenght'] == 10 ) {
-	$carbonat = 21600; $fund_100 = 9000; $fund_150 = 13500;
-}
-
-// Стоимость сборки теплицы в зависимости от типа и длины
-if ($myrow5['depth'] == 1 &  $myrow5['lenght'] == 4) {
-	$sborka = 3500;
-} elseif ($myrow5['depth'] == 1 &  $myrow5['lenght'] == 6) {
-	$sborka = 4500;
-} elseif ($myrow5['depth'] == 1 &  $myrow5['lenght'] == 8) {
-	$sborka = 5500;
-} elseif ($myrow5['depth'] == 1 &  $myrow5['lenght'] == 10) {
-	$sborka = 6500;
-} elseif ($myrow5['depth'] == 2 &  $myrow5['lenght'] == 4) {
-	$sborka = 4000;
-} elseif ($myrow5['depth'] == 2 &  $myrow5['lenght'] == 6) {
-	$sborka = 5000;
-} elseif ($myrow5['depth'] == 2 &  $myrow5['lenght'] == 8) {
-	$sborka = 6000;
-} elseif ($myrow5['depth'] == 2 &  $myrow5['lenght'] == 10) {
-	$sborka = 7000;
-}
 	
-					$itog = $myrow5['price'] + $carbonat + $sborka;
-					$itog_100 = $itog + $fund_100;
-					$itog_150 = $itog + $fund_150;
+					$itog = $myrow5['price'] + $myrow5['carbonat'] + $myrow5['sborka'];
+					$itog_100 = $itog + $myrow5['fund_100'];
+					$itog_150 = $itog + $myrow5['fund_150'];
 					
 						printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
 									<td>%sм.</td>
@@ -224,15 +186,16 @@ if ($myrow5['depth'] == 1 &  $myrow5['lenght'] == 4) {
 									<td>/</td>
 									<td>%s</td>
 									<td>%s</td>
-									<td>%s / %s</td>
+									<td>%s</td>
+									<td>/</td>
+									<td>%s</td>
 								</tr>
-							</tbody>", $myrow5['lenght'], $myrow5['price'], $carbonat, $fund_100, $fund_150, $sborka, $itog_100, $itog_150); 
+							</tbody>", $myrow5['lenght'], $myrow5['price'], $myrow5['carbonat'], $myrow5['fund_100'], $myrow5['fund_150'], $myrow5['sborka'], $itog_100, $itog_150); 
 					$even=!$even;	
 					}
 	// Окончание цикла печати всех разновидностей теплиц в категории
 			while ($myrow5 = mysqli_fetch_array($result5));
 			}
-
 
 // Окончание цикла категорий
 		$material = $myrow['material'];
@@ -255,23 +218,13 @@ printf  ("</table>
 // !***************** Закрытие объектов с результатами и подключение к базе данных *********************! //
 $result->close(); // Все существующие модели теплиц (поле 'material') внутри общего наименования 'Теплицы' - 'name' - отсортированные по алфавиту
 $result5->close(); // Категории теплиц с сортировкой по алфавиту
-$result6->close(); // Теплицы внутри категории, отсортированные по длине
 $result7->close(); // Характеристики поликарбоната
 
 // Подключаем галерею с фотографиями теплиц
 include ("blocks/gallery_green.php");
+//include ("blocks/gallery_green2.php");
 
 	printf  ("</div>");
-
-
-
-
-
-
-
-
-
-
 
 
 // Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ЗАБОРЫ		
@@ -321,9 +274,7 @@ include ("blocks/calc_fence.php");
 		}
 	
 ?>				
-				<p>
-				</p>
-
+				<!--<p></p>-->
 <?php
 // Подключаем кнопки обратной связи
 include ("blocks/order_call_911.php");
@@ -340,21 +291,13 @@ include ("blocks/accordion.php");
 </div><!--container-->
 
 <?php
-
-
 // !***************** Закрытие объектов с результатами и подключение к базе данных *********************! //
-
 $result1->close(); // Страницы - без сортировки и лимитов
 $result2->close(); // Все характеристики товара '$good' из таблицы 'goods' - без сортировки и лимитов
 $result3->close(); // Все существующие специфификации товаров из таблицы 'specif' - без сортировки и лимитов
 $result4->close(); // Товары внутри категории, отсортированные по алфавиту для аккордеона
-
-
 $db->close(); // Закрываем базу данных
 
 // Подключаем FOOTER
 include ("blocks/footer.php");
-
-
-
 ?>

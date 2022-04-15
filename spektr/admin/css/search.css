@@ -9,7 +9,7 @@
 /* ******************** */
 
 span {text-align: center;}
-label {float: left;}
+label {float: center;}
 .blockButton input {display: none;}
 .blockButton label {padding: .2em .5em;}
 .blockButton label:hover {background: #ddd; cursor:pointer; border-radius: 3px;}
@@ -116,6 +116,10 @@ label {float: left;}
 	color: gray;/* gray */
 }
 
+.color-price {
+	color: red; /*#0d6efd light-blue*/
+	font-size: 1.25rem;
+}
 /*
 #townHidden
 {

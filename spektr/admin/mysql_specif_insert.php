@@ -22,6 +22,12 @@ if (isset($_POST['date'])) {$date = $_POST['date'];}
 if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['depth'])) {$depth = $_POST['depth'];}
 if (isset($_POST['width'])) {$width = $_POST['width'];}
+if (isset($_POST['lenght_mat'])) {$lenght_mat = $_POST['lenght_mat'];}
+if (isset($_POST['lenght'])) {$lenght = $_POST['lenght'];}
+if (isset($_POST['carbonat'])) {$carbonat = $_POST['carbonat'];}
+if (isset($_POST['fund_100'])) {$fund_100 = $_POST['fund_100'];}
+if (isset($_POST['fund_150'])) {$fund_150 = $_POST['fund_150'];}
+if (isset($_POST['sborka'])) {$sborka = $_POST['sborka'];}
 if (isset($_POST['price'])) {$price = $_POST['price'];}
 if (isset($_POST['material'])) {$material = $_POST['material'];}
 if (isset($_POST['list'])) {$list = $_POST['list'];}
@@ -46,7 +52,7 @@ if ($fail == "") {
 
 
 
-	$query = "INSERT INTO specif(id, date, name, depth, width, price, material, list, item) VALUES ('$id', '$date', '$name', '$depth', '$width', '$price', '$material', '$list', '$item')";
+	$query = "INSERT INTO specif(id, date, name, depth, width, lenght_mat, lenght, carbonat, fund_100, fund_150, sborka, price, material, list, item) VALUES ('$id', '$date', '$name', '$depth', '$width', '$lenght_mat', '$lenght', '$carbonat', '$fund_100', '$fund_150', '$sborka', '$price', '$material', '$list', '$item')";
 
 	// Проверка на ошибки при вводе в базу
 	if ($result = mysqli_query($db, $query)) {

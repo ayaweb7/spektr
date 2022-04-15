@@ -41,7 +41,8 @@
 	margin: 1% 0 3% 0;
 }
 
-#info h2 em {
+#info h2 em,
+form em {
 	color: #D01E1E; /*red*/
 	font-weight: bold;
 	font-size: 1.5em;

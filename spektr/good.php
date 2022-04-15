@@ -87,19 +87,18 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 
 					printf ("<thead>
 					<tr class='fw-bold'>
-						<td style='border: 0;' colspan='2'>%s</td>
-						<td style='border: 0;'>%s</td>
+						<td style='border: 0;'>Сечение</td>
+						<td style='border: 0;'>Количество в 1 куб.м. при длине:</td>
 						<td style='border: 0;' colspan='2'>Цена</td>
 					</tr>
 					<tr>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
+						<th scope='col'></th>
+						<th scope='col'>6.1 м.</th>
+						<th scope='col'>1 шт.</th>
+						<th scope='col'>1 куб.м.</th>
 					</tr>
 				</thead>
-				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['size_1'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+				<tbody>");
 // Начало цикла печати спецификаций товара       
 				do
 				{
@@ -107,11 +106,10 @@ printf ("<div class='col-md-9 ms-sm-auto col-lg-12 px-md-4 absent'>
 				$count = round(1000000/($cut * $myrow2['size_1']),1);
 				$price_count = round($myrow3['price']/$count);
 					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
-								<td>%s</td>
-								<td>%s</td>
+								<td>%s*%s мм.</td>
 								<td>%s шт.</td>
-								<td>%s руб.</td>
-								<td>%s руб.</td>
+								<td>%s ₽</td>
+								<td>%s ₽</td>
 							</tr>
 						</tbody>", $myrow3['depth'], $myrow3['width'], $count, $price_count, $myrow3['price']); 
 				$even=!$even;
@@ -129,19 +127,19 @@ printf  ("</table>
 
 					printf ("<thead>
 					<tr class='fw-bold'>
-						<td style='border: 0;' colspan='2'>%s</td>
-						<td style='border: 0;'>%s</td>
+						<td style='border: 0;' colspan='2'>Размеры:</td>
+						<td style='border: 0;'>Количество</td>
 						<td style='border: 0;' colspan='2'>Цена</td>
 					</tr>
 					<tr>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
+						<th scope='col'>длина</th>
+						<th scope='col'>ширина</th>
 						<th scope='col'>в 1 куб.м.</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
+						<th scope='col'>1 шт.</th>
+						<th scope='col'>1 куб.м.</th>
 					</tr>
 				</thead>
-				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+				<tbody>");
 // Начало цикла печати спецификаций товара       
 				do
 				{
@@ -149,11 +147,11 @@ printf  ("</table>
 				$count = round(1000000/($cut * $myrow3['depth']/1000),0);
 				$price_count = round($myrow3['price'] * $count);
 					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
-								<td>%s</td>
-								<td>%s</td>
+								<td>%s м.</td>
+								<td>%s мм.</td>
 								<td>%s шт.</td>
-								<td>%s руб.</td>
-								<td>%s руб.</td>
+								<td>%s ₽/шт.</td>
+								<td>%s ₽/куб.м.</td>
 							</tr>
 						</tbody>", $myrow3['depth']/1000, $myrow3['width'], $count, $myrow3['price'], $price_count); 
 				$even=!$even;
@@ -166,46 +164,94 @@ printf  ("</table>
 		</div><!--table-responsive-->
 	</div>");
 
-
-// Окончание проверки условий для вывода информации разных товаров - максимальное количество информации - ДОСКА СТРОГАНАЯ		
-			} else {
+// Продолжение проверки условий для вывода информации разных товаров - НАЛИЧНИК
+			} elseif ($myrow3['name'] == 'Наличник') {
 					
 					printf ("<thead>
-					<tr class='fw-bold'>
-						<td style='border: 0;' colspan='2'>%s</td>
-						<td style='border: 0;' colspan='3'>%s</td>
-						<td style='border: 0;' colspan='2'>Цена</td>
-					</tr>
 					<tr>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s м.</th>
-						<th scope='col'>%s</th>
-						<th scope='col'>%s</th>
+						<th scope='col'>Ширина</th>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Цена</th>
 					</tr>
 				</thead>
-				<tbody>", $myrow2['name_title'], $myrow2['size_title'], $myrow2['depth'], $myrow2['width'], $myrow2['size_1'], $myrow2['size_2'], $myrow2['size_3'], $myrow2['price_title_1'], $myrow2['price_title_2']);
+				<tbody>");
+				
+// Выборка в цикле всех существующих форм (поле 'material')
+$result = mysqli_query($db, "SELECT * FROM specif ORDER BY material");
+$myrow = mysqli_fetch_array($result);
+$material='';
+	do
+	{
+		if ($myrow['material'] != $material)
+		{	
+				
+// Выборка досок каждой толщины, отсортированных по ширине
+$result5 = mysqli_query($db, "SELECT * FROM specif WHERE name = 'Наличник' AND material='$myrow[material]' ORDER BY width");
+$myrow5 = mysqli_fetch_array($result5);
+
+// Проверка наличия товаров в группе для необходимости печати подзаголовка категории
+			if (!isset($myrow5['id'])) {'<script language="javascript">document.getElementsByClassName("absent").style.display="none";<script>';}                     
+			else
+			{
+				printf ("<tr><td class='subtitle' colspan='3'>наличник %s</td></tr>", $myrow['material']);
+
+	// Печать полосатых строк таблицы								
+				$even=true;
+
+	// Начало цикла печати размеров в каждой форме       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s мм.</td>
+								<td>%s м.</td>
+								<td>%s ₽/шт.</td>
+							</tr>
+						</tbody>", $myrow5['width'], $myrow5['lenght_mat'], $myrow5['price']); 
+				$even=!$even;	
+				}
+	// Окончание цикла печати всех разновидностей теплиц в категории
+			while ($myrow5 = mysqli_fetch_array($result5));
+			}
+
+// Окончание цикла категорий
+		$material = $myrow['material'];
+		}
+	}
+	while ($myrow = mysqli_fetch_array($result));
+
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+// !***************** Закрытие объектов с результатами *********************! //
+$result5->close(); // Категории товаров с сортировкой по алфавиту
+
+
+// Продолжение проверки условий для вывода информации разных товаров - ПЛИНТУС
+			} elseif ($myrow3['name'] == 'Плинтус') {
+
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Сечение</th>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
 // Начало цикла печати спецификаций товара       
 				do
 				{
-				$cut = $myrow3['depth'] * $myrow3['width'];
-				$count_43 = round(1000000/($cut * $myrow2['size_1']));
-				$count_52 = round(1000000/($cut * $myrow2['size_2']));
-				$count_61 = round(1000000/($cut * $myrow2['size_3']));
-				$price_count = round(1000000/$cut) * $myrow3['price'];
 					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
-								<td>%s</td>
-								<td>%s</td>
-								<td>%s шт.</td>
-								<td>%s шт.</td>
-								<td>%s шт.</td>
-								<td>%s руб.</td>
-								<td>%s руб.</td>
+								<td>%s*%s мм.</td>
+								<td>%s м.</td>
+								<td>%s ₽/шт.</td>
 							</tr>
-						</tbody>", $myrow3['depth'], $myrow3['width'], $count_43, $count_52, $count_61, $myrow3['price'], $price_count); 
-				$even=!$even;	
+						</tbody>", $myrow3['width'], $myrow3['depth'], $myrow3['lenght_mat'], $myrow3['price']); 
+				$even=!$even;
 				}
 
 // Окончание цикла печати товаров в категории
@@ -214,13 +260,265 @@ printf  ("</table>
 printf  ("</table>
 		</div><!--table-responsive-->
 	</div>");
+
+
+// Продолжение проверки условий для вывода информации разных товаров - УГОЛОК
+			} elseif ($myrow3['name'] == 'Уголок') {
+
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Сечение</th>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+// Начало цикла печати спецификаций товара       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s*%s мм.</td>
+								<td>%s м.</td>
+								<td>%s ₽/шт.</td>
+							</tr>
+						</tbody>", $myrow3['width'], $myrow3['depth'], $myrow3['lenght_mat'], $myrow3['price']); 
+				$even=!$even;
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+
+// Продолжение проверки условий для вывода информации разных товаров - ВАГОНКА
+			} elseif ($myrow3['name'] == 'Вагонка') {
+
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Сечение</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+// Начало цикла печати спецификаций товара       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s м.</td>
+								<td>%s*%s мм.</td>
+								<td>%s ₽/шт.</td>
+							</tr>
+						</tbody>", $myrow3['lenght_mat'], $myrow3['depth'], $myrow3['width'], $myrow3['price']); 
+				$even=!$even;
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+
+// Продолжение проверки условий для вывода информации разных товаров - ДОСКА ПОЛА
+			} elseif ($myrow3['name'] == 'Доска пола') {
+
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Сечение</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+// Начало цикла печати спецификаций товара       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s м.</td>
+								<td>%s*%s мм.</td>
+								<td>%s ₽/шт.</td>
+							</tr>
+						</tbody>", $myrow3['lenght_mat'], $myrow3['depth'], $myrow3['width'], $myrow3['price']); 
+				$even=!$even;
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+
+// Продолжение проверки условий для вывода информации разных товаров - ИМИТАЦИЯ БРУСА
+			} elseif ($myrow3['name'] == 'Имитация бруса') {
+
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Длина</th>
+						<th scope='col'>Сечение</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+// Начало цикла печати спецификаций товара       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s м.</td>
+								<td>%s*%s мм.</td>
+								<td>%s ₽/шт.</td>
+							</tr>
+						</tbody>", $myrow3['lenght_mat'], $myrow3['depth'], $myrow3['width'], $myrow3['price']); 
+				$even=!$even;
+				}
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+
+// Продолжение проверки условий для вывода информации разных товаров - ДОСКА СТРОГАНАЯ		
+			} elseif ($myrow3['name'] == 'Доска строганая') {
+					
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Ширина</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+				
+// Выборка в цикле всех существующих толщин (поле 'depth')
+$result = mysqli_query($db, "SELECT * FROM specif ORDER BY depth");
+$myrow = mysqli_fetch_array($result);
+$depth='';
+	do
+	{
+		if ($myrow['depth'] != $depth)
+		{	
+				
+// Выборка досок каждой толщины, отсортированных по ширине
+$result5 = mysqli_query($db, "SELECT * FROM specif WHERE name = 'Доска строганая' AND depth='$myrow[depth]' ORDER BY width");
+$myrow5 = mysqli_fetch_array($result5);
+
+// Проверка наличия товаров в группе для необходимости печати подзаголовка категории
+			if (!isset($myrow5['id'])) {'<script language="javascript">document.getElementsByClassName("absent").style.display="none";<script>';}                     
+			else
+			{
+				printf ("<tr><td class='subtitle' colspan='2'>Толщина: %s мм.</td></tr>", $myrow['depth']);
+
+	// Печать полосатых строк таблицы								
+				$even=true;
+
+	// Начало цикла печати теплиц в категории       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s мм.</td>
+								<td>%s ₽/пог.м.</td>
+							</tr>
+						</tbody>", $myrow5['width'], $myrow5['price']); 
+				$even=!$even;	
+				}
+	// Окончание цикла печати всех разновидностей теплиц в категории
+			while ($myrow5 = mysqli_fetch_array($result5));
+			}
+
+// Окончание цикла категорий
+		$depth = $myrow['depth'];
+		}
+	}
+	while ($myrow = mysqli_fetch_array($result));
+
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+
+// !***************** Закрытие объектов с результатами *********************! //
+$result5->close(); // Категории товаров с сортировкой по алфавиту
+
+// Продолжение проверки условий для вывода информации разных товаров - БРУСОК, РЕЙКА		
+			} elseif ($myrow3['name'] == 'Брусок, рейка') {
+					
+					printf ("<thead>
+					<tr>
+						<th scope='col'>Ширина</th>
+						<th scope='col'>Цена</th>
+					</tr>
+				</thead>
+				<tbody>");
+				
+// Выборка в цикле всех существующих толщин (поле 'depth')
+$result = mysqli_query($db, "SELECT * FROM specif ORDER BY depth");
+$myrow = mysqli_fetch_array($result);
+$depth='';
+	do
+	{
+		if ($myrow['depth'] != $depth)
+		{	
+				
+// Выборка досок каждой толщины, отсортированных по ширине
+$result5 = mysqli_query($db, "SELECT * FROM specif WHERE name = 'Брусок, рейка' AND depth='$myrow[depth]' ORDER BY width");
+$myrow5 = mysqli_fetch_array($result5);
+
+// Проверка наличия товаров в группе для необходимости печати подзаголовка категории
+			if (!isset($myrow5['id'])) {'<script language="javascript">document.getElementsByClassName("absent").style.display="none";<script>';}                     
+			else
+			{
+				printf ("<tr><td class='subtitle' colspan='2'>Толщина: %s мм.</td></tr>", $myrow['depth']);
+
+	// Печать полосатых строк таблицы								
+				$even=true;
+
+	// Начало цикла печати теплиц в категории       
+				do
+				{
+					printf  ("<tr style='background-color:".($even?'white':'#eaeaea')."'>
+								<td>%s мм.</td>
+								<td>%s ₽/пог.м.</td>
+							</tr>
+						</tbody>", $myrow5['width'], $myrow5['price']); 
+				$even=!$even;	
+				}
+	// Окончание цикла печати всех разновидностей теплиц в категории
+			while ($myrow5 = mysqli_fetch_array($result5));
+			}
+
+// Окончание цикла категорий
+		$depth = $myrow['depth'];
+		}
+	}
+	while ($myrow = mysqli_fetch_array($result));
+
+
+// Окончание цикла печати товаров в категории
+		while ($myrow3 = mysqli_fetch_array($result3));
+
+printf  ("</table>
+		</div><!--table-responsive-->
+	</div>");
+	
+// !***************** Закрытие объектов с результатами *********************! //
+$result5->close(); // Категории товаров с сортировкой по алфавиту	
+	
 			}
 // Окончание проверок, связанных с выводом таблиц
 		}
-	
 ?>				
-				<p>
-				</p>
+				<!--<p></p>-->
 
 <?php
 // Подключаем кнопки обратной связи
@@ -239,7 +537,6 @@ include ("blocks/accordion.php");
 
 <?php
 
-
 // !***************** Закрытие объектов с результатами и подключение к базе данных *********************! //
 // $result->close(); Товары внутри категорий - отсортированные по дате и лимитированные
 //$result2->close(); // все характеристики товара '$good' - без сортировки и лимитов
@@ -252,7 +549,4 @@ $db->close(); // Закрываем базу данных
 
 // Подключаем FOOTER
 include ("blocks/footer.php");
-
-
-
 ?>
